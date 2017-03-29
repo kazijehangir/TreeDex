@@ -20,7 +20,7 @@ export default class Login extends Component {
                 <Button 
                     label="Forgot Login/Pass"
                     styles={{button: styles.alignRight, label: styles.label}} 
-                    onPress={this.press.bind(this)} />
+                    onPress={this.forgotPassHandler.bind(this)} />
             </Container>
             <Container>
                 <Label text="Username or Email" />
@@ -38,7 +38,7 @@ export default class Login extends Component {
             <Container>
                 <Button 
                     styles={{button: styles.transparentButton}}
-                    onPress={this.press.bind(this)}
+                    onPress={this.signinFacebookHandler.bind(this)}
                 >
                     <View style={styles.inline}>
                         <Icon name="facebook-official" size={30} color="#3B5699" />
@@ -52,22 +52,34 @@ export default class Login extends Component {
                     <Button 
                         label="Sign In"
                         styles={{button: styles.primaryButton, label: styles.buttonWhiteText}} 
-                        onPress={this.press.bind(this)} />
+                        onPress={this.signinHandler.bind(this)} />
                 </Container>
                 <Container>
                     <Button 
                         label="CANCEL"
                         styles={{label: styles.buttonBlackText}} 
-                        onPress={this.press.bind(this)} />
+                        onPress={this.cancelHandler.bind(this)} />
                 </Container>
             </View>
 
         </ScrollView>
     );
   }
-  press() {
+  cancelHandler() {
   //execute any code here
-    console.log('button pressed')
+    console.log('cancel button pressed')
+  }
+  forgotPassHandler() {
+  //execute any code here
+    console.log('forgot pass button pressed')
+  }
+  signinHandler() {
+  //execute any code here
+    console.log('signin button pressed')
+  }
+  signinFacebookHandler() {
+  //execute any code here
+    console.log('fb button pressed')
   }
   
 }
