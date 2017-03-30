@@ -16,14 +16,19 @@ export default class Login extends Component {
   render() {
     return (
         <ScrollView style={styles.scroll}>
+
             <Container>
-                <Label text="Username or Email" />
+                <Text style={styles.label}>
+                    Username or Email
+                </Text>
                 <TextInput
                     style={styles.textInput}
                 />
             </Container>
             <Container>
-                <Label text="Password" />
+                <Text style={styles.label}>
+                    Password
+                </Text>
                 <TextInput
                     secureTextEntry={true}
                     style={styles.textInput}
