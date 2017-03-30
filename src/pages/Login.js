@@ -9,19 +9,13 @@ import {
   TextInput,
   ScrollView
 } from 'react-native';
- 
+
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class Login extends Component {
   render() {
     return (
         <ScrollView style={styles.scroll}>
-            <Container>
-                <Button 
-                    label="Forgot Login/Pass"
-                    styles={{button: styles.alignRight, label: styles.label}} 
-                    onPress={this.forgotPassHandler.bind(this)} />
-            </Container>
             <Container>
                 <Label text="Username or Email" />
                 <TextInput
@@ -35,29 +29,23 @@ export default class Login extends Component {
                     style={styles.textInput}
                 />
             </Container>
-            <Container>
-                <Button 
-                    styles={{button: styles.transparentButton}}
-                    onPress={this.signinFacebookHandler.bind(this)}
-                >
-                    <View style={styles.inline}>
-                        <Icon name="facebook-official" size={30} color="#3B5699" />
-                        <Text style={[styles.buttonBlueText, styles.buttonBigText]}>  Connect </Text> 
-                        <Text style={styles.buttonBlueText}>with Facebook</Text>
-                    </View>
-                </Button>
-            </Container>
             <View style={styles.footer}>
                 <Container>
-                    <Button 
+                    <Button
                         label="Sign In"
-                        styles={{button: styles.primaryButton, label: styles.buttonWhiteText}} 
+                        styles={{button: styles.primaryButton, label: styles.buttonWhiteText}}
                         onPress={this.signinHandler.bind(this)} />
                 </Container>
                 <Container>
-                    <Button 
+                    <Button
+                        label="Forgot Login/Pass"
+                        styles={{button: styles.primaryButton, label: styles.label}}
+                        onPress={this.forgotPassHandler.bind(this)} />
+                </Container>
+                <Container>
+                    <Button
                         label="CANCEL"
-                        styles={{label: styles.buttonBlackText}} 
+                        styles={{label: styles.buttonBlackText}}
                         onPress={this.cancelHandler.bind(this)} />
                 </Container>
             </View>
@@ -81,7 +69,7 @@ export default class Login extends Component {
   //execute any code here
     console.log('fb button pressed')
   }
-  
+
 }
 const styles = StyleSheet.create({
     scroll: {
@@ -90,16 +78,27 @@ const styles = StyleSheet.create({
         flexDirection: 'column'
     },
     label: {
-    color: '#0d8898',
-    fontSize: 18
+       width: 230,
+       flex: 1,
+       alignSelf: 'center',
+       textAlign: 'center',
+       fontSize: 20,
+       fontWeight: '600',
+       color: '#ffffff'
     },
     alignRight: {
         alignSelf: 'flex-end'
     },
     textInput: {
-        height: 40,
-        fontSize: 18,
-        backgroundColor: '#FFF'
+        width: 250,
+        color: '#555555',
+        padding: 10,
+        height: 50,
+        borderColor: '#32C5E6',
+        borderWidth: 1,
+        borderRadius: 4,
+        alignSelf: 'center',
+        backgroundColor: '#ffffff'
     },
     transparentButton: {
         marginTop: 30,
@@ -126,7 +125,14 @@ const styles = StyleSheet.create({
         color: '#595856'
     },
     primaryButton: {
-        backgroundColor: '#34A853'
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderWidth: 1,
+        borderRadius: 5,
+        borderColor: '#328FE6',
+        padding: 10,
+        marginTop: 10,
+        backgroundColor: '#32c5e6'
     },
     footer: {
         marginTop: 50
