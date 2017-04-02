@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import {
-  AppRegistry
+  AppRegistry,
 } from 'react-native';
  
 import Login from './src/pages/Login';
- 
+
 export default class TreeDexRN extends Component {
- 
+
   render() {
     return (
       <Login />

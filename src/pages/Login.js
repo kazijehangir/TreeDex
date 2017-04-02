@@ -50,7 +50,7 @@ export default class Login extends Component {
                 <Container>
                     <Button
                         label="CANCEL"
-                        styles={{label: styles.buttonBlackText}}
+                        styles={{label: styles.transparentButton}}
                         onPress={this.cancelHandler.bind(this)} />
                 </Container>
             </View>
@@ -64,11 +64,11 @@ export default class Login extends Component {
   }
   forgotPassHandler() {
   //execute any code here
-    console.log('forgot pass button pressed')
+    alert('forgot pass button pressed')
   }
   signinHandler() {
   //execute any code here
-    console.log('signin button pressed')
+    alert('signin button pressed')
   }
   signinFacebookHandler() {
   //execute any code here
@@ -78,7 +78,7 @@ export default class Login extends Component {
 }
 const styles = StyleSheet.create({
     scroll: {
-        backgroundColor: '#E1D7D8',
+        backgroundColor: '#E8D1E3',
         padding: 30,
         flexDirection: 'column'
     },
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
         color: '#555555',
         padding: 10,
         height: 50,
-        borderColor: '#32C5E6',
+        borderColor: '#E0AEFF',
         borderWidth: 1,
         borderRadius: 4,
         alignSelf: 'center',
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     },
     buttonBlueText: {
         fontSize: 18,
-        color: '#3B5699'
+        color: '#841584'
     },
     buttonBigText: {
         fontSize: 18,
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
         borderColor: '#328FE6',
         padding: 10,
         marginTop: 10,
-        backgroundColor: '#32c5e6'
+        backgroundColor: '#75F4FF'
     },
     footer: {
         marginTop: 50
