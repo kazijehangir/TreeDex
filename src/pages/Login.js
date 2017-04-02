@@ -10,7 +10,7 @@ import {
   ScrollView
 } from 'react-native';
 
-import Icon from 'react-native-vector-icons/FontAwesome';
+// import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class Login extends Component {
   render() {
