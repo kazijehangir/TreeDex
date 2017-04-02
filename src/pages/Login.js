@@ -44,7 +44,7 @@ export default class Login extends Component {
                 <Container>
                     <Button
                         label="Forgot Login/Pass"
-                        styles={{button: styles.primaryButton, label: styles.label}}
+                        styles={{button: styles.primaryButton, label: styles.buttonWhiteText}}
                         onPress={this.forgotPassHandler.bind(this)} />
                 </Container>
                 <Container>
@@ -77,9 +77,9 @@ export default class Login extends Component {
 
 }
 const styles = StyleSheet.create({
-    scroll: {
-        backgroundColor: '#E8D1E3',
-        padding: 30,
+     scroll: {
+        backgroundColor: '#ffffff',
+        padding: 15,
         flexDirection: 'column'
     },
     label: {
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
        textAlign: 'center',
        fontSize: 20,
        fontWeight: '600',
-       color: '#ffffff'
+       color: '#00695C'
     },
     alignRight: {
         alignSelf: 'flex-end'
@@ -99,16 +99,21 @@ const styles = StyleSheet.create({
         color: '#555555',
         padding: 10,
         height: 50,
-        borderColor: '#E0AEFF',
+        borderColor: '#00796B',
         borderWidth: 1,
         borderRadius: 4,
         alignSelf: 'center',
         backgroundColor: '#ffffff'
     },
     transparentButton: {
-        marginTop: 30,
-        borderColor: '#3B5699',
-        borderWidth: 2
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderWidth: 2,
+        borderRadius: 77,
+        borderColor: '#00695C',
+        padding: 10,
+        marginTop: 10,
+        backgroundColor: '#ffffff'
     },
     buttonBlueText: {
         fontSize: 18,
@@ -133,11 +138,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         borderWidth: 1,
-        borderRadius: 5,
+        borderRadius: 77,
         borderColor: '#328FE6',
         padding: 10,
-        marginTop: 10,
-        backgroundColor: '#75F4FF'
+        marginTop: 15,
+        backgroundColor: '#00897B'
     },
     footer: {
         marginTop: 50
