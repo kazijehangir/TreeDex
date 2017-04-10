@@ -7,14 +7,20 @@ import {
   View,
   TouchableHighlight,
   NavigationExperimental,
-  ScrollView
+  ScrollView,
+  Platform,
+  BackAndroid
 } from 'react-native';
 const {
  CardStack: NavigationCardStack,
+ Header: NavigationHeader,
  StateUtils: NavigationStateUtils
 } = NavigationExperimental
 
 const emailChangeHandler = ev => {
+  console.log(ev.nativeEvent.text)
+}
+const passwordChangeHandler = ev => {
   console.log(ev.nativeEvent.text)
 }
 const Button = ({title, onPress}) => (
@@ -51,7 +57,7 @@ const Login = ({ goBack, onPressSignIn }) => (
    <TextInput placeholder='Password'
     style={styles.passwordInput}
     secureTextEntry={true}
-    onChange={emailChangeHandler}></TextInput>
+    onChange={passwordChangeHandler}></TextInput>
    <Button title='Sign In' onPress={onPressSignIn} />
  </View>
 )
@@ -70,6 +76,16 @@ export default class TreeDexRN extends Component {
       super(props)
       this.state = {
         navState: NavReducer(undefined, {})
+      }
+      if (Platform.OS === 'android') {
+        BackAndroid.addEventListener('hardwareBackPress', () => {
+          if (this.state.navState.index > 0) {
+            this.handleBackAction()
+            return true
+          } else {
+            return false
+          }
+        })
       }
     }
     _handleAction (action) {
@@ -129,6 +145,7 @@ export default class TreeDexRN extends Component {
           renderScene={this._renderScene.bind(this)} />
       )
     }
+
 }
 function createReducer(initialState) {
   return (currentState = initialState, action) => {
