@@ -3,6 +3,7 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
+  TextInput,
   View,
   TouchableHighlight,
   NavigationExperimental,
@@ -13,16 +14,15 @@ const {
  StateUtils: NavigationStateUtils
 } = NavigationExperimental
 
-// import Login from './src/pages/Login';
-// import Home from './src/pages/Home'
-// import About from './src/pages/About'
-// import Contact from './src/pages/Contact'
+const emailChangeHandler = ev => {
+  console.log(ev.nativeEvent.text)
+}
 const Button = ({title, onPress}) => (
   <TouchableHighlight
     underlayColor='#EFEFEF'
     onPress={onPress}
     style={styles.button}>
-      <Text>{title}</Text>
+      <Text style={styles.buttonText}>{title}</Text>
   </TouchableHighlight>
 )
 const Home = ({ onPressRegister, onPressLogin}) => (
@@ -41,12 +41,30 @@ const Register = ({ onPress, goBack }) => (
    <Button onPress={goBack} title='Go Back' />
  </View>
 )
-const Login = ({ goBack }) => (
+const Login = ({ goBack, onPressSignIn }) => (
  <View style={styles.container}>
-   <Text style={styles.title} >Welcome back! Please log-in below.</Text>
    <Button title='Go Back' onPress={goBack} />
+   <Text style={styles.subtitle} >Welcome back! Please log-in below.</Text>
+   <TextInput placeholder='Email'
+    style={styles.emailInput}
+    onChange={emailChangeHandler}></TextInput>
+   <TextInput placeholder='Password'
+    style={styles.passwordInput}
+    secureTextEntry={true}
+    onChange={emailChangeHandler}></TextInput>
+   <Button title='Sign In' onPress={onPressSignIn} />
  </View>
 )
+
+const Main = ({ onPressQuests, onPressNews}) => (
+ <View style={styles.container}>
+   <Text style={styles.title} >TreeDex</Text>
+   <Text style={styles.subtitle}>This is the main page for the application.</Text>
+   <Button onPress={onPressQuests} title='Quests' />
+   <Button onPress={onPressNews} title='News' />
+ </View>
+)
+
 export default class TreeDexRN extends Component {
     constructor(props) {
       super(props)
@@ -83,7 +101,16 @@ export default class TreeDexRN extends Component {
       }
       if (key === 'Login') {
         return <Login
-                 goBack={ this.handleBackAction.bind(this)} />
+                 goBack={ this.handleBackAction.bind(this)}
+                 onPressSignIn={this._handleAction.bind(this,
+                 { type: 'push', key: 'Main' })} />
+      }
+      if (key === 'Main') {
+        return <Home
+                 onPressQuests={this._handleAction.bind(this,
+                 { type: 'push', key: 'Quests' })}
+                 onPressNews={this._handleAction.bind(this,
+                 { type: 'push', key: 'News'})} />
       }
     }
     _renderScene(props) {
@@ -102,12 +129,6 @@ export default class TreeDexRN extends Component {
           renderScene={this._renderScene.bind(this)} />
       )
     }
-    // render() {
-    //     return (
-    //       <Login />
-    //     );
-    // }
-
 }
 function createReducer(initialState) {
   return (currentState = initialState, action) => {
@@ -142,9 +163,9 @@ const styles = StyleSheet.create({
     marginTop: 100,
     textAlign: 'center'
   },
-  title: {
-    fontSize: 30,
-    marginTop: 50,
+  subtitle: {
+    fontSize: 16,
+    marginTop: 20,
     textAlign: 'center'
   },
   button: {
@@ -155,6 +176,21 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     marginRight: 20,
     backgroundColor: '#00796b'
+  },
+  buttonText: {
+    fontSize: 22,
+    color: '#FFFFFF',
+  },
+  emailInput: {
+    marginRight: 20,
+    marginLeft: 20,
+    alignItems: 'center'
+  },
+  passwordInput: {
+    marginRight: 20,
+    marginLeft: 20,
+    alignItems: 'center'
   }
+
 })
 AppRegistry.registerComponent('TreeDexRN', () => TreeDexRN);
