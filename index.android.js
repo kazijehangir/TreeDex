@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Text,
   TextInput,
+  Image,
   View,
   TouchableHighlight,
   NavigationExperimental,
@@ -13,8 +14,8 @@ import {
   BackAndroid
 } from 'react-native';
 var {height} = Dimensions.get('window')
-var greenboxheight = height*0.68
-var whiteboxheight = height*0.32
+var greenboxheight = height*0.65
+var whiteboxheight = height*0.35
 const {
  CardStack: NavigationCardStack,
  Header: NavigationHeader,
@@ -38,8 +39,13 @@ const Button = ({title, onPress}) => (
 const Home = ({ onPressRegister, onPressLogin}) => (
  <View style={styles.container}>
     <View style={styles.whitebox}>
-      <Text style={styles.title} >TreeDex</Text>
-      
+      <View style={styles.logoWrapper}>
+        <Image
+          source = {require('./android/app/src/main/res/mipmap-hdpi/ic_launcher.png')}
+          style={{width:70, height:70, marginTop: 70}}
+        />
+        <Text style={styles.title} >TreeDex</Text>
+      </View>
     </View>
     <View style={styles.greenbox}>
       <Text style={styles.subtitle}>TreeDex is a
@@ -185,12 +191,17 @@ const styles = StyleSheet.create({
   },
  container: {
     flex: 1,
+    alignItems: 'center',
     backgroundColor: '#F5FCFF',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   whitebox: {
     height: whiteboxheight,
     backgroundColor: '#F5FCFF'
+  },
+  logoWrapper:{
+    flexWrap: 'wrap',
+    flexDirection: 'row'
   },
   greenbox: {
     height: greenboxheight,
@@ -199,6 +210,7 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: 'Roboto',
     fontSize: 40,
+    color: '#004D40',
     marginTop: 75,
     textAlign: 'center'
   },
@@ -207,7 +219,16 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#F5FCFF',
     marginTop: 20,
-    textAlign: 'center'
+    textAlign: 'left',
+    marginLeft: 16,
+    marginRight: 16
+  },
+  welcomeLabel: {
+    fontFamily: 'Roboto',
+    fontSize: 33,
+    color: '#00796b',
+    marginTop: 40,
+    textAlign: 'left'
   },
   button: {
     height: 40,
