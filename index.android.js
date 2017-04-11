@@ -7,10 +7,14 @@ import {
   View,
   TouchableHighlight,
   NavigationExperimental,
+  Dimensions,
   ScrollView,
   Platform,
   BackAndroid
 } from 'react-native';
+var {height} = Dimensions.get('window')
+var greenboxheight = height*0.68
+var whiteboxheight = height*0.32
 const {
  CardStack: NavigationCardStack,
  Header: NavigationHeader,
@@ -33,12 +37,17 @@ const Button = ({title, onPress}) => (
 )
 const Home = ({ onPressRegister, onPressLogin}) => (
  <View style={styles.container}>
-   <Text style={styles.title} >TreeDex</Text>
-   <Text style={styles.subtitle}>TreeDex is a
-       complete repository for horticulture information.</Text>
-   <Button onPress={onPressLogin} title='Login' />
-   <Button onPress={onPressRegister} title='Register' />
- </View>
+    <View style={styles.whitebox}>
+      <Text style={styles.title} >TreeDex</Text>
+      
+    </View>
+    <View style={styles.greenbox}>
+      <Text style={styles.subtitle}>TreeDex is a
+        complete repository for horticulture information.</Text>
+      <Button onPress={onPressLogin} title='Login' />
+      <Button onPress={onPressRegister} title='Register' />    
+    </View>
+  </View>
 )
 const Register = ({ onPress, goBack }) => (
  <View style={styles.container}>
@@ -174,9 +183,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
     flex: 1
   },
-  container: {
+ container: {
     flex: 1,
+    backgroundColor: '#F5FCFF',
+    flexDirection: 'column'
+  },
+  whitebox: {
+    height: whiteboxheight,
     backgroundColor: '#F5FCFF'
+  },
+  greenbox: {
+    height: greenboxheight,
+    backgroundColor: '#00796b'
   },
   title: {
     fontSize: 40,
@@ -195,11 +213,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginLeft: 20,
     marginRight: 20,
-    backgroundColor: '#00796b'
+    backgroundColor: '#F5FCFF'
   },
   buttonText: {
     fontSize: 22,
-    color: '#FFFFFF',
+    color: '#00796b',
   },
   emailInput: {
     marginRight: 20,
