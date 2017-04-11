@@ -37,7 +37,7 @@ const Button = ({title, onPress}) => (
   </TouchableHighlight>
 )
 const Home = ({ onPressRegister, onPressLogin}) => (
- <View style={styles.container}>
+ <View style={styles.containerLogin}>
     <View style={styles.whitebox}>
       <View style={styles.logoWrapper}>
         <Image
@@ -48,7 +48,7 @@ const Home = ({ onPressRegister, onPressLogin}) => (
       </View>
     </View>
     <View style={styles.greenbox}>
-      <Text style={styles.subtitle}>TreeDex is a
+      <Text style={styles.subtitle1}>TreeDex is a
         complete repository for horticulture information.</Text>
       <Button onPress={onPressLogin} title='LOG IN' />
       <Button onPress={onPressRegister} title='REGISTER' />    
@@ -65,7 +65,7 @@ const Register = ({ onPress, goBack }) => (
 const Login = ({ goBack, onPressSignIn }) => (
  <View style={styles.container}>
    <Button title='Go Back' onPress={goBack} />
-   <Text style={styles.subtitle} >Welcome back! Please log-in below.</Text>
+   <Text style={styles.subtitle1} >Welcome back! Please log-in below.</Text>
    <TextInput placeholder='Email'
     style={styles.emailInput}
     onChange={emailChangeHandler}></TextInput>
@@ -191,9 +191,13 @@ const styles = StyleSheet.create({
   },
  container: {
     flex: 1,
-    alignItems: 'center',
     backgroundColor: '#F5FCFF',
-    flexDirection: 'column',
+  },
+  containerLogin: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF'
   },
   whitebox: {
     height: whiteboxheight,
@@ -214,14 +218,17 @@ const styles = StyleSheet.create({
     marginTop: 75,
     textAlign: 'center'
   },
-  subtitle: {
+    subtitle1: {
     fontFamily: 'Roboto',
+    textAlign: 'center',
     fontSize: 16,
     color: '#F5FCFF',
-    marginTop: 20,
-    textAlign: 'left',
-    marginLeft: 16,
-    marginRight: 16
+    marginTop: 20
+  },
+  subtitle: {
+    textAlign: 'center',
+    fontSize: 16,
+    marginTop: 20
   },
   welcomeLabel: {
     fontFamily: 'Roboto',
