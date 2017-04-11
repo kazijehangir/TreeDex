@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Card, Button } from 'react-native-material-design';
 import {
   AppRegistry,
   StyleSheet,
@@ -13,6 +14,7 @@ import {
   Platform,
   BackAndroid
 } from 'react-native';
+var {widthWindow} = Dimensions.get('window')
 var {height} = Dimensions.get('window')
 var greenboxheight = height*0.65
 var whiteboxheight = height*0.35
@@ -28,7 +30,7 @@ const emailChangeHandler = ev => {
 const passwordChangeHandler = ev => {
   console.log(ev.nativeEvent.text)
 }
-const Button = ({title, onPress}) => (
+const ButtonCustom = ({title, onPress}) => (
   <TouchableHighlight
     underlayColor='#EFEFEF'
     onPress={onPress}
@@ -50,21 +52,21 @@ const Home = ({ onPressRegister, onPressLogin}) => (
     <View style={styles.greenbox}>
       <Text style={styles.subtitle1}>TreeDex is a
         complete repository for horticulture information.</Text>
-      <Button onPress={onPressLogin} title='LOG IN' />
-      <Button onPress={onPressRegister} title='REGISTER' />    
+      <ButtonCustom onPress={onPressLogin} title='LOG IN' />
+      <ButtonCustom onPress={onPressRegister} title='REGISTER' />    
     </View>
   </View>
 )
 const Register = ({ onPress, goBack }) => (
  <View style={styles.container}>
    <Text style={styles.title}>Register as a new user</Text>
-   <Button onPress={onPress} title='Or go to Login' />
-   <Button onPress={goBack} title='Go Back' />
+   <ButtonCustom onPress={onPress} title='Or go to Login' />
+   <ButtonCustom onPress={goBack} title='Go Back' />
  </View>
 )
 const Login = ({ goBack, onPressSignIn }) => (
  <View style={styles.container}>
-   <Button title='Go Back' onPress={goBack} />
+   <ButtonCustom title='Go Back' onPress={goBack} />
    <Text style={styles.subtitle1} >Welcome back! Please log-in below.</Text>
    <TextInput placeholder='Email'
     style={styles.emailInput}
@@ -73,20 +75,37 @@ const Login = ({ goBack, onPressSignIn }) => (
     style={styles.passwordInput}
     secureTextEntry={true}
     onChange={passwordChangeHandler}></TextInput>
-   <Button title='Sign In' onPress={onPressSignIn} />
+   <ButtonCustom title='Sign In' onPress={onPressSignIn} />
  </View>
 )
 
 const Main = ({ onPressQuests, onPressNews}) => (
- <View style={styles.container}>
-   <Text style={styles.title} >TreeDex</Text>
-   <Text style={styles.subtitle}>This is the main page for the application.</Text>
-   <Button onPress={onPressQuests} title='Quests' />
-   <Button onPress={onPressNews} title='News' />
-   <Text style={styles.subtitle}>
-       Choose a category or swipe to your destination.</Text>
 
- </View>
+  <View>
+      <Card>
+          <Card.Media
+              height={200}
+              image={<Image source={require('./src/images/plant.jpg')} style={{width: widthWindow}}/>}
+              overlay
+          />
+          <Card.Body>
+              <Text style={styles.welcomeLabel}>There is Such a Thing as Plant Intelligence</Text>
+              <Text>Plants are capable of solving problems and learning from past experiences</Text>
+          </Card.Body>
+          <Card.Actions position="right">
+              <Button text="READ MORE" textColor="#00796b" />
+          </Card.Actions>
+      </Card>
+  </View>
+//  {/*<View style={styles.container}>
+//    <Text style={styles.title} >TreeDex</Text>
+//    <Text style={styles.subtitle}>This is the main page for the application.</Text>
+//    <Button onPress={onPressQuests} title='Quests' />
+//    <Button onPress={onPressNews} title='News' />
+//    <Text style={styles.subtitle}>
+//        Choose a category or swipe to your destination.</Text>
+
+//  </View>*/}
 )
 
 export default class TreeDexRN extends Component {
@@ -227,14 +246,14 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     textAlign: 'center',
-    fontSize: 16,
+    fontSize: 20,
     marginTop: 20
   },
   welcomeLabel: {
     fontFamily: 'Roboto',
-    fontSize: 33,
+    fontSize: 16,
     color: '#00796b',
-    marginTop: 40,
+    marginTop: 10,
     textAlign: 'left'
   },
   button: {
