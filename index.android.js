@@ -93,7 +93,7 @@ const Main = ({ onPressQuests, onPressNews}) => (
               <Text>Plants are capable of solving problems and learning from past experiences</Text>
           </Card.Body>
           <Card.Actions position="right">
-              <Button text="READ MORE" textColor="#00796b" />
+              <Button value="NORMAL FLAT" text="READ MORE" primary="paperTeal" />
           </Card.Actions>
       </Card>
   </View>
