@@ -68,6 +68,9 @@ const Main = ({ onPressQuests, onPressNews}) => (
    <Text style={styles.subtitle}>This is the main page for the application.</Text>
    <Button onPress={onPressQuests} title='Quests' />
    <Button onPress={onPressNews} title='News' />
+   <Text style={styles.subtitle}>
+       Choose a category or swipe to your destination.</Text>
+
  </View>
 )
 
@@ -122,7 +125,7 @@ export default class TreeDexRN extends Component {
                  { type: 'push', key: 'Main' })} />
       }
       if (key === 'Main') {
-        return <Home
+        return <Main
                  onPressQuests={this._handleAction.bind(this,
                  { type: 'push', key: 'Quests' })}
                  onPressNews={this._handleAction.bind(this,
