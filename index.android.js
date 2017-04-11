@@ -44,8 +44,8 @@ const Home = ({ onPressRegister, onPressLogin}) => (
     <View style={styles.greenbox}>
       <Text style={styles.subtitle}>TreeDex is a
         complete repository for horticulture information.</Text>
-      <Button onPress={onPressLogin} title='Login' />
-      <Button onPress={onPressRegister} title='Register' />    
+      <Button onPress={onPressLogin} title='LOG IN' />
+      <Button onPress={onPressRegister} title='REGISTER' />    
     </View>
   </View>
 )
@@ -197,26 +197,34 @@ const styles = StyleSheet.create({
     backgroundColor: '#00796b'
   },
   title: {
+    fontFamily: 'Roboto',
     fontSize: 40,
-    marginTop: 100,
+    marginTop: 75,
     textAlign: 'center'
   },
   subtitle: {
+    fontFamily: 'Roboto',
     fontSize: 16,
+    color: '#F5FCFF',
     marginTop: 20,
     textAlign: 'center'
   },
   button: {
-    height: 70,
+    height: 40,
+    elevation: 4,
+    borderRadius: 2,
     marginTop: 20,
     justifyContent: 'center',
     alignItems: 'center',
-    marginLeft: 20,
-    marginRight: 20,
+    marginLeft: 16,
+    marginRight: 16,
     backgroundColor: '#F5FCFF'
   },
   buttonText: {
-    fontSize: 22,
+    textAlign: 'center',
+    padding: 8,
+    fontWeight: '500',
+    fontSize: 16,
     color: '#00796b',
   },
   emailInput: {
