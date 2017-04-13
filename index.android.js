@@ -61,7 +61,6 @@ const Login = ({ goBack, onPressSignIn }) => (
    <Button title='Sign In' onPress={onPressSignIn} />
  </View>
 )
-
 const Main = ({ onPressQuests, onPressNews}) => (
  <View style={styles.container}>
    <Text style={styles.title} >TreeDex</Text>
@@ -140,15 +139,70 @@ export default class TreeDexRN extends Component {
           </ScrollView>
         );
     }
+    _renderTitleComponent(props) {
+      return (
+        <NavigationHeader.Title>
+          {props.scene.route.key}
+        </NavigationHeader.Title>
+      );
+    }
+    _renderHeader = (sceneProps) => {
+        // <Header
+        //   style={styles.navHeader}
+        //   backnavigate={this.handleBackAction}
+        //   {...sceneProps}
+        // />
+        const route = sceneProps.scene.route
+        if (route.key == 'Home' || route.key == 'Main')
+          return null // Here we skip header on home and main screen
+        // Next, we remove back navigation on second screen (optional)
+        const onNavigateBack =
+          sceneProps.scene.index > 1 ? this.handleBackAction : undefined
+        return (
+            <NavigationHeader
+                {...sceneProps}
+                renderTitleComponent={this._renderTitleComponent}
+                onNavigateBack={this._handleBackAction}
+            />
+        // TODO: fix handleBackAction functionality
+        )
+    }
     render() {
       return (
         <NavigationCardStack
           navigationState={this.state.navState}
           onNavigate={this._handleAction.bind(this)}
-          renderScene={this._renderScene.bind(this)} />
+          renderScene={this._renderScene.bind(this)}
+          renderHeader={this._renderHeader} />
       )
     }
-
+}
+class Header extends Component {
+  _back = () => {
+    this.props.backnavigate();
+  }
+  _renderTitleComponent = (props) => {
+    return (
+      <NavigationHeader.Title>
+        {props.scene.route.key}
+      </NavigationHeader.Title>
+    );
+  }
+  render() {
+      const route = this.props.scene.route
+      if (route.key == 'Home' || route.key == 'Main')
+        return null // Here we skip header on home and main screen
+      // Next, we remove back navigation on second screen (optional)
+      const onNavigateBack =
+        this.props.scene.index > 1 ? this._back : undefined
+      return (
+          <NavigationHeader
+              {...this.props}
+              renderTitleComponent={this._renderTitleComponent}
+              onNavigateBack={this._back}
+          />
+      )
+   }
 }
 function createReducer(initialState) {
   return (currentState = initialState, action) => {
@@ -170,6 +224,9 @@ const NavReducer = createReducer({
   routes: [{key: 'Home'}]
 })
 const styles = StyleSheet.create({
+  navHeader: {
+    backgroundColor: '#00796b'
+  },
   scrollView: {
     backgroundColor: '#F5FCFF',
     flex: 1
@@ -210,7 +267,8 @@ const styles = StyleSheet.create({
     marginRight: 20,
     marginLeft: 20,
     alignItems: 'center'
-  }
+  },
+
 
 })
 AppRegistry.registerComponent('TreeDexRN', () => TreeDexRN);
