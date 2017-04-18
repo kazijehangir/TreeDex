@@ -18,6 +18,8 @@ var {widthWindow} = Dimensions.get('window')
 var {height} = Dimensions.get('window')
 var greenboxheight = height*0.65
 var whiteboxheight = height*0.35
+// TODO: Jehangir: figure out a more elegant way
+    // for the above calculation and variables
 const {
  CardStack: NavigationCardStack,
  Header: NavigationHeader,
@@ -53,7 +55,7 @@ const Home = ({ onPressRegister, onPressLogin}) => (
       <Text style={styles.subtitle1}>TreeDex is a
         complete repository for horticulture information.</Text>
       <ButtonCustom onPress={onPressLogin} title='LOG IN' />
-      <ButtonCustom onPress={onPressRegister} title='REGISTER' />    
+      <ButtonCustom onPress={onPressRegister} title='REGISTER' />
     </View>
   </View>
 )
@@ -78,34 +80,35 @@ const Login = ({ goBack, onPressSignIn }) => (
    <ButtonCustom title='Sign In' onPress={onPressSignIn} />
  </View>
 )
-const Main = ({ onPressQuests, onPressNews}) => (
-
-  <View>
-      <Card>
-          <Card.Media
-              height={200}
-              image={<Image source={require('./src/images/plant.jpg')} style={{width: widthWindow}}/>}
-              overlay
-          />
-          <Card.Body>
-              <Text style={styles.welcomeLabel}>There is Such a Thing as Plant Intelligence</Text>
-              <Text>Plants are capable of solving problems and learning from past experiences</Text>
-          </Card.Body>
-          <Card.Actions position="right">
-              <Button value="NORMAL FLAT" text="READ MORE" primary="paperTeal" />
-          </Card.Actions>
-      </Card>
-  </View>
-//  {/*<View style={styles.container}>
-//    <Text style={styles.title} >TreeDex</Text>
-//    <Text style={styles.subtitle}>This is the main page for the application.</Text>
-//    <Button onPress={onPressQuests} title='Quests' />
-//    <Button onPress={onPressNews} title='News' />
-//    <Text style={styles.subtitle}>
-//        Choose a category or swipe to your destination.</Text>
-
-//  </View>*/}
-)
+// const Main = ({ onPressQuests, onPressNews}) => (
+//
+//   <View>
+//       <Card>
+//           <Card.Media
+//               height={200}
+//               image={<Image source={require('./src/images/plant.jpg')} style={{width: widthWindow}}/>}
+//               overlay
+//           />
+//           <Card.Body>
+//               <Text style={styles.welcomeLabel}>There is Such a Thing as Plant Intelligence</Text>
+//               <Text>Plants are capable of solving problems and learning from past experiences</Text>
+//           </Card.Body>
+//           <Card.Actions position="right">
+//               <Button value="NORMAL FLAT" text="READ MORE" primary="paperTeal" />
+//           </Card.Actions>
+//       </Card>
+//   </View>
+// //  {/*<View style={styles.container}>
+// //    <Text style={styles.title} >TreeDex</Text>
+// //    <Text style={styles.subtitle}>This is the main page for the application.</Text>
+// //    <Button onPress={onPressQuests} title='Quests' />
+// //    <Button onPress={onPressNews} title='News' />
+// //    <Text style={styles.subtitle}>
+// //        Choose a category or swipe to your destination.</Text>
+//
+// //  </View>*/}
+// )
+import Main from './src/pages/Main'
 
 export default class TreeDexRN extends Component {
     constructor(props) {
@@ -198,7 +201,7 @@ export default class TreeDexRN extends Component {
                 renderTitleComponent={this._renderTitleComponent}
                 onNavigateBack={this._handleBackAction}
             />
-        // TODO: fix handleBackAction functionality
+        // TODO: Jehangir: fix handleBackAction functionality
         )
     }
     render() {
