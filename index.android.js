@@ -26,88 +26,10 @@ const {
  StateUtils: NavigationStateUtils
 } = NavigationExperimental
 
-const emailChangeHandler = ev => {
-  console.log(ev.nativeEvent.text)
-}
-const passwordChangeHandler = ev => {
-  console.log(ev.nativeEvent.text)
-}
-const ButtonCustom = ({title, onPress}) => (
-  <TouchableHighlight
-    underlayColor='#EFEFEF'
-    onPress={onPress}
-    style={styles.button}>
-      <Text style={styles.buttonText}>{title}</Text>
-  </TouchableHighlight>
-)
-const Home = ({ onPressRegister, onPressLogin}) => (
- <View style={styles.containerLogin}>
-    <View style={styles.whitebox}>
-      <View style={styles.logoWrapper}>
-        <Image
-          source = {require('./android/app/src/main/res/mipmap-hdpi/ic_launcher.png')}
-          style={{width:70, height:70, marginTop: 70}}
-        />
-        <Text style={styles.title} >TreeDex</Text>
-      </View>
-    </View>
-    <View style={styles.greenbox}>
-      <Text style={styles.subtitle1}>TreeDex is a
-        complete repository for horticulture information.</Text>
-      <ButtonCustom onPress={onPressLogin} title='LOG IN' />
-      <ButtonCustom onPress={onPressRegister} title='REGISTER' />
-    </View>
-  </View>
-)
-const Register = ({ onPress, goBack }) => (
- <View style={styles.container}>
-   <Text style={styles.title}>Register as a new user</Text>
-   <ButtonCustom onPress={onPress} title='Or go to Login' />
-   <ButtonCustom onPress={goBack} title='Go Back' />
- </View>
-)
-const Login = ({ goBack, onPressSignIn }) => (
- <View style={styles.container}>
-   <ButtonCustom title='Go Back' onPress={goBack} />
-   <Text style={styles.subtitle1} >Welcome back! Please log-in below.</Text>
-   <TextInput placeholder='Email'
-    style={styles.emailInput}
-    onChange={emailChangeHandler}></TextInput>
-   <TextInput placeholder='Password'
-    style={styles.passwordInput}
-    secureTextEntry={true}
-    onChange={passwordChangeHandler}></TextInput>
-   <ButtonCustom title='Sign In' onPress={onPressSignIn} />
- </View>
-)
-// const Main = ({ onPressQuests, onPressNews}) => (
-//
-//   <View>
-//       <Card>
-//           <Card.Media
-//               height={200}
-//               image={<Image source={require('./src/images/plant.jpg')} style={{width: widthWindow}}/>}
-//               overlay
-//           />
-//           <Card.Body>
-//               <Text style={styles.welcomeLabel}>There is Such a Thing as Plant Intelligence</Text>
-//               <Text>Plants are capable of solving problems and learning from past experiences</Text>
-//           </Card.Body>
-//           <Card.Actions position="right">
-//               <Button value="NORMAL FLAT" text="READ MORE" primary="paperTeal" />
-//           </Card.Actions>
-//       </Card>
-//   </View>
-// //  {/*<View style={styles.container}>
-// //    <Text style={styles.title} >TreeDex</Text>
-// //    <Text style={styles.subtitle}>This is the main page for the application.</Text>
-// //    <Button onPress={onPressQuests} title='Quests' />
-// //    <Button onPress={onPressNews} title='News' />
-// //    <Text style={styles.subtitle}>
-// //        Choose a category or swipe to your destination.</Text>
-//
-// //  </View>*/}
-// )
+
+import Home from './src/pages/Home'
+import Register from './src/pages/Register'
+import Login from './src/pages/Login'
 import Main from './src/pages/Main'
 
 export default class TreeDexRN extends Component {

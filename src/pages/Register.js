@@ -114,24 +114,12 @@ const styles = StyleSheet.create({
 
 
 })
-const emailChangeHandler = ev => {
-  console.log(ev.nativeEvent.text)
-}
-const passwordChangeHandler = ev => {
-  console.log(ev.nativeEvent.text)
-}
 
-export default ({ goBack, onPressSignIn }) => (
+
+export default ({ onPress, goBack }) => (
  <View style={styles.container}>
-   <ButtonCustom title='Go Back' onPress={goBack} />
-   <Text style={styles.subtitle1} >Welcome back! Please log-in below.</Text>
-   <TextInput placeholder='Email'
-    style={styles.emailInput}
-    onChange={emailChangeHandler}></TextInput>
-   <TextInput placeholder='Password'
-    style={styles.passwordInput}
-    secureTextEntry={true}
-    onChange={passwordChangeHandler}></TextInput>
-   <ButtonCustom title='Sign In' onPress={onPressSignIn} />
+   <Text style={styles.title}>Register as a new user</Text>
+   <ButtonCustom onPress={onPress} title='Or go to Login' />
+   <ButtonCustom onPress={goBack} title='Go Back' />
  </View>
 )
