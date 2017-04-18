@@ -219,7 +219,7 @@ const styles = StyleSheet.create({
     marginTop: 75,
     textAlign: 'center'
   },
-    subtitle1: {
+  subtitle1: {
     fontFamily: 'Roboto',
     textAlign: 'center',
     fontSize: 16,
