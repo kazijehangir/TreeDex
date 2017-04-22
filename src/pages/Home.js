@@ -27,7 +27,7 @@ export default ({ onPressRegister, onPressLogin}) => (
     <View style={containerStyles.greenbox}>
        <Image
           source = {require('../images/background1.jpg')}
-          style={{width:Constants.width, height:Constants.greenboxheight}}>
+          style={{width: null, height:Constants.greenboxheight, alignSelf: 'stretch'}}>
         
         <Text style={textStyles.subtitle1}>TreeDex is a
           complete repository for horticulture information.</Text>

@@ -28,6 +28,8 @@ export default StyleSheet.create({
   },
   greenbox: {
     height: Constants.greenboxheight,
+    alignSelf: 'stretch',
+    width: null,
     backgroundColor: '#00796b'
   },
 })
