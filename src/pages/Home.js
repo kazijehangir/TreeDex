@@ -7,7 +7,7 @@ import {
   Image,
   View,
 } from 'react-native';
-
+import Constants from '../Constants'
 import ButtonCustom from '../components/ButtonCustom'
 
 import textStyles from '../styles/Text'
@@ -25,10 +25,15 @@ export default ({ onPressRegister, onPressLogin}) => (
       </View>
     </View>
     <View style={containerStyles.greenbox}>
-      <Text style={textStyles.subtitle1}>TreeDex is a
-        complete repository for horticulture information.</Text>
-      <ButtonCustom onPress={onPressLogin} title='LOG IN' />
-      <ButtonCustom onPress={onPressRegister} title='REGISTER' />
+       <Image
+          source = {require('../images/background1.jpg')}
+          style={{width:Constants.width, height:Constants.greenboxheight}}>
+        
+        <Text style={textStyles.subtitle1}>TreeDex is a
+          complete repository for horticulture information.</Text>
+        <ButtonCustom onPress={onPressLogin} title='LOG IN' backgroundColor='#F5FCFF' />
+        <ButtonCustom onPress={onPressRegister} title='REGISTER' backgroundColor='#F5FCFF' />
+      </Image>
     </View>
   </View>
 )

@@ -5,8 +5,8 @@ import {
 export default StyleSheet.create({
   title: {
     fontFamily: 'Roboto',
-    fontSize: 40,
-    color: '#004D40',
+    fontSize: 50,
+    color: '#21b48c',
     marginTop: 75,
     textAlign: 'center'
   },
