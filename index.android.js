@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Button } from 'react-native-material-design';
+// import { Card, Button } from 'react-native-material-design';
 import {
   AppRegistry,
   StyleSheet,
