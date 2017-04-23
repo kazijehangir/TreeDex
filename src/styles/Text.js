@@ -20,6 +20,7 @@ export default StyleSheet.create({
   },
   subtitle: {
     textAlign: 'center',
+    color: Colors.primary,
     fontSize: 20,
     marginTop: 20
   },
