@@ -18,6 +18,17 @@ const passwordChangeHandler = ev => {
   // console.log(ev.nativeEvent.text)
 }
 
+// Initialize Firebase
+ // var config = {
+ //   apiKey: "AIzaSyB_lkRcCsN5y5jtCNE0sPUD-kb0rhQHYjE",
+ //   authDomain: "treedex-4e602.firebaseapp.com",
+ //   databaseURL: "https://treedex-4e602.firebaseio.com",
+ //   projectId: "treedex-4e602",
+ //   storageBucket: "treedex-4e602.appspot.com",
+ //   messagingSenderId: "1031584636567"
+ // };
+ // firebase.initializeApp(config);
+
 export default ({ goBack, onPressSignIn }) => (
  <View style={containerStyles.container}>
    <Text style={textStyles.subtitle} >Welcome back! Please log-in below.</Text>
