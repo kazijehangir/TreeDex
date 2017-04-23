@@ -17,10 +17,12 @@ import {
 import containerStyles from '../styles/Container'
 import textStyles from '../styles/Text'
 import ButtonCustom from '../components/ButtonCustom'
+import ButtonSquare from '../components/ButtonSquare'
 
 export default () => (
  <View style={containerStyles.container}>
    <Text style={textStyles.title}>This is the explore page</Text>
    <ButtonCustom onPress={console.log('button pressed')} title='sample button' />
+
  </View>
 )
