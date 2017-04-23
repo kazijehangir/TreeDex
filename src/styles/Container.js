@@ -4,6 +4,8 @@ import {
 import Constants from '../Constants'
 
 export default StyleSheet.create({
+  swiper: {
+  },
   scrollView: {
     backgroundColor: '#F5FCFF',
     flex: 1

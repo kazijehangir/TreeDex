@@ -25,7 +25,7 @@ const {
 import Home from './src/pages/Home'
 import Register from './src/pages/Register'
 import Login from './src/pages/Login'
-import Main from './src/pages/Main'
+import MainSwiper from './src/pages/MainSwiper'
 import containerStyles from './src/styles/Container'
 
 export default class TreeDexRN extends Component {
@@ -76,10 +76,10 @@ export default class TreeDexRN extends Component {
         return <Login
                  goBack={ this.handleBackAction.bind(this)}
                  onPressSignIn={this._handleAction.bind(this,
-                 { type: 'push', key: 'Main' })} />
+                 { type: 'push', key: 'MainSwiper' })} />
       }
-      if (key === 'Main') {
-        return <Main
+      if (key === 'MainSwiper') {
+        return <MainSwiper
                  onPressQuests={this._handleAction.bind(this,
                  { type: 'push', key: 'Quests' })}
                  onPressNews={this._handleAction.bind(this,

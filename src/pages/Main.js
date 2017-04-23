@@ -7,6 +7,7 @@ import {
   View,
   ScrollView,
 } from 'react-native';
+
 import Constants from '../Constants'
 import textStyles from '../styles/Text'
 
