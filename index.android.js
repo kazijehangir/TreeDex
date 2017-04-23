@@ -129,8 +129,15 @@ export default class TreeDexRN extends Component {
         )
     }
     render() {
+      direction = 'horizontal'
+      if (this.state.navState.routes
+            [this.state.navState.routes.length - 1]
+            .key === 'Profile') {
+        direction = 'vertical'
+      }
       return (
         <NavigationCardStack
+          direction={direction}
           navigationState={this.state.navState}
           onNavigate={this._handleAction.bind(this)}
           renderScene={this._renderScene.bind(this)}

@@ -27,10 +27,10 @@ export default ({ onPressQuests, onPressNews, onPressProfile}) => (
       </Card.Body>
       <Card.Actions position="right">
         <Button value="NORMAL FLAT" text="READ MORE" primary="paperTeal" />
-        
+
       </Card.Actions>
     </Card>
     <ButtonCustom onPress={onPressProfile} title='Profile' backgroundColor='#F5FCFF' />
-    
+
   </View>
 )
