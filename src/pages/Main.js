@@ -11,6 +11,7 @@ import {
 import Constants from '../Constants'
 import textStyles from '../styles/Text'
 import containerStyles from '../styles/Container'
+import ButtonCustom from '../components/ButtonCustom'
 
 export default ({ onPressQuests, onPressNews, onPressProfile}) => (
   <View>
@@ -26,9 +27,10 @@ export default ({ onPressQuests, onPressNews, onPressProfile}) => (
       </Card.Body>
       <Card.Actions position="right">
         <Button value="NORMAL FLAT" text="READ MORE" primary="paperTeal" />
-        <ButtonCustom onPress={onPressLogin} title='Profile' backgroundColor='#F5FCFF' />
         
       </Card.Actions>
     </Card>
+    <ButtonCustom onPress={onPressProfile} title='Profile' backgroundColor='#F5FCFF' />
+        
   </View>
 )

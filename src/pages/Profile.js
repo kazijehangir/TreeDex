@@ -15,7 +15,7 @@ export default ({ onPressQuests, onPressNews}) => (
     <Card>
       <Card.Media
         height={200}
-        image={<Image source={require('../images/plant.jpg')} style={{width: Constants.widthWindow}}/>}
+        image={<Image source={require('../images/background.jpg')} style={{width: Constants.widthWindow}}/>}
         overlay
       />
       <Card.Body>
