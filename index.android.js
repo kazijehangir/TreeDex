@@ -26,6 +26,7 @@ import Home from './src/pages/Home'
 import Register from './src/pages/Register'
 import Login from './src/pages/Login'
 import Main from './src/pages/Main'
+import Profile from './src/pages/Profile'
 import containerStyles from './src/styles/Container'
 
 export default class TreeDexRN extends Component {
@@ -84,6 +85,11 @@ export default class TreeDexRN extends Component {
                  { type: 'push', key: 'Quests' })}
                  onPressNews={this._handleAction.bind(this,
                  { type: 'push', key: 'News'})} />
+      }
+      if (key === 'Main') {
+        return <Main
+                 onPressProfile={this._handleAction.bind(this,
+                 { type: 'push' key: 'Profile'})} />
       }
     }
     _renderScene(props) {

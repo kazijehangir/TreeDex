@@ -10,7 +10,7 @@ import {
 import Constants from '../Constants'
 import textStyles from '../styles/Text'
 
-export default ({ onPressQuests, onPressNews}) => (
+export default ({ onPressQuests, onPressNews, onPressProfile}) => (
   <View>
     <Card>
       <Card.Media
@@ -24,6 +24,8 @@ export default ({ onPressQuests, onPressNews}) => (
       </Card.Body>
       <Card.Actions position="right">
         <Button value="NORMAL FLAT" text="READ MORE" primary="paperTeal" />
+        <ButtonCustom onPress={onPressLogin} title='Profile' backgroundColor='#F5FCFF' />
+        
       </Card.Actions>
     </Card>
   </View>
