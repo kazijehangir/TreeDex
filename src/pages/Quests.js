@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import {
   AppRegistry,
   StyleSheet,
@@ -21,8 +22,8 @@ import ButtonSquare from '../components/ButtonSquare'
 
 export default () => (
  <View style={containerStyles.container}>
-   <Text style={textStyles.title}>This is the Quests page</Text>
-   <ButtonCustom onPress={console.log('button pressed')} title='sample button' />
-  
+   {/*<Text style={textStyles.title}>This is the Quests page</Text>
+   <ButtonCustom onPress={console.log('button pressed')} title='sample button' />*/}
+    
  </View>  
 )

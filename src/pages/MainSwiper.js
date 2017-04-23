@@ -16,7 +16,7 @@ export default ({ onPressQuests, onPressNews, onPressProfile}) => (
         <ExplorePage
              
             onPressNews={onPressNews}
-             onPressQuests={onPressQuests}
+            onPressQuests={onPressQuests}
         />
     </Swiper>
 
