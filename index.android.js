@@ -102,11 +102,6 @@ export default class TreeDexRN extends Component {
       );
     }
     _renderHeader = (sceneProps) => {
-        // <Header
-        //   style={styles.navHeader}
-        //   backnavigate={this.handleBackAction}
-        //   {...sceneProps}
-        // />
         const route = sceneProps.scene.route
         if (route.key == 'Home' || route.key == 'Main')
           return null // Here we skip header on home and main screen
@@ -117,9 +112,8 @@ export default class TreeDexRN extends Component {
             <NavigationHeader
                 {...sceneProps}
                 renderTitleComponent={this._renderTitleComponent}
-                onNavigateBack={this._handleBackAction}
+                onNavigateBack={this.handleBackAction.bind(this)}
             />
-        // TODO: Jehangir: fix handleBackAction functionality
         )
     }
     render() {

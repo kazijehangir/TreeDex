@@ -25,7 +25,7 @@ export default ({ onPressRegister, onPressLogin}) => (
       </View>
     </View>
     <View style={containerStyles.greenbox}>
-      <Text style={textStyles.subtitle1}>TreeDex is a
+      <Text style={textStyles.subtitle1}>TreeDex is an awesomely
         complete repository for horticulture information.</Text>
       <ButtonCustom onPress={onPressLogin} title='LOG IN' />
       <ButtonCustom onPress={onPressRegister} title='REGISTER' />
