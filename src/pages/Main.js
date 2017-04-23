@@ -7,8 +7,10 @@ import {
   View,
   ScrollView,
 } from 'react-native';
+
 import Constants from '../Constants'
 import textStyles from '../styles/Text'
+import containerStyles from '../styles/Container'
 
 export default ({ onPressQuests, onPressNews, onPressProfile}) => (
   <View>

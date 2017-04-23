@@ -25,8 +25,12 @@ const {
 import Home from './src/pages/Home'
 import Register from './src/pages/Register'
 import Login from './src/pages/Login'
+<<<<<<< HEAD
 import Main from './src/pages/Main'
 import Profile from './src/pages/Profile'
+=======
+import MainSwiper from './src/pages/MainSwiper'
+>>>>>>> 0b49cf0f83caeeeecc11ca96231af3a6a71e5b0f
 import containerStyles from './src/styles/Container'
 
 export default class TreeDexRN extends Component {
@@ -77,10 +81,10 @@ export default class TreeDexRN extends Component {
         return <Login
                  goBack={ this.handleBackAction.bind(this)}
                  onPressSignIn={this._handleAction.bind(this,
-                 { type: 'push', key: 'Main' })} />
+                 { type: 'push', key: 'MainSwiper' })} />
       }
-      if (key === 'Main') {
-        return <Main
+      if (key === 'MainSwiper') {
+        return <MainSwiper
                  onPressQuests={this._handleAction.bind(this,
                  { type: 'push', key: 'Quests' })}
                  onPressNews={this._handleAction.bind(this,
@@ -108,13 +112,8 @@ export default class TreeDexRN extends Component {
       );
     }
     _renderHeader = (sceneProps) => {
-        // <Header
-        //   style={styles.navHeader}
-        //   backnavigate={this.handleBackAction}
-        //   {...sceneProps}
-        // />
         const route = sceneProps.scene.route
-        if (route.key == 'Home' || route.key == 'Main')
+        if (route.key == 'Home' || route.key == 'MainSwiper')
           return null // Here we skip header on home and main screen
         // Next, we remove back navigation on second screen (optional)
         const onNavigateBack =
@@ -123,9 +122,8 @@ export default class TreeDexRN extends Component {
             <NavigationHeader
                 {...sceneProps}
                 renderTitleComponent={this._renderTitleComponent}
-                onNavigateBack={this._handleBackAction}
+                onNavigateBack={this.handleBackAction.bind(this)}
             />
-        // TODO: Jehangir: fix handleBackAction functionality
         )
     }
     render() {

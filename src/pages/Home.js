@@ -27,7 +27,7 @@ export default ({ onPressRegister, onPressLogin}) => (
        <Image
           source = {require('../images/background1.jpg')}
           style={{width: null, height:Constants.greenboxheight, alignSelf: 'stretch'}}>
-        
+
         <Text style={textStyles.subtitle1}>TreeDex is a
           complete repository for horticulture information.</Text>
         <ButtonCustom onPress={onPressLogin} title='LOG IN' backgroundColor='#F5FCFF' />
