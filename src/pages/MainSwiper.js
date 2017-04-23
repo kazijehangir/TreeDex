@@ -12,11 +12,10 @@ export default ({ onPressQuests, onPressNews, onPressProfile}) => (
         showsButtons={true} loop={false} index={1}>
         <FriendsPage/>
         <MainPage
-         
-          onPressNews={onPressNews} />
+         onPressProfile={onPressProfile} />
         <ExplorePage
-             onPressProfile={onPressProfile} 	
-            
+             
+            onPressNews={onPressNews}
              onPressQuests={onPressQuests}
         />
     </Swiper>
