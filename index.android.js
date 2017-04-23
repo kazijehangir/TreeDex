@@ -103,7 +103,7 @@ export default class TreeDexRN extends Component {
     }
     _renderHeader = (sceneProps) => {
         const route = sceneProps.scene.route
-        if (route.key == 'Home' || route.key == 'Main')
+        if (route.key == 'Home' || route.key == 'MainSwiper')
           return null // Here we skip header on home and main screen
         // Next, we remove back navigation on second screen (optional)
         const onNavigateBack =

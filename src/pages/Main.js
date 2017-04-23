@@ -10,9 +10,10 @@ import {
 
 import Constants from '../Constants'
 import textStyles from '../styles/Text'
+import containerStyles from '../styles/Container'
 
 export default ({ onPressQuests, onPressNews}) => (
-  <View>
+  <View style={containerStyles.container}>
     <Card>
       <Card.Media
         height={200}

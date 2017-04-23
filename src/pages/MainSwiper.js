@@ -5,10 +5,11 @@ import FriendsPage from './Friends'
 import ExplorePage from './Explore'
 import MainPage from './Main'
 
-import StylesContainer from '../styles/Container'
+import containerStyles from '../styles/Container'
 
 export default ({ onPressQuests, onPressNews}) => (
-    <Swiper style={StylesContainer.swiper} showsButtons={true} loop={false} index={1}>
+    <Swiper style={containerStyles.swiper}
+        showsButtons={true} loop={false} index={1}>
         <FriendsPage/>
         <MainPage
           onPressQuests={onPressQuests}

@@ -1,12 +1,13 @@
 import {
   StyleSheet,
 } from 'react-native';
+import Colors from '../Colors'
 
 export default StyleSheet.create({
   title: {
     fontFamily: 'Roboto',
     fontSize: 50,
-    color: '#21b48c',
+    color: Colors.primaryLight,
     marginTop: 75,
     textAlign: 'center'
   },
@@ -14,7 +15,7 @@ export default StyleSheet.create({
     fontFamily: 'Roboto',
     textAlign: 'center',
     fontSize: 16,
-    color: '#F5FCFF',
+    color: Colors.background,
     marginTop: 20
   },
   subtitle: {
@@ -25,7 +26,7 @@ export default StyleSheet.create({
   welcomeLabel: {
     fontFamily: 'Roboto',
     fontSize: 16,
-    color: '#00796b',
+    color: Colors.primary,
     marginTop: 10,
     textAlign: 'left'
   }
