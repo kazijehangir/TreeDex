@@ -1,6 +1,7 @@
 import {
   StyleSheet,
 } from 'react-native';
+import Colors from '../Colors'
 
 export default StyleSheet.create({
   button: {
@@ -12,13 +13,13 @@ export default StyleSheet.create({
     alignItems: 'center',
     marginLeft: 16,
     marginRight: 16,
-    backgroundColor: '#F5FCFF'
+    backgroundColor: Colors.background
   },
   buttonText: {
     textAlign: 'center',
     padding: 8,
     fontWeight: '500',
     fontSize: 16,
-    color: '#00796b',
+    color: Colors.primary,
   },
 })

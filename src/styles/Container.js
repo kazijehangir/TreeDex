@@ -2,25 +2,28 @@ import {
   StyleSheet,
 } from 'react-native';
 import Constants from '../Constants'
+import Colors from '../Colors'
 
 export default StyleSheet.create({
+  swiper: {
+  },
   scrollView: {
-    backgroundColor: '#F5FCFF',
+    backgroundColor: Colors.background,
     flex: 1
   },
   container: {
     flex: 1,
-    backgroundColor: '#F5FCFF',
+    backgroundColor: Colors.background,
   },
   containerLogin: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF'
+    backgroundColor: Colors.background
   },
   whitebox: {
     height: Constants.whiteboxheight,
-    backgroundColor: '#F5FCFF'
+    backgroundColor: Colors.background
   },
   logoWrapper:{
     flexWrap: 'wrap',
@@ -30,6 +33,6 @@ export default StyleSheet.create({
     height: Constants.greenboxheight,
     alignSelf: 'stretch',
     width: null,
-    backgroundColor: '#00796b'
+    backgroundColor: Colors.primary
   },
 })
