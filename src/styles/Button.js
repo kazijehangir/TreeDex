@@ -4,10 +4,10 @@ import {
 
 export default StyleSheet.create({
   button: {
-    height: 40,
-    elevation: 4,
-    borderRadius: 2,
-    marginTop: 20,
+    height: 45,
+    elevation: 8,
+    borderRadius: 50,
+    marginTop: 35,
     justifyContent: 'center',
     alignItems: 'center',
     marginLeft: 16,
