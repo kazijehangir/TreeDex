@@ -8,8 +8,8 @@ export default StyleSheet.create({
   swiper: {
   },
   scrollView: {
+    flex: 1,
     backgroundColor: Colors.background,
-    flex: 1
   },
   container: {
     flex: 1,

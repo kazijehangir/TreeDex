@@ -26,7 +26,7 @@ export default ({ onPressQuests, onPressNews, onPressProfile}) => (
         <Text>Plants are capable of solving problems and learning from past experiences</Text>
       </Card.Body>
       <Card.Actions position="right">
-        <Button value="NORMAL FLAT" text="READ MORE" primary="paperTeal" />
+        <Button value="NORMAL FLAT" text="READ MORE"  />
 
       </Card.Actions>
     </Card>

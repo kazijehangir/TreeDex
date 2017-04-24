@@ -3,13 +3,15 @@ import {
 } from 'react-native';
 import Colors from '../Colors'
 
+// const {w,h} = Dimensions.get("window");
 export default StyleSheet.create({
   title: {
     fontFamily: 'Roboto',
     fontSize: 50,
-    color: Colors.primaryLight,
+    color: Colors.primary,
     marginTop: 75,
-    textAlign: 'center'
+    textAlign: 'center',
+    backgroundColor: Colors.background
   },
   subtitle1: {
     fontFamily: 'Roboto',
@@ -30,5 +32,15 @@ export default StyleSheet.create({
     color: Colors.primary,
     marginTop: 10,
     textAlign: 'left'
-  }
+  },
+  header:{
+    fontFamily: 'Roboto',
+    fontSize: 30,
+    color: "#FFFFFF",
+    textAlign: 'left',
+    position:'relative',
+    height: 50,
+    padding: 5,
+    backgroundColor: Colors.primary
+  },
 })
