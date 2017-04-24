@@ -43,4 +43,19 @@ export default StyleSheet.create({
     padding: 5,
     backgroundColor: Colors.primary
   },
+   welcomeLabel1: {
+    fontFamily: 'serif',
+    fontWeight: 'bold',
+    fontSize: 25,
+    color: '#FFFFFF',
+    marginLeft: 10,
+    marginTop: 130,
+    textAlign: 'left'
+  },
+  newsHeading: {
+    fontFamily: 'sans-serif',
+    fontSize: 13,
+    color: Colors.primary,
+    textAlign: 'left'
+  }
 })

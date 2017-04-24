@@ -14,7 +14,7 @@ export default ({ onPressQuests, onPressNews, onPressProfile}) => (
         <MainPage
          onPressProfile={onPressProfile} />
         <ExplorePage
-             
+        
             onPressNews={onPressNews}
             onPressQuests={onPressQuests}
         />
