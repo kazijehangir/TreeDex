@@ -21,11 +21,11 @@ import ButtonSquare from '../components/ButtonSquare'
 
 export default ({onPressQuests, onPressNews}) => (
  <View style={containerStyles.container}>
-   <Text style={textStyles.title}>This is the explore page</Text>
-   <ButtonCustom onPress={console.log('button pressed')} title='sample button' />
-   <View style={{flex: 1, flexDirection: 'row'}}>
-      <ButtonSquare onPress={onPressQuests} title='QUESTS' />
-      <ButtonSquare onPress={onPressNews} title='NEWS' />
-    </View>
+
+  <Text style={textStyles.header}>Explore</Text>
+  <ScrollView style={containerStyles.scrollView}>
+      <Image source={require('../images/news1.jpg')}/>
+      <Image source={require('../images/plant.jpg')}/>
+  </ScrollView>
  </View>  
 )

@@ -37,24 +37,3 @@ export default ({ onPressQuests, onPressNews, onPressProfile}) => (
     type={state.cameraType}
   />
 )
-// export default ({ onPressQuests, onPressNews, onPressProfile}) => (
-//   <View>
-//     <Card>
-//       <Card.Media
-//         height={200}
-//         image={<Image source={require('../images/plant.jpg')} style={{width: Constants.widthWindow}}/>}
-//         overlay
-//       />
-//       <Card.Body>
-//         <Text style={textStyles.welcomeLabel}>There is Such a Thing as Plant Intelligence</Text>
-//         <Text>Plants are capable of solving problems and learning from past experiences</Text>
-//       </Card.Body>
-//       <Card.Actions position="right">
-//         <Button value="NORMAL FLAT" text="READ MORE" primary="paperTeal" />
-//
-//       </Card.Actions>
-//     </Card>
-//     <ButtonCustom onPress={onPressProfile} title='Profile' backgroundColor='#F5FCFF' />
-//
-//   </View>
-// )

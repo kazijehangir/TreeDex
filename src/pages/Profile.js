@@ -19,30 +19,19 @@ export default ({ onPressQuests, onPressNews}) => (
           style={{width: null, height:Constants.greenboxheight, alignSelf: 'stretch'}}/>
 
         <View>
-          <View style={{width: 500, height: 50, backgroundColor: '#00796b'}} />
-          <View style={{width: 500, height: 50, backgroundColor: '#21b48c'}} />
-          <View style={{width: 500, height: 50, backgroundColor: '#afeeee'}} />
+          <View 
+                style={{flexDirection: 'row', width: 500, height: 50, backgroundColor: '#00796b'}} >
+                <Image source={require('../images/edit_icon.png')} style={{width: 50, height: 50}}/>
+                <Text>EDIT PROFILE</Text>
+          </View>
+          <View style={{flexDirection: 'row', width: 500, height: 50, backgroundColor: '#21b48c'}}>
+                <Image source={require('../images/badges_icon.jpg')} style={{width: 50, height: 50}}/>
+                <Text>BADGES</Text>
+          </View>
+          <View style={{flexDirection: 'row', width: 500, height: 50, backgroundColor: '#afeeee'}}>
+                <Image source={require('../images/adopt_a_plant_icon.png')} style={{width: 50, height: 50}}/>
+                <Text>ADOPT A PLANT</Text>
+          </View>     
         </View>
-
-
-
-
-
   </View>
-    // <Card>
-
-    //   <Card.Media
-    //     // height={250}
-    //     image={<Image source={require('../images/background.jpg')}  style={{width: Constants.widthWindow}} />}
-    //     overlay
-    //   />
-    //   // <Card.Body>
-    //   //   <Text style={textStyles.welcomeLabel}>There is Such a Thing as Plant Intelligence</Text>
-    //   //   <Text>Plants are capable of solving problems and learning from past experiences</Text>
-    //   // </Card.Body>
-    //   <Card.Actions position="right">
-    //     <Button value="NORMAL FLAT" text="READ MORE" primary="paperTeal" />
-    //   </Card.Actions>
-    // </Card>
-  // </View>
 )
