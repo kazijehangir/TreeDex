@@ -27,17 +27,15 @@ const _onBarCodeRead = (e) => {
 }
 
 export default ({ onPressQuests, onPressNews, onPressProfile}) => (
-  <View>
-    <Camera
-      ref={(cam) => {
-        this.camera = cam;
-      }}
-      style={containerStyles.camera}
-      onBarCodeRead={_onBarCodeRead}
-      aspect={Camera.constants.Aspect.fill}
-      type={state.cameraType}
-    />
-  </View>
+  <Camera
+    ref={(cam) => {
+      this.camera = cam;
+    }}
+    style={containerStyles.camera}
+    onBarCodeRead={_onBarCodeRead}
+    aspect={Camera.constants.Aspect.fill}
+    type={state.cameraType}
+  />
 )
 // export default ({ onPressQuests, onPressNews, onPressProfile}) => (
 //   <View>
