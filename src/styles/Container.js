@@ -36,4 +36,10 @@ export default StyleSheet.create({
     width: null,
     backgroundColor: Colors.primary
   },
+  camera: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "transparent",
+  }
 })
