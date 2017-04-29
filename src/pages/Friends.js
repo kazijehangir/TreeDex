@@ -20,7 +20,6 @@ import textStyles from '../styles/Text'
 import ButtonCustom from '../components/ButtonCustom'
 import Constants from '../Constants'
 
-<<<<<<< HEAD
 class ListViewDemo extends React.Component {
   constructor(props) {
     super(props);
@@ -42,17 +41,3 @@ class ListViewDemo extends React.Component {
 }
 
 export default ListViewDemo;
-=======
-export default () => (
- <View style={containerStyles.container}>
- <Image
-          source = {require('../images/happy.jpg')}
-          style={{width: null, alignSelf: 'stretch'}}>
-    
-   <Text style={textStyles.title}>This is the friends page</Text>
-   <ButtonCustom onPress={console.log('button pressed')} title='sample button' />
-   </Image>
-
- </View>
-)
->>>>>>> e561bbdff496db36fa1a3ca6a8a6af32a5bf821d
