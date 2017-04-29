@@ -49,7 +49,9 @@ export default ({ onPress, goBack, onPressRegister }) => (
     secureTextEntry={true}
     onChange={passwordChangeHandler}></TextInput>
 
+   <ButtonInverted title='Register' onPress={onPressRegister} />
+
    <ButtonCustom onPress={onPress} title='Or go to Login' />
-   <ButtonCustom onPress={goBack} title='Go Back' />
+  
  </View>
 )
