@@ -22,7 +22,7 @@ import ButtonSquare from '../components/ButtonSquare'
 import Colors from '../Colors'
 import { WebView } from 'react-native';
 
-export default () => (
+export default ({onPressNews}) => (
  <View style={containerStyles.container}>
    {/*<Text style={textStyles.title}>This is the News page</Text>
    <ButtonCustom onPress={console.log('button pressed')} title='sample button' />*/}
@@ -42,7 +42,7 @@ export default () => (
       </Card.Actions>
     </Card>*/}
     <View style = {{marginTop: 10, marginLeft: 10, marginRight: 10}}>
-        <TouchableHighlight onPress={() =>this._onPressImage1}>
+        <TouchableHighlight onPress={onPressNews}>
             <Image source={require('../images/plant.jpg')} style={{width: Constants.width, height: 200, marginBottom: 10}}>
                 <Text style={textStyles.welcomeLabel1}>There is Such a Thing as Plant Intelligence</Text>
             </Image>

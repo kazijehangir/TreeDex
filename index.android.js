@@ -34,7 +34,8 @@ import Quests from './src/pages/Quests'
 import News from './src/pages/News'
 import containerStyles from './src/styles/Container'
 import buttonStyles from './src/styles/Button'
-
+import WebView from './src/pages/WebView'
+// import { WebView } from 'react-native';
 
 
 // Initialize Firebase
@@ -118,7 +119,14 @@ export default class TreeDexRN extends Component {
         return <Quests />
       }
       if(key === 'News'){
-        return <News />
+        return <News 
+                onPressNews={this._handleAction.bind(this,
+                 { type: 'push', key: 'News1' })}/>
+      }
+      if (key == 'News1'){
+        return <WebView
+          />
+  
       }
 
     }
