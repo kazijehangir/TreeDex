@@ -37,6 +37,7 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		9FF213D9F09A4E3D99C9B37B /* libRCTMaterialKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A363DF1723AA40F09CF7188E /* libRCTMaterialKit.a */; };
 		F4B95F1C5A3F47E2B792A2F0 /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F0CF26AC534D3C83ACF2ED /* libSplashScreen.a */; };
+		B6584386CA0A4358AE1FEED2 /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B82C8F147A334B1FBCFE9379 /* libRCTCamera.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -260,6 +261,8 @@
 		A363DF1723AA40F09CF7188E /* libRCTMaterialKit.a */ = {isa = PBXFileReference; name = "libRCTMaterialKit.a"; path = "libRCTMaterialKit.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		7BE23BDBA0F24B57BEFE3468 /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; name = "SplashScreen.xcodeproj"; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		F4F0CF26AC534D3C83ACF2ED /* libSplashScreen.a */ = {isa = PBXFileReference; name = "libSplashScreen.a"; path = "libSplashScreen.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		5410EF69560F45F8AA8F40EE /* RCTCamera.xcodeproj */ = {isa = PBXFileReference; name = "RCTCamera.xcodeproj"; path = "../node_modules/react-native-camera/ios/RCTCamera.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		B82C8F147A334B1FBCFE9379 /* libRCTCamera.a */ = {isa = PBXFileReference; name = "libRCTCamera.a"; path = "libRCTCamera.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +291,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				9FF213D9F09A4E3D99C9B37B /* libRCTMaterialKit.a in Frameworks */,
 				F4B95F1C5A3F47E2B792A2F0 /* libSplashScreen.a in Frameworks */,
+				B6584386CA0A4358AE1FEED2 /* libRCTCamera.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +460,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				81AEA47D1B3E4E0785C11D60 /* RCTMaterialKit.xcodeproj */,
 				7BE23BDBA0F24B57BEFE3468 /* SplashScreen.xcodeproj */,
+				5410EF69560F45F8AA8F40EE /* RCTCamera.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -985,11 +990,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-material-kit\iOS\RCTMaterialKit",
 					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 				);
 			};
 			name = Debug;
@@ -1012,11 +1019,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-material-kit\iOS\RCTMaterialKit",
 					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 				);
 			};
 			name = Release;
@@ -1040,6 +1049,7 @@
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-material-kit\iOS\RCTMaterialKit",
 					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 				);
 			};
 			name = Debug;
@@ -1062,6 +1072,7 @@
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-material-kit\iOS\RCTMaterialKit",
 					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 				);
 			};
 			name = Release;
@@ -1093,11 +1104,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-material-kit\iOS\RCTMaterialKit",
 					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 				);
 			};
 			name = Debug;
@@ -1129,11 +1142,13 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-material-kit\iOS\RCTMaterialKit",
 					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
+					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 				);
 			};
 			name = Release;
@@ -1160,6 +1175,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 			};
 			name = Debug;
@@ -1184,6 +1200,7 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);

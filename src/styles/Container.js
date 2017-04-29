@@ -35,4 +35,21 @@ export default StyleSheet.create({
     width: null,
     backgroundColor: Colors.primary
   },
+  camera: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "transparent",
+  },
+  navHeader: {
+    backgroundColor: Colors.primary
+  },
+  navHeaderText: {
+    color: 'white'
+  },
+  ExploreImage: {
+    height: Constants.height/2,
+    width: Constants.width/2,
+    resizeMode: 'contain'
+  }
 })

@@ -1,5 +1,6 @@
 import {
   StyleSheet,
+  Platform
 } from 'react-native';
 import Colors from '../Colors'
 
@@ -60,5 +61,17 @@ export default StyleSheet.create({
     fontWeight: '500',
     fontSize: 16,
     color: Colors.background
-  }
+  },
+  navBack:{
+    height:24,
+    width:24,
+    margin: Platform.OS === 'ios' ? 10 : 16,
+    resizeMode: 'contain'
+  },
+  navBackContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 })
