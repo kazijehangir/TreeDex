@@ -24,8 +24,8 @@ export default ({onPressQuests, onPressNews}) => (
 
   <Text style={textStyles.header}>Explore</Text>
   <ScrollView style={containerStyles.scrollView}>
-      <Image source={require('../images/news1.jpg')}/>
-      <Image source={require('../images/plant.jpg')}/>
+      <Image source={require('../images/news1.jpg')} style={containerStyles.ExploreImage}/>
+      <Image source={require('../images/plant.jpg')} style={containerStyles.ExploreImage}/>
   </ScrollView>
- </View>  
+ </View>
 )

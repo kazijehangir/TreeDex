@@ -47,5 +47,10 @@ export default StyleSheet.create({
   },
   navHeaderText: {
     color: 'white'
+  },
+  ExploreImage: {
+    height: Constants.height/2,
+    width: Constants.width/2,
+    resizeMode: 'contain'
   }
 })
