@@ -8,12 +8,11 @@ export default StyleSheet.create({
   swiper: {
   },
   scrollView: {
-    flex: 1,
+    height:50,
     backgroundColor: Colors.background,
   },
   container: {
     flex: 1,
-    height: Constants.height,
     backgroundColor: Colors.background,
   },
   containerLogin: {

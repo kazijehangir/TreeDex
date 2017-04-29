@@ -26,6 +26,6 @@ export default ({onPressQuests, onPressNews}) => (
   <ScrollView style={containerStyles.scrollView}>
       <Image source={require('../images/news1.jpg')}/>
       <Image source={require('../images/plant.jpg')}/>
-  </ScrollView>
+   </ScrollView>
  </View>  
 )
