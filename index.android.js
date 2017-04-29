@@ -8,6 +8,7 @@ import {
   Image,
   View,
   TouchableHighlight,
+  TouchableOpacity,
   NavigationExperimental,
   Dimensions,
   ScrollView,
@@ -21,7 +22,6 @@ const {
  StateUtils: NavigationStateUtils
 } = NavigationExperimental
 
-
 import Home from './src/pages/Home'
 import Register from './src/pages/Register'
 import Login from './src/pages/Login'
@@ -31,6 +31,7 @@ import MainSwiper from './src/pages/MainSwiper'
 import Quests from './src/pages/Quests'
 import News from './src/pages/News'
 import containerStyles from './src/styles/Container'
+import buttonStyles from './src/styles/Button'
 
 export default class TreeDexRN extends Component {
     constructor(props) {
@@ -116,10 +117,23 @@ export default class TreeDexRN extends Component {
     }
     _renderTitleComponent(props) {
       return (
-        <NavigationHeader.Title>
+        <NavigationHeader.Title >
+          <Text style={containerStyles.navHeaderText}>
           {props.scene.route.key}
+          </Text>
         </NavigationHeader.Title>
       );
+    }
+    _renderBackButton(props) {
+      return (
+        <TouchableOpacity
+          style={buttonStyles.navBackContainer}
+          onPress={() => props.onNavigateBack(this.handleBackAction)}>
+          <Image
+            style={buttonStyles.navBack} source={require('./src/assets/backButton.png')}
+          />
+        </TouchableOpacity>
+      )
     }
     _renderHeader = (sceneProps) => {
         const route = sceneProps.scene.route
@@ -133,6 +147,8 @@ export default class TreeDexRN extends Component {
                 {...sceneProps}
                 renderTitleComponent={this._renderTitleComponent}
                 onNavigateBack={this.handleBackAction.bind(this)}
+                style={containerStyles.navHeader}
+                renderLeftComponent={this._renderBackButton}
             />
         )
     }
@@ -153,33 +169,7 @@ export default class TreeDexRN extends Component {
       )
     }
 }
-class Header extends Component {
-  _back = () => {
-    this.props.backnavigate();
-  }
-  _renderTitleComponent = (props) => {
-    return (
-      <NavigationHeader.Title>
-        {props.scene.route.key}
-      </NavigationHeader.Title>
-    );
-  }
-  render() {
-      const route = this.props.scene.route
-      if (route.key == 'Home' || route.key == 'Main')
-        return null // Here we skip header on home and main screen
-      // Next, we remove back navigation on second screen (optional)
-      const onNavigateBack =
-        this.props.scene.index > 1 ? this._back : undefined
-      return (
-          <NavigationHeader
-              {...this.props}
-              renderTitleComponent={this._renderTitleComponent}
-              onNavigateBack={this._back}
-          />
-      )
-   }
-}
+
 function createReducer(initialState) {
   return (currentState = initialState, action) => {
     switch (action.type) {

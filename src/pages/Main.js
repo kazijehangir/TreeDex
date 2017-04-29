@@ -17,23 +17,33 @@ import ButtonCustom from '../components/ButtonCustom'
 import ButtonSquare from '../components/ButtonSquare'
 
 let state = {
+  showCamera: true,
   cameraType: Camera.constants.Type.back
 }
 const _onBarCodeRead = (e) => {
+  state.showCamera = false
   Alert.alert(
     'Barcode Scanned!',
     "Type: " + e.type + "\nData: " + e.data
   )
 }
 
-export default ({ onPressQuests, onPressNews, onPressProfile}) => (
-  <Camera
-    ref={(cam) => {
-      this.camera = cam;
-    }}
-    style={containerStyles.camera}
-    onBarCodeRead={_onBarCodeRead}
-    aspect={Camera.constants.Aspect.fill}
-    type={state.cameraType}
-  />
-)
+export default ({ onPressQuests, onPressNews, onPressProfile}) => {
+  if(state.showCamera) {
+    return (
+      <Camera
+        ref={(cam) => {
+          this.camera = cam;
+        }}
+        style={containerStyles.camera}
+        onBarCodeRead={_onBarCodeRead}
+        aspect={Camera.constants.Aspect.fill}
+        type={state.cameraType}
+      />
+    );
+  } else {
+    return (
+      <View></View>
+    );
+  }
+}

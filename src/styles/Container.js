@@ -41,5 +41,11 @@ export default StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "transparent",
+  },
+  navHeader: {
+    backgroundColor: Colors.primary
+  },
+  navHeaderText: {
+    color: 'white'
   }
 })
