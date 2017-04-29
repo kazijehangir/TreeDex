@@ -56,7 +56,7 @@ export default () => (
             <Image source={require('../images/news2.jpg')} style={{flex: 0.5, width: undefined, height: 200, marginLeft: 5, marginRight: 10}}/>
         
     </View>
-    <View style={{flex:1, flexDirection: 'row', marginTop: 40}}>
+    <View style={{flex:1, flexDirection: 'row', marginTop: 10}}>
         <View style = {{flex:0.5, marginLeft: 10}}>
             <Text style={textStyles.newsHeading}>Bats Drawn to Plant via "Echo Beacon"</Text>
         </View>

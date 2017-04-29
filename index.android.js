@@ -38,15 +38,15 @@ import buttonStyles from './src/styles/Button'
 
 
 // Initialize Firebase
-var config = {
-  apiKey: "AIzaSyC-4zmR4cVvrezgDh0MxsnJA5awezVe5kk",
-  authDomain: "treedex-8cb38.firebaseapp.com",
-  databaseURL: "https://treedex-8cb38.firebaseio.com",
-  projectId: "treedex-8cb38",
-  storageBucket: "treedex-8cb38.appspot.com",
-  messagingSenderId: "826678556599"
-};
-const firebaseApp = firebase.initializeApp(config);
+// var config = {
+//   apiKey: "AIzaSyC-4zmR4cVvrezgDh0MxsnJA5awezVe5kk",
+//   authDomain: "treedex-8cb38.firebaseapp.com",
+//   databaseURL: "https://treedex-8cb38.firebaseio.com",
+//   projectId: "treedex-8cb38",
+//   storageBucket: "treedex-8cb38.appspot.com",
+//   messagingSenderId: "826678556599"
+// };
+// const firebaseApp = firebase.initializeApp(config);
 
 export default class TreeDexRN extends Component {
     constructor(props) {
