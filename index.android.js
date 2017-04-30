@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as firebase from "firebase";
 // import { Card, Button } from 'react-native-material-design';
 import {
   AppRegistry,
@@ -33,6 +34,20 @@ import Quests from './src/pages/Quests'
 import News from './src/pages/News'
 import containerStyles from './src/styles/Container'
 import buttonStyles from './src/styles/Button'
+import WebView from './src/pages/WebView'
+// import { WebView } from 'react-native';
+
+
+// Initialize Firebase
+// var config = {
+//   apiKey: "AIzaSyC-4zmR4cVvrezgDh0MxsnJA5awezVe5kk",
+//   authDomain: "treedex-8cb38.firebaseapp.com",
+//   databaseURL: "https://treedex-8cb38.firebaseio.com",
+//   projectId: "treedex-8cb38",
+//   storageBucket: "treedex-8cb38.appspot.com",
+//   messagingSenderId: "826678556599"
+// };
+// const firebaseApp = firebase.initializeApp(config);
 
 export default class TreeDexRN extends Component {
     constructor(props) {
@@ -104,7 +119,14 @@ export default class TreeDexRN extends Component {
         return <Quests />
       }
       if(key === 'News'){
-        return <News />
+        return <News 
+                onPressNews={this._handleAction.bind(this,
+                 { type: 'push', key: 'News1' })}/>
+      }
+      if (key == 'News1'){
+        return <WebView
+          />
+  
       }
 
     }
