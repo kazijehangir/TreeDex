@@ -11,9 +11,41 @@ export default StyleSheet.create({
     height:50,
     backgroundColor: Colors.background,
   },
-  container: {
+  friendsList: {
     flex: 1,
+    padding: 12,
+    flexDirection:'row',
+    alignItems: 'center',
     backgroundColor: Colors.background,
+  },
+  separator: {
+    flex: 1,
+    height: StyleSheet.hairlineWidth,
+    backgroundColor: Colors.primary,
+  },
+  sectionHeader: {
+    flex: 1,
+    padding: 8,
+    justifyContent: 'center',
+    backgroundColor: Colors.primary,
+  },
+  searchBar: {
+      flex: 1,
+      padding: 5,
+      flexDirection: 'row',
+      alignItems: 'center',
+      backgroundColor: '#C1C1C1',
+  },
+  footer: {
+    flex: 1,
+    padding: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  photo: {
+    height: 40,
+    width: 40,
+    borderRadius: 20,
   },
   containerLogin: {
     flex: 1,

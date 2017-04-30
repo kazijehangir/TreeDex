@@ -57,5 +57,24 @@ export default StyleSheet.create({
     fontSize: 13,
     color: Colors.primary,
     textAlign: 'left'
-  }
+  },
+  friends: {
+    marginLeft: 12,
+    fontSize: 16,
+    color: 'black'
+  },
+  input: {
+    height: 40,
+    flex: 1,
+    paddingHorizontal: 8,
+    fontSize: 15,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 2,
+  },
+  footerText: {
+    color: Colors.primary,
+  },
+  sectionHeaderText: {
+    fontSize: 13,
+  },
 })

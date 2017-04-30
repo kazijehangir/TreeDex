@@ -74,4 +74,11 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  footerButton: {
+    borderColor: Colors.primary,
+    borderWidth: StyleSheet.hairlineWidth,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 5,
+  },
 })
