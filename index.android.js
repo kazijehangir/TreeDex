@@ -121,6 +121,10 @@ export default class TreeDexRN extends Component {
       if(key === 'News'){
         return <News 
                 onPressNews={this._handleAction.bind(this,
+                 { type: 'push', key: 'News1' })}
+                 onPressSubNews1={this._handleAction.bind(this,
+                 { type: 'push', key: 'News1' })}
+                 onPressSubNews2={this._handleAction.bind(this,
                  { type: 'push', key: 'News1' })}/>
       }
       if (key == 'News1'){
