@@ -13,12 +13,12 @@ import textStyles from '../styles/Text'
 import containerStyles from '../styles/Container'
 
 export default ({ onPressRegister, onPressLogin}) => (
- <View style={containerStyles.containerLogin}>
+  <View style={containerStyles.containerLogin}>
     <View style={containerStyles.whitebox}>
       <View style={containerStyles.logoWrapper}>
         <Image
           source = {require('../../android/app/src/main/res/mipmap-hdpi/ic_launcher.png')}
-          style={{width:70, height:70, marginTop: 70}}
+          style={{width:70, height:70, marginTop: 70, marginBottom: 35}}
         />
         <Text style={textStyles.title} >TreeDex</Text>
       </View>
@@ -26,7 +26,7 @@ export default ({ onPressRegister, onPressLogin}) => (
     <View style={containerStyles.greenbox}>
        <Image
           source = {require('../images/background1.jpg')}
-          style={{width: null, height:Constants.greenboxheight, alignSelf: 'stretch'}}>
+          style={{flex:1, width:null,height:Constants.greenboxheight, alignSelf: 'stretch'}}>
 
         <Text style={textStyles.subtitle1}>TreeDex is a
           complete repository for horticulture information.</Text>
@@ -36,3 +36,5 @@ export default ({ onPressRegister, onPressLogin}) => (
     </View>
   </View>
 )
+// style={{width: null, height:Constants.greenboxheight, alignSelf: 'stretch'}}>
+// TODO: fix layout on landscape.

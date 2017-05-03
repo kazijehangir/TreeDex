@@ -6,6 +6,7 @@ import Colors from '../Colors'
 
 export default StyleSheet.create({
   swiper: {
+    flex: 1
   },
   scrollView: {
     height:50,
@@ -54,7 +55,8 @@ export default StyleSheet.create({
     backgroundColor: Colors.background
   },
   whitebox: {
-    height: Constants.whiteboxheight,
+    height: Constants.whiteboxheight - 24,
+    flex: 1,
     backgroundColor: Colors.background
   },
   logoWrapper:{
@@ -62,7 +64,8 @@ export default StyleSheet.create({
     flexDirection: 'row'
   },
   greenbox: {
-    height: Constants.greenboxheight,
+    // height: Constants.greenboxheight,
+    flex: 1,
     alignSelf: 'stretch',
     width: null,
     backgroundColor: Colors.primary
