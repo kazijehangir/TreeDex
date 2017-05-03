@@ -12,6 +12,7 @@
     "react-native": "0.42.3",
     "react-native-camera": "git+https://github.com/lwansbrough/react-native-camera.git",
     "react-native-camera-android": "^1.0.7",
+    "react-native-firebase": "^1.0.0-alpha13",
     "react-native-material-design": "^0.3.7",
     "react-native-swiper": "^1.5.4"
   },

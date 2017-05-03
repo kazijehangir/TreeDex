@@ -48,7 +48,7 @@ const Footer = (props) => (
   </View>
 );
 
-class ListViewDemo extends React.Component {
+class Friends extends React.Component {
   constructor(props) {
     super(props);
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
@@ -74,4 +74,4 @@ class ListViewDemo extends React.Component {
   }
 }
 
-export default ListViewDemo;
+export default Friends;

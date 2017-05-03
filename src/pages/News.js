@@ -48,13 +48,13 @@ export default ({onPressNews}) => (
             </Image>
         </TouchableHighlight>
             <Text style = {{fontFamily:'Roboto', fontSize: 16, color: Colors.primary}}>Plants are capable of solving problems and learning from past experiences</Text>
-        
+
     </View>
-    
+
     <View style={{flex: 1, flexDirection: 'row', marginTop: 20}}>
             <Image source={require('../images/news1.jpg')} style={{flex:0.5, width: undefined, height: 200, marginLeft: 10, marginRight: 5}}/>
             <Image source={require('../images/news2.jpg')} style={{flex: 0.5, width: undefined, height: 200, marginLeft: 5, marginRight: 10}}/>
-        
+
     </View>
     <View style={{flex:1, flexDirection: 'row', marginTop: 10}}>
         <View style = {{flex:0.5, marginLeft: 10}}>
@@ -64,7 +64,7 @@ export default ({onPressNews}) => (
             <Text style={textStyles.newsHeading}>Teenager Is on Track to Plant a Trillion Trees</Text>
         </View>
     </View>
- </View>  
+ </View>
 )
 /*_onPressImage1() {
     class MyWeb extends Component {
@@ -76,5 +76,5 @@ export default ({onPressNews}) => (
             />
             );
         }
-    }
-}*/
+    }*/
+}
