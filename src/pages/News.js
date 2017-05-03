@@ -22,25 +22,8 @@ import ButtonSquare from '../components/ButtonSquare'
 import Colors from '../Colors'
 import { WebView } from 'react-native';
 
-export default ({onPressNews}) => (
+export default ({onPressNews, onPressSubNews1, onPressSubNews2}) => (
  <View style={containerStyles.container}>
-   {/*<Text style={textStyles.title}>This is the News page</Text>
-   <ButtonCustom onPress={console.log('button pressed')} title='sample button' />*/}
-   {/*<Card>
-      <Card.Media
-        height={200}
-        image={<Image source={require('../images/plant.jpg')} style={{ flex: 1, width: undefined, height: undefined}}/>}
-        overlay
-      />
-      <Card.Body>
-        <Text style={textStyles.welcomeLabel}>There is Such a Thing as Plant Intelligence</Text>
-        <Text>Plants are capable of solving problems and learning from past experiences</Text>
-      </Card.Body>
-      <Card.Actions position="right">
-        <Button value="NORMAL FLAT" text="READ MORE" primary="paperTeal" />
-
-      </Card.Actions>
-    </Card>*/}
     <View style = {{marginTop: 10, marginLeft: 10, marginRight: 10}}>
         <TouchableHighlight onPress={onPressNews}>
             <Image source={require('../images/plant.jpg')} style={{width: Constants.width, height: 200, marginBottom: 10}}>
@@ -55,6 +38,12 @@ export default ({onPressNews}) => (
             <Image source={require('../images/news1.jpg')} style={{flex:0.5, width: undefined, height: 200, marginLeft: 10, marginRight: 5}}/>
             <Image source={require('../images/news2.jpg')} style={{flex: 0.5, width: undefined, height: 200, marginLeft: 5, marginRight: 10}}/>
 
+        <TouchableHighlight onPress={onPressSubNews1} style={{flex:0.5}}>
+            <Image source={require('../images/news1.jpg')} style={{flex:0.5, width: undefined, height: 200, marginLeft: 10, marginRight: 5}}></Image>
+        </TouchableHighlight>
+        <TouchableHighlight onPress={onPressSubNews2} style={{flex:0.5}}>
+            <Image source={require('../images/news2.jpg')} style={{flex: 0.5, width: undefined, height: 200, marginLeft: 5, marginRight: 10}}></Image>
+        </TouchableHighlight>
     </View>
     <View style={{flex:1, flexDirection: 'row', marginTop: 10}}>
         <View style = {{flex:0.5, marginLeft: 10}}>
