@@ -11,11 +11,13 @@ import inputStyles from '../styles/Input'
 import containerStyles from '../styles/Container'
 import textStyles from '../styles/Text'
 
+var state = {}
+
 const emailChangeHandler = ev => {
-  // console.log(ev.nativeEvent.text)
+  state.email = ev.nativeEvent.text
 }
 const passwordChangeHandler = ev => {
-  // console.log(ev.nativeEvent.text)
+  state.pass = ev.nativeEvent.text
 }
 
 // Initialize Firebase
@@ -28,8 +30,16 @@ const passwordChangeHandler = ev => {
  //   messagingSenderId: "1031584636567"
  // };
  // firebase.initializeApp(config);
+const onPressLogin = async (email, pass, onSuccess) => {
+  var cond = true
+  if (cond) {
+    onSuccess()
+  } else {
+    // display error
+  }
+}
 
-export default ({ goBack, onPressSignIn }) => (
+export default ({onSuccess }) => (
  <View style={containerStyles.container}>
    <Text style={textStyles.subtitle} >Welcome back! Please log-in below.</Text>
    <TextInput placeholder='Email'
@@ -39,6 +49,8 @@ export default ({ goBack, onPressSignIn }) => (
     style={inputStyles.passwordInput}
     secureTextEntry={true}
     onChange={passwordChangeHandler}></TextInput>
-  <ButtonInverted title='Sign In' onPress={onPressSignIn} />
+  <ButtonInverted title='Sign In'
+    onPress={() => onPressLogin(state.email, state.pass, onSuccess)}
+  />
  </View>
 )

@@ -95,9 +95,8 @@ export default class TreeDexRN extends Component {
       }
       if (key === 'Login') {
         return <Login
-                 goBack={ this.handleBackAction.bind(this)}
-                 onPressSignIn={this._handleAction.bind(this,
-                 { type: 'push', key: 'MainSwiper' })}/>
+                 onSuccess={this._handleAction.bind(this,
+                 { type: 'push', key: 'MainSwiper' })} />
       }
       if (key === 'MainSwiper') {
         return <MainSwiper
@@ -119,7 +118,7 @@ export default class TreeDexRN extends Component {
         return <Quests />
       }
       if(key === 'News'){
-        return <News 
+        return <News
                 onPressNews={this._handleAction.bind(this,
                  { type: 'push', key: 'News1' })}
                  onPressSubNews1={this._handleAction.bind(this,
@@ -128,9 +127,8 @@ export default class TreeDexRN extends Component {
                  { type: 'push', key: 'News1' })}/>
       }
       if (key == 'News1'){
-        return <WebView
-          />
-  
+        return <WebView/>
+
       }
 
     }
