@@ -1,12 +1,11 @@
 import {
   Dimensions,
 } from 'react-native';
-var {widthWindow} = Dimensions.get('window')
-var {height} = Dimensions.get('window')
+var {height, width} = Dimensions.get('window')
 
 export default {
-  height: height,
+  height: height - 24,
   greenboxheight: height*0.65,
   whiteboxheight: height*0.35,
-  width: widthWindow
+  width: width
 }

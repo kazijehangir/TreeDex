@@ -7,9 +7,9 @@ import Colors from '../Colors'
 export default StyleSheet.create({
   title: {
     fontFamily: 'Roboto',
-    fontSize: 50,
+    fontSize: 40,
     color: Colors.primary,
-    marginTop: 75,
+    margin: 25,
     textAlign: 'center',
     backgroundColor: Colors.background
   },

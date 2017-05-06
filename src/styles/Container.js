@@ -50,24 +50,32 @@ export default StyleSheet.create({
   },
   containerLogin: {
     flex: 1,
-    justifyContent: 'center',
+    // height: null,
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    flexDirection: 'column'
+    // backgroundColor: 'red'
+  },
+  whitebox: {
+    height: Constants.height * 0.35,
+    // flex: 35,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: Colors.background
   },
-  whitebox: {
-    height: Constants.whiteboxheight - 24,
-    flex: 1,
-    backgroundColor: Colors.background
-  },
-  logoWrapper:{
-    flexWrap: 'wrap',
-    flexDirection: 'row'
-  },
+  // logoWrapper:{
+  //   flex: 1,
+  //   flexWrap: 'wrap',
+  //   flexDirection: 'row',
+  //   justifyContent: 'center'
+  // },
   greenbox: {
-    // height: Constants.greenboxheight,
-    flex: 1,
-    alignSelf: 'stretch',
-    width: null,
+    height: Constants.height * 0.65,
+    // flex: 65,
+    flexDirection: 'column',
+    // alignSelf: 'stretch',
+    justifyContent: 'flex-start',
     backgroundColor: Colors.primary
   },
   camera: {
@@ -81,6 +89,9 @@ export default StyleSheet.create({
   },
   navHeaderText: {
     color: 'white'
+  },
+  explore: {
+    flex:1
   },
   ExploreImage: {
     height: Constants.height/2,
