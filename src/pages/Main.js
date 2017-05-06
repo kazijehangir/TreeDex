@@ -15,7 +15,7 @@ import textStyles from '../styles/Text'
 import containerStyles from '../styles/Container'
 import ButtonCustom from '../components/ButtonCustom'
 import ButtonSquare from '../components/ButtonSquare'
-
+// import ButtonCustom from '../components/ButtonCustom'
 let state = {
   showCamera: true,
   cameraType: Camera.constants.Type.back
@@ -31,19 +31,24 @@ const _onBarCodeRead = (e) => {
 export default ({ onPressQuests, onPressNews, onPressProfile}) => {
   if(state.showCamera) {
     return (
-      <Camera
-        ref={(cam) => {
-          this.camera = cam;
-        }}
-        style={containerStyles.camera}
-        onBarCodeRead={_onBarCodeRead}
-        aspect={Camera.constants.Aspect.fill}
-        type={state.cameraType}
-      />
+      // <View>
+        <Camera
+          ref={(cam) => {
+            this.camera = cam;
+          }}
+          style={containerStyles.camera}
+          onBarCodeRead={_onBarCodeRead}
+          aspect={Camera.constants.Aspect.fill}
+          type={state.cameraType}
+        >
+        <ButtonCustom onPress={onPressProfile} title='Profile' />
+        </Camera>
+      // </View>  
     );
   } else {
     return (
-      <View></View>
+      <View>
+      </View>
     );
   }
 }

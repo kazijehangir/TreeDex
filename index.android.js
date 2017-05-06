@@ -97,7 +97,7 @@ export default class TreeDexRN extends Component {
         return <Login
                  goBack={ this.handleBackAction.bind(this)}
                  onPressSignIn={this._handleAction.bind(this,
-                 { type: 'push', key: 'MainSwiper' })} />
+                 { type: 'push', key: 'MainSwiper' })}/>
       }
       if (key === 'MainSwiper') {
         return <MainSwiper
