@@ -10,6 +10,7 @@ import ButtonInverted from '../components/ButtonInverted'
 import inputStyles from '../styles/Input'
 import containerStyles from '../styles/Container'
 import textStyles from '../styles/Text'
+import * as firebase from "firebase";
 
 var state = {}
 
@@ -19,6 +20,17 @@ const emailChangeHandler = ev => {
 const passwordChangeHandler = ev => {
   state.pass = ev.nativeEvent.text
 }
+//Mahnoor's Initialization
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyC-4zmR4cVvrezgDh0MxsnJA5awezVe5kk",
+  authDomain: "treedex-8cb38.firebaseapp.com",
+  databaseURL: "https://treedex-8cb38.firebaseio.com",
+  projectId: "treedex-8cb38",
+  storageBucket: "treedex-8cb38.appspot.com",
+  messagingSenderId: "826678556599"
+};
+const firebaseApp = firebase.initializeApp(config);
 
 // Initialize Firebase
  // var config = {
@@ -32,11 +44,19 @@ const passwordChangeHandler = ev => {
  // firebase.initializeApp(config);
 const onPressLogin = async (email, pass, onSuccess) => {
   var cond = true
-  if (cond) {
+  try {
+    await firebase.auth()
+      .signInWithEmailAndPassword(email, pass);
+    console.log("Logged In!");
     onSuccess()
-  } else {
-    // display error
+  } catch (error) {
+    console.log(error.toString())
   }
+  // if (cond) {
+  //   onSuccess()
+  // } else {
+  //   // display error
+  // }
 }
 
 export default ({onSuccess }) => (
