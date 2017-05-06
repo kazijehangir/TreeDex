@@ -6,7 +6,8 @@ import Colors from '../Colors'
 
 export default StyleSheet.create({
   swiper: {
-    flex: 1
+    height: Constants.height,
+    flex: 0
   },
   scrollView: {
     height:50,
@@ -50,31 +51,18 @@ export default StyleSheet.create({
   },
   containerLogin: {
     flex: 1,
-    // height: null,
-    // justifyContent: 'center',
-    // alignItems: 'center',
     flexDirection: 'column'
-    // backgroundColor: 'red'
   },
   whitebox: {
     height: Constants.height * 0.35,
-    // flex: 35,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: Colors.background
   },
-  // logoWrapper:{
-  //   flex: 1,
-  //   flexWrap: 'wrap',
-  //   flexDirection: 'row',
-  //   justifyContent: 'center'
-  // },
   greenbox: {
     height: Constants.height * 0.65,
-    // flex: 65,
     flexDirection: 'column',
-    // alignSelf: 'stretch',
     justifyContent: 'flex-start',
     backgroundColor: Colors.primary
   },
