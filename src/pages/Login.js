@@ -45,13 +45,13 @@ const passwordChangeHandler = ev => {
  // firebase.initializeApp(config);
  //TODO-Mahnoor: add progress bar
 
- const firebase = Constants.firebase
+
 
  // TODO: Jehangir: Tab button to move to password
 const onPressLogin = async (email, pass, onSuccess) => {
   var cond = true
   try {
-    userData = await firebase.auth()
+    userData = await Constants.firebaseApp.auth()
       .signInWithEmailAndPassword(email, pass);
     // console.log("Logged In!");
     onSuccess()

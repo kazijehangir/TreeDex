@@ -19,7 +19,8 @@ var config = {
 const firebaseApp = firebase.initializeApp(config);
 
 export default {
-  firebase: firebaseApp,
+  firebaseApp: firebaseApp,
+  firebase: firebase,
   height: height - 24,
   greenboxheight: height*0.65,
   whiteboxheight: height*0.35,

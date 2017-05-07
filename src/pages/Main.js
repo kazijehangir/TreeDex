@@ -43,10 +43,8 @@ const checkUser = (ev) => {
     alert("No user logged in.")
   }
 }
-const logout = (ev) => {
-  alert("Havent implemented logout yet")
-}
-export default ({ user, onPressQuests, onPressNews, onPressProfile}) => {
+
+export default ({ user, signout, onPressQuests, onPressNews, onPressProfile}) => {
   state.user = user
   if(state.showCamera) {
     return (
@@ -62,7 +60,7 @@ export default ({ user, onPressQuests, onPressNews, onPressProfile}) => {
         >
         <ButtonCustom onPress={onPressProfile} title='Profile' />
         <ButtonCustom onPress={checkUser} title='Check User' />
-        <ButtonCustom onPress={logout} title='Logout' />
+        <ButtonCustom onPress={signout} title='Logout' />
         </Camera>
       // </View>
     );

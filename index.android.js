@@ -51,7 +51,6 @@ import Constants from './src/Constants'
 //   storageBucket: "treedex-8cb38.appspot.com",
 //   messagingSenderId: "826678556599"
 // };
-const firebase = Constants.firebase
 
 export default class TreeDexRN extends Component {
     constructor(props) {
@@ -71,21 +70,34 @@ export default class TreeDexRN extends Component {
       }
     }
     componentWillMount(){
-      firebase.auth().onAuthStateChanged((user) => {
+      Constants.firebaseApp.auth().onAuthStateChanged((user) => {
         if (user) {
           // User is signed in.
           // alert(JSON.stringify(user) + " signed in.")
           this.setState({user: user})
           this._handleAction({ type: 'push', key: 'MainSwiper' })
-          // alert(JSON.stringify(this.state.navState))
           let newState = Object.assign({}, this.state.navState)
           newState.routes = newState.routes.slice(-1)
           newState.index = 0
           this.setState({navState: newState})
         } else {
-          alert("No User signed in.")
+          // alert("No User signed in.")
+
         }
       })
+    }
+    async _signOut() {
+      // alert("Signing out")
+      try {
+        prom = await Constants.firebase.auth().signOut()
+        this._handleAction({ type: 'push', key: 'Home' })
+        let newState = Object.assign({}, this.state.navState)
+        newState.routes = newState.routes.slice(-1)
+        newState.index = 0
+        this.setState({navState: newState})
+      } catch (error) {
+        alert("Error Signing out!")
+      }
 
     }
     _handleAction (action) {
@@ -125,6 +137,7 @@ export default class TreeDexRN extends Component {
       if (key === 'MainSwiper') {
         return <MainSwiper
                  user={this.state.user}
+                 onPressSignout={this._signOut.bind(this)}
                  onPressQuests={this._handleAction.bind(this,
                  { type: 'push', key: 'Quests' })}
                  onPressNews={this._handleAction.bind(this,
