@@ -5,9 +5,12 @@ import Constants from '../Constants'
 import Colors from '../Colors'
 
 export default StyleSheet.create({
+  Container : {
+    height: Constants.height
+  },
   swiper: {
     height: Constants.height,
-    flex: 0
+    flex: -1
   },
   scrollView: {
     height:50,
@@ -15,6 +18,7 @@ export default StyleSheet.create({
   },
   friendsList: {
     flex: 1,
+    // height: Constants.height,
     padding: 12,
     flexDirection:'row',
     alignItems: 'center',
@@ -67,9 +71,9 @@ export default StyleSheet.create({
     backgroundColor: Colors.primary
   },
   camera: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+    height: Constants.height,
+    // alignItems: "center",
+    // justifyContent: "center",
     backgroundColor: "transparent",
   },
   navHeader: {
@@ -79,7 +83,7 @@ export default StyleSheet.create({
     color: 'white'
   },
   explore: {
-    flex:1
+    height: Constants.height
   },
   ExploreImage: {
     height: Constants.height/2,

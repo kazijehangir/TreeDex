@@ -42,6 +42,9 @@ const firebaseApp = firebase.initializeApp(config);
  //   messagingSenderId: "1031584636567"
  // };
  // firebase.initializeApp(config);
+
+
+ // TODO: Jehangir: Tab button to move to password
 const onPressLogin = async (email, pass, onSuccess) => {
   var cond = true
   try {
