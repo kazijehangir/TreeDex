@@ -16,16 +16,25 @@ import containerStyles from '../styles/Container'
 import ButtonCustom from '../components/ButtonCustom'
 import ButtonSquare from '../components/ButtonSquare'
 // import ButtonCustom from '../components/ButtonCustom'
+
+//global stuct maintaining the state
 let state = {
   showCamera: true,
+  // flag: false,
   cameraType: Camera.constants.Type.back
 }
 const _onBarCodeRead = (e) => {
-  state.showCamera = false
-  Alert.alert(
+  
+  // state.flag = true
+  if(state.showCamera){
+    Alert.alert(
     'Barcode Scanned!',
     "Type: " + e.type + "\nData: " + e.data
-  )
+    )  
+  }
+  
+  state.showCamera = false
+  
 }
 
 export default ({ onPressQuests, onPressNews, onPressProfile}) => {
