@@ -53,7 +53,8 @@ export default class TreeDexRN extends Component {
     constructor(props) {
       super(props)
       this.state = {
-        navState: NavReducer(undefined, {})
+        navState: NavReducer(undefined, {}),
+        showProgress: false
       }
       if (Platform.OS === 'android') {
         BackAndroid.addEventListener('hardwareBackPress', () => {
@@ -66,6 +67,7 @@ export default class TreeDexRN extends Component {
         })
       }
     }
+
     _handleAction (action) {
         const newState = NavReducer(this.state.navState, action);
         if (newState === this.state.navState) {
@@ -89,11 +91,17 @@ export default class TreeDexRN extends Component {
       }
       if (key === 'Register') {
         return <Register
+                progressOff={
+                  this.setState({showProgress: false})}
+                progressOn={
+                  this.setState({showProgress:true})
+                }
                 onSuccessRegister={this._handleAction.bind(this,
                 {type: 'push', key: 'MainSwiper'})}
                 goBack={this.handleBackAction.bind(this)}
                 onPress={this._handleAction.bind(this,
-                { type: 'push', key: 'Login' })} />
+                { type: 'push', key: 'Login' })}
+                 />
       }
       if (key === 'Login') {
         return <Login

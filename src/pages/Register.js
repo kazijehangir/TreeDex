@@ -11,6 +11,7 @@ import {
   Dimensions,
   ScrollView,
   Platform,
+  ActivityIndicator,
   BackAndroid
 } from 'react-native';
 
@@ -46,21 +47,16 @@ const passwordChangeHandler = ev => {
 // };
 // const firebaseApp = firebase.initializeApp(config);
 var loaded = true
-const onPressRegister = async (email, pass, onSuccessRegister) => {
+const onPressRegister = async (email, pass, onSuccessRegister, progressOn, progressOff) => {
   // var cond = true
-  try {
+  // try {
     // if(cond){
     //   onSuccessRegister()
     // }
-    loaded = false
-    userData = await firebase.auth()
-            .createUserWithEmailAndPassword(email, pass);
-    loaded = true
-      console.log("Account created");
-      alert('Your account was created!');
-      onSuccessRegister()
-  } catch (error) {
-    switch(error.code){
+    // loaded = false
+    progressOn()
+    firebase.auth().createUserWithEmailAndPassword(email, pass).catch(function(error) {
+      switch(error.code){
 
         case "EMAIL_TAKEN":
           alert("The new user account cannot be created because the email is already in use.");
@@ -73,16 +69,37 @@ const onPressRegister = async (email, pass, onSuccessRegister) => {
         default:
           alert("Error creating user:");
       }
+    });
+    // this.showProgress = false
+      console.log("Account created");
+      progressOff
+      alert('Your account was created!');
+      onSuccessRegister()
+  // } catch (error) {
+  //   switch(error){
 
-}
+  //       case "EMAIL_TAKEN":
+  //         alert("The new user account cannot be created because the email is already in use.");
+  //       break;
+
+  //       case "INVALID_EMAIL":
+  //         alert("The specified email is not a valid email.");
+  //       break;
+
+  //       default:
+  //         alert("Error creating user:");
+  //     }
+
+  // }
     console.log(error.toString())
 }
-
-export default ({onPress, goBack, onSuccessRegister}) => (
+export default ({onPress, goBack, onSuccessRegister, progressOff, progressOn}) => (
  <View style={containerStyles.container}>
-   <Header text="Signup" loaded={loaded} />
-   <Text style={textStyles.subtitle} >Your Username will be used to login</Text>
-
+   
+   <Text style={textStyles.subtitle} >Sign Up</Text>
+   <ActivityIndicator animating = {this.progressOff.bind(this)}
+        style = {containerStyles.activityIndicator} size = "large"
+    />
    <TextInput placeholder='Username'
     style={inputStyles.emailInput}
     onChange={usernameChangeHandler}></TextInput>
@@ -96,7 +113,7 @@ export default ({onPress, goBack, onSuccessRegister}) => (
     secureTextEntry={true}
     onChange={passwordChangeHandler}></TextInput>
 
-   <ButtonInverted title='Register' onPress={() => onPressRegister(state.email, state.pass, onSuccessRegister)} />
+   <ButtonInverted title='Register' onPress={() => onPressRegister(state.email, state.pass, onSuccessRegister, progressOn, progressOff)} />
 
    <ButtonCustom onPress={onPress} title='Or go to Login' />
   

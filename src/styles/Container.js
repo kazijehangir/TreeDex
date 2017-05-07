@@ -12,6 +12,13 @@ export default StyleSheet.create({
     height: Constants.height,
     flex: -1
   },
+   activityIndicator: {
+      flex: 1,
+      marginTop: 10,
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: 80
+   },
   scrollView: {
     height:50,
     backgroundColor: Colors.background,
