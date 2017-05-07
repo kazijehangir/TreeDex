@@ -32,9 +32,12 @@ export default ({ onPressQuests, onPressNews}) => (
                 <Image source={require('../images/edit_icon.png')} style={{width: 50, height: 50}}></Image>
                 </TouchableHighlight>
 
+
                 <TouchableHighlight onPress={onPressNews}>
-                <Image source={require('../images/adopt_a_plant_icon.png')} style={{width: 50, height: 50}}></Image>
-                 </TouchableHighlight>
+                <Image source={require('../images/badges_icon.png')} style={{width: 50, height: 50}}></Image>
+                </TouchableHighlight>
+
+                
 
           </View>
 
@@ -43,9 +46,9 @@ export default ({ onPressQuests, onPressNews}) => (
 
           
           <View 
-                style={{flexDirection: 'row', width: 360, height: 50}} >
+                style={{flexDirection: 'row', width: 360, height: 50, justifyContent: 'space-between'}} >
                 <TouchableHighlight onPress={onPressNews}>
-                <Image source={require('../images/badges_icon.png')} style={{width: 50, height: 50}}></Image>
+                <Image source={require('../images/adopt_a_plant_icon.png')} style={{width: 50, height: 50}}></Image>
                 </TouchableHighlight>
                 
           </View>
