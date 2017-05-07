@@ -9,11 +9,12 @@ import News from './News'
 import containerStyles from '../styles/Container'
 import Constants from '../Constants'
 
-export default ({ onPressQuests, onPressNews, onPressProfile}) => (
+export default ({ user, onPressQuests, onPressNews, onPressProfile}) => (
     <Swiper style={containerStyles.swiper}
         showsButtons={true} loop={false} index={1}>
         <FriendsPage/>
         <MainPage
+         user={user}
          onPressProfile={onPressProfile} />
         <ExplorePage
             onPressNews={onPressNews}

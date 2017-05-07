@@ -76,6 +76,12 @@ export default class TreeDexRN extends Component {
           // User is signed in.
           // alert(JSON.stringify(user) + " signed in.")
           this.setState({user: user})
+          this._handleAction({ type: 'push', key: 'MainSwiper' })
+          // alert(JSON.stringify(this.state.navState))
+          let newState = Object.assign({}, this.state.navState)
+          newState.routes = newState.routes.slice(-1)
+          newState.index = 0
+          this.setState({navState: newState})
         } else {
           alert("No User signed in.")
         }
@@ -118,6 +124,7 @@ export default class TreeDexRN extends Component {
       }
       if (key === 'MainSwiper') {
         return <MainSwiper
+                 user={this.state.user}
                  onPressQuests={this._handleAction.bind(this,
                  { type: 'push', key: 'Quests' })}
                  onPressNews={this._handleAction.bind(this,
