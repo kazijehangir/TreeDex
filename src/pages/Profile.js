@@ -15,7 +15,7 @@ import Constants from '../Constants'
 import textStyles from '../styles/Text'
 import containerStyles from '../styles/Container'
 // 3421
-export default ({ onPressQuests, onPressNews}) => ( 
+export default ({ onPressQuests, onPressNews, onPressSettings}) => ( 
   <View>
     <Image
           source = {require('../images/profile_background.png')}
@@ -28,7 +28,7 @@ export default ({ onPressQuests, onPressNews}) => (
            
            <View 
                 style={{flexDirection: 'row', width: 360, height: 50, justifyContent: 'space-between'}} >
-                <TouchableHighlight onPress={onPressNews}>
+                <TouchableHighlight onPress={onPressSettings}>
                 <Image source={require('../images/edit_icon.png')} style={{width: 50, height: 50}}></Image>
                 </TouchableHighlight>
 

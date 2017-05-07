@@ -33,6 +33,7 @@ import Profile from './src/pages/Profile'
 import MainSwiper from './src/pages/MainSwiper'
 import Quests from './src/pages/Quests'
 import News from './src/pages/News'
+import Settings from './src/pages/Settings'
 import containerStyles from './src/styles/Container'
 import buttonStyles from './src/styles/Button'
 import WebView from './src/pages/WebView'
@@ -150,7 +151,9 @@ export default class TreeDexRN extends Component {
                  onPressQuests={this._handleAction.bind(this,
                  { type: 'push', key: 'Quests' })}
                  onPressNews={this._handleAction.bind(this,
-                 { type: 'push', key: 'News'})} />
+                 { type: 'push', key: 'News'})}
+                 onPressSettings={this._handleAction.bind(this,
+                 { type: 'push', key: 'Settings' })} />
       }
       if(key === 'Quests'){
         return <Quests />
@@ -166,6 +169,11 @@ export default class TreeDexRN extends Component {
       }
       if (key == 'News1'){
         return <WebView/>
+
+      }
+
+      if (key == 'Settings'){
+        return <Settings/>
 
       }
 
