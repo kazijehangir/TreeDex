@@ -174,6 +174,16 @@ export default class TreeDexRN extends Component {
 
       }
 
+      if (key == 'ChangeName'){
+        return <ChangeName/>
+
+      }
+
+      if (key == 'ChangePass'){
+        return <ChangePass/>
+
+      }
+
       if (key == 'Settings'){
         return <Settings
                  onPressName={this._handleAction.bind(this,
@@ -182,6 +192,7 @@ export default class TreeDexRN extends Component {
                  { type: 'push', key: 'ChangePass' })} />
 
       }
+
 
     }
     _renderScene(props) {
