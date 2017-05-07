@@ -62,16 +62,12 @@ const onPressRegister = async (email, pass, onSuccessRegister) => {
   } catch (error) {
     switch(error.code){
 
-        case "EMAIL_TAKEN":
-          alert("The new user account cannot be created because the email is already in use.");
-        break;
-
-        case "INVALID_EMAIL":
-          alert("The specified email is not a valid email.");
+        case "INVALID PASSWORD":
+          alert("The new password is invalid.");
         break;
 
         default:
-          alert("Error creating user:");
+          alert("Error changing password");
       }
 
 }
@@ -81,24 +77,23 @@ const onPressRegister = async (email, pass, onSuccessRegister) => {
 export default ({onPress, goBack, onSuccessRegister}) => (
  <View style={containerStyles.container}>
    <Header text="Signup" loaded={loaded} />
-   <Text style={textStyles.subtitle} >Your Username will be used to login</Text>
+   <Text style={textStyles.subtitle} >Change Password</Text>
 
-   <TextInput placeholder='Username'
+   <TextInput placeholder='Old Password'
     style={inputStyles.emailInput}
     onChange={usernameChangeHandler}></TextInput>
 
-   <TextInput placeholder='Email'
+   <TextInput placeholder='Type New Password'
     style={inputStyles.emailInput}
     onChange={emailChangeHandler}></TextInput>
 
-   <TextInput placeholder='Password'
+   <TextInput placeholder='Re-type New Password'
     style={inputStyles.passwordInput}
     secureTextEntry={true}
     onChange={passwordChangeHandler}></TextInput>
 
-   <ButtonInverted title='Register' onPress={() => onPressRegister(state.email, state.pass, onSuccessRegister)} />
+   <ButtonInverted title='Change Password' onPress={() => onPressRegister(state.email, state.pass, onSuccessRegister)} />
 
-   <ButtonCustom onPress={onPress} title='Or go to Login' />
   
  </View>
 )
