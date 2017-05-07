@@ -42,6 +42,7 @@ const firebaseApp = firebase.initializeApp(config);
  //   messagingSenderId: "1031584636567"
  // };
  // firebase.initializeApp(config);
+ //TODO-Mahnoor: add progress bar 
 
 
  // TODO: Jehangir: Tab button to move to password
