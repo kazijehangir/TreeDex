@@ -188,28 +188,19 @@ export default class TreeDexRN extends Component {
       );
     }
     _renderBackButton(props) {
-      // alert(JSON.stringify(props))
-      switch (props.navigationState
-          .routes[props.navigationState.routes.length - 1].key) {
-        case 'Home':
-          return (<View></View>)
-        case 'MainSwiper':
-          return (<View></View>)
-        default:
-          return (
-            <TouchableOpacity
-              style={buttonStyles.navBackContainer}
-              onPress={() => props.onNavigateBack(this.handleBackAction)}>
-              <Image
-                style={buttonStyles.navBack} source={require('./src/assets/backButton.png')}
-              />
-            </TouchableOpacity>
-          )
-      }
+      return (
+        <TouchableOpacity
+          style={buttonStyles.navBackContainer}
+          onPress={() => props.onNavigateBack(this.handleBackAction)}>
+          <Image
+            style={buttonStyles.navBack} source={require('./src/assets/backButton.png')}
+          />
+        </TouchableOpacity>
+      )
     }
     _renderHeader = (sceneProps) => {
         const route = sceneProps.scene.route
-        if (route.key == 'Home')
+        if (route.key == 'Home' || route.key == 'MainSwiper')
           return null // Here we skip header on home and main screen
         // Next, we remove back navigation on second screen (optional)
         const onNavigateBack =

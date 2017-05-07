@@ -19,9 +19,36 @@ export default ({ onPressQuests, onPressNews}) => (
   <View>
     <Image
           source = {require('../images/profile_background.png')}
+
+          
+
+
           style={{width: null, height:Constants.greenboxheight, alignSelf: 'stretch',justifyContent: 'center',alignItems: 'center' }}>
+
+           
+           <View 
+                style={{flexDirection: 'row', width: 360, height: 50}} >
+                <TouchableHighlight onPress={onPressNews}>
+                <Image source={require('../images/edit_icon.png')} style={{width: 50, height: 50}}></Image>
+                </TouchableHighlight>
+
+                <TouchableHighlight onPress={onPressNews}>
+                <Image source={require('../images/adopt_a_plant_icon.png')} style={{width: 50, height: 50}}></Image>
+                 </TouchableHighlight>
+
+          </View>
+
           <Image source={require('../images/profilePic.png')}
            style={{width: 150, height: 150}}/> 
+
+          
+          <View 
+                style={{flexDirection: 'row', width: 360, height: 50}} >
+                <TouchableHighlight onPress={onPressNews}>
+                <Image source={require('../images/badges_icon.png')} style={{width: 50, height: 50}}></Image>
+                </TouchableHighlight>
+                
+          </View>
     
     </Image>    
 
@@ -35,7 +62,7 @@ export default ({ onPressQuests, onPressNews}) => (
           </View>
           <View style={{flexDirection: 'row', width: 360, height: 50, backgroundColor: '#21b48c'}}>
                 <TouchableHighlight onPress={onPressNews}>
-                <Image source={require('../images/badges_icon.jpg')} style={{width: 50, height: 50}}></Image>
+                <Image source={require('../images/badges_icon.png')} style={{width: 50, height: 50}}></Image>
                 </TouchableHighlight>
                 <Text style={styles.titleText}>        BADGES</Text>
           </View>
