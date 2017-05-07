@@ -19,7 +19,6 @@ export default ({ onPressQuests, onPressNews, onPressProfile}) => (
             onPressNews={onPressNews}
             onPressQuests={onPressQuests}
         />
-        <News/>
     </Swiper>
 
 )

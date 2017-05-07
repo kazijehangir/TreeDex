@@ -49,13 +49,13 @@ const passwordChangeHandler = ev => {
 const onPressRegister = async (email, pass, onSuccessRegister) => {
   var cond = true
   try {
-    if(cond){
-      onSuccessRegister()
-    }
-    // await firebase.auth()
-    //   .createUserWithEmailAndPassword(email, pass);
-    //   console.log("Account created");
+    // if(cond){
     //   onSuccessRegister()
+    // }
+    await firebase.auth()
+      .createUserWithEmailAndPassword(email, pass);
+      console.log("Account created");
+      onSuccessRegister()
   } catch (error) {
     console.log(error.toString())
   }

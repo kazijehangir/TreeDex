@@ -43,6 +43,9 @@ const firebaseApp = firebase.initializeApp(config);
  // };
  // firebase.initializeApp(config);
  //TODO-Mahnoor: add progress bar 
+
+
+ // TODO: Jehangir: Tab button to move to password
 const onPressLogin = async (email, pass, onSuccess) => {
   var cond = true
   try {

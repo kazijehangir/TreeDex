@@ -137,9 +137,9 @@ export default class TreeDexRN extends Component {
     _renderScene(props) {
         const ComponentToRender = this._renderRoute(props.scene.route.key)
         return (
-          <ScrollView style={containerStyles.scrollView}>
+          <View style={containerStyles.Container}>
             {ComponentToRender}
-          </ScrollView>
+          </View>
         );
     }
     _renderTitleComponent(props) {
