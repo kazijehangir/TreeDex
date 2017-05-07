@@ -1,0 +1,957 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"done",
+				"doneZero"
+			],
+			[
+				"pref",
+				"prefixsum1"
+			],
+			[
+				"from",
+				"fromLeft"
+			],
+			[
+				"lef",
+				"leftsum"
+			],
+			[
+				"pre",
+				"prefixsum1"
+			],
+			[
+				"Print",
+				"Println"
+			],
+			[
+				"yd",
+				"ydim"
+			],
+			[
+				"P",
+				"Println"
+			],
+			[
+				"ce",
+				"censusData"
+			],
+			[
+				"l",
+				"longitude"
+			],
+			[
+				"y",
+				"ybuck"
+			],
+			[
+				"xdi",
+				"xdim-1"
+			],
+			[
+				"ydim",
+				"ydim-1"
+			],
+			[
+				"min_la",
+				"min_lat"
+			],
+			[
+				"min",
+				"min_long"
+			],
+			[
+				"max_l",
+				"max_long"
+			],
+			[
+				"len",
+				"lenofgrid"
+			],
+			[
+				"le",
+				"lenofgrid"
+			],
+			[
+				"cen",
+				"censusData"
+			],
+			[
+				"max",
+				"max_lat"
+			],
+			[
+				"merge",
+				"mergesort"
+			],
+			[
+				"pa",
+				"par2"
+			],
+			[
+				"x",
+				"xdim"
+			],
+			[
+				"no",
+				"north"
+			],
+			[
+				"c",
+				"censusData"
+			],
+			[
+				"f",
+				"fmt"
+			],
+			[
+				"s",
+				"south"
+			],
+			[
+				"min_",
+				"min_lat"
+			],
+			[
+				"la",
+				"latitude"
+			],
+			[
+				"pr",
+				"Println"
+			],
+			[
+				"Cen",
+				"CensusGroup"
+			],
+			[
+				"int",
+				"int"
+			],
+			[
+				"max_",
+				"max_lat"
+			],
+			[
+				"min_l",
+				"min_lat"
+			],
+			[
+				"Ce",
+				"CensusGroup"
+			],
+			[
+				"C",
+				"CensusGroup"
+			],
+			[
+				"num",
+				"num_of_o"
+			],
+			[
+				"turn",
+				"turn_player"
+			],
+			[
+				"handle",
+				"handleClick"
+			],
+			[
+				"hand",
+				"handleClick"
+			],
+			[
+				"clien",
+				"clientSocket1"
+			],
+			[
+				"peer",
+				"peer_ip"
+			],
+			[
+				"ser",
+				"serverPort"
+			],
+			[
+				"serv",
+				"serverPort"
+			],
+			[
+				"search",
+				"searchquery"
+			],
+			[
+				"cl",
+				"clientSocket1"
+			],
+			[
+				"serve",
+				"serverSocket"
+			],
+			[
+				"site",
+				"siteInfo"
+			],
+			[
+				"minfet",
+				"minfetch"
+			],
+			[
+				"all",
+				"allsites"
+			],
+			[
+				"co",
+				"console"
+			],
+			[
+				"req",
+				"requestCount"
+			],
+			[
+				"pars",
+				"parsedUrl"
+			],
+			[
+				"ada",
+				"adapterFor"
+			],
+			[
+				"par",
+				"parsedUrl"
+			],
+			[
+				"proto",
+				"protocol"
+			],
+			[
+				"in",
+				"initialUrls"
+			],
+			[
+				"read",
+				"readFile"
+			],
+			[
+				"write",
+				"writeFile"
+			],
+			[
+				"rad",
+				"radius"
+			],
+			[
+				"body",
+				"Body"
+			],
+			[
+				"posx1",
+				"posx1"
+			],
+			[
+				"py",
+				"py"
+			],
+			[
+				"upd",
+				"updateBody"
+			],
+			[
+				"pad",
+				"pad_len_ascii"
+			],
+			[
+				"clie",
+				"clients"
+			],
+			[
+				"client",
+				"clientSocket"
+			],
+			[
+				"so",
+				"clientSocket"
+			],
+			[
+				"quer",
+				"query_resp"
+			],
+			[
+				"sear",
+				"searchinfile"
+			],
+			[
+				"que",
+				"query_resp"
+			],
+			[
+				"gr",
+				"groupBy"
+			],
+			[
+				"solv",
+				"solvedBoard"
+			],
+			[
+				"solved",
+				"solvedBoardElements"
+			],
+			[
+				"Boa",
+				"BoardElement"
+			],
+			[
+				"other",
+				"otherwise"
+			],
+			[
+				"empty",
+				"emptywala"
+			],
+			[
+				"B",
+				"BoardElement"
+			],
+			[
+				"sod",
+				"sudokuElements"
+			],
+			[
+				"inpu",
+				"inputBoardEmpty"
+			],
+			[
+				"valid",
+				"validVals"
+			],
+			[
+				"vali",
+				"validVals"
+			],
+			[
+				"sudo",
+				"sudokuElements"
+			],
+			[
+				"Exce",
+				"EXCEPTION"
+			],
+			[
+				"borrowe",
+				"borrower"
+			],
+			[
+				"NU",
+				"NUMBER"
+			],
+			[
+				"borrower",
+				"borrower_id"
+			],
+			[
+				"bo",
+				"borrower_id"
+			],
+			[
+				"iss",
+				"issue_date"
+			],
+			[
+				"book",
+				"book_id"
+			],
+			[
+				"numbr",
+				"NUMBER"
+			],
+			[
+				"number",
+				"NUMBER"
+			],
+			[
+				"borro",
+				"borrower_id"
+			],
+			[
+				"ns",
+				"nsocket"
+			],
+			[
+				"a",
+				"a"
+			],
+			[
+				"cover",
+				"cover"
+			],
+			[
+				"cno",
+				"cnode2"
+			],
+			[
+				"coll",
+				"collisions"
+			],
+			[
+				"colli",
+				"Collisions"
+			],
+			[
+				"n",
+				"n"
+			],
+			[
+				"te",
+				"testline"
+			],
+			[
+				"test",
+				"Test"
+			],
+			[
+				"delet",
+				"delete_node"
+			],
+			[
+				"temp",
+				"temp"
+			],
+			[
+				"tr",
+				"trav"
+			],
+			[
+				"ke",
+				"key"
+			],
+			[
+				"en",
+				"endl"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 174.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/new/TreeDex/index.ios.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/new/TreeDex/src/pages/Profile.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/new/TreeDex/package.json",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/new/TreeDex/src/pages/Main.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/new/TreeDex/app.json",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/new/TreeDex/index.android.js",
+		"/C/Users/Saad/go/src/hello/hello.go",
+		"/C/Users/Saad/go/src/a5/PopulationQuery.go",
+		"/C/Users/Saad/Downloads/PopulationQuery.go",
+		"/C/Users/Saad/go/src/ex/ex.go",
+		"/C/Users/Saad/go/src/ex/rec.go",
+		"/C/Users/Saad/AppData/Local/Temp/Rar$DIa0.874/PopulationQuery.go",
+		"/C/Users/Saad/AppData/Local/Temp/Rar$DIa0.772/PopulationQuery.go",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/Assignment 4/PopulationQuery.java",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/Assignment 4/USMaps.java",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/Assignment 4/CensusGroup.java",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/Assignment 4/CensusData.java",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/Assignment 4/InteractionPane.java",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/Assignment 4/Rectangle.java",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/Assignment 4/MapPane.java",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/Assignment5/PopulationQuery.go",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/Assignment 4/Pair.java",
+		"/C/Users/Saad/go/hello.go",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/new/TreeDex/src/pages/Register.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/new/TreeDex/src/pages/Friends.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/new/TreeDex/src/components/Container.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/new/TreeDex/src/styles/Container.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/new/TreeDex/src/pages/WebView.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/new/TreeDex/src/pages/Home.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/new/TreeDex/src/pages/Explore.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/new/TreeDex/src/pages/Login.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/new/TreeDex/src/pages/News.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/new/TreeDex/.git/.COMMIT_EDITMSG.swp",
+		"/C/Users/Saad/Desktop/Junior Fall/NET-CEN/pa3/server.py",
+		"/C/Users/Saad/Desktop/Junior Fall/NET-CEN/pa3/worker.py",
+		"/C/Users/Saad/Desktop/Junior Fall/NET-CEN/pa3/client.py",
+		"/C/Users/Saad/Desktop/Junior Fall/NET-CEN/PA1/Final/client.py",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/Project/TreeDex/src/pages/Home.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/Project/TreeDex/src/pages/Main.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/Project/TreeDex/src/pages/Login.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/Project/TreeDex/src/pages/Register.js",
+		"/C/Users/Saad/Downloads/features1.py",
+		"/C/Users/Saad/Downloads/features.py",
+		"/C/Users/Saad/Desktop/Junior Fall/security/18100073/features.py",
+		"/C/Users/Saad/Downloads/features (2).py",
+		"/C/Users/Saad/Desktop/Junior Fall/NET-CEN/netcen-a2/assignment/tracker_server.py",
+		"/C/Users/Saad/Desktop/Junior Fall/NET-CEN/netcen-a2/assignment/Peer2/peerf.py",
+		"/C/Users/Saad/Desktop/Junior Fall/NET-CEN/netcen-a2/assignment/Peer2/peer.py",
+		"/C/Users/Saad/Desktop/Junior Fall/NET-CEN/netcen-a2/assignment/Peer1/peerf.py",
+		"/C/Users/Saad/Desktop/Junior Fall/security/gruyere/part3/test.html",
+		"/C/Users/Saad/Desktop/desk/menubar.gtl",
+		"/C/Users/Saad/Desktop/desk/sanitize.py",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa4/client.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa3/A3.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa3/config.json",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa4/exam.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa4/test.html",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa4/server.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa4/test.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa4/client.html",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa4/client_test.html",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa4/client.txt",
+		"/C/Users/Saad/Desktop/demo/reversi.js",
+		"/C/Users/Saad/Desktop/demo/reversi-ui.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa3/test2.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa4/18100073/server.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa4/18100073/client.html",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa4/18100073/client.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa4/server_backup.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa4/backup_client.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa4/client_backup2.js",
+		"/C/Users/Saad/Downloads/lib.txt",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa4/lib.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa4/server.txt",
+		"/C/Users/Saad/AppData/Local/Temp/7zO6680.tmp/client.js",
+		"/C/Users/Saad/AppData/Local/Temp/7zO96AC.tmp/server.js",
+		"/C/Users/Saad/AppData/Local/Temp/7zO7E2D.tmp/client.jade",
+		"/C/Users/Saad/Desktop/demo/index.html",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/Project/TreeDex/index.android.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/Project/TreeDex/src/components/Button.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/Project/TreeDex/src/components/Container.js",
+		"/C/Users/Saad/Downloads/assignment2.hs",
+		"/C/Users/Saad/Desktop/Junior Fall/Software Engineering/Project/TreeDex/app.json",
+		"/C/Users/Saad/Desktop/part1/peer.py",
+		"/C/Users/Saad/Desktop/Junior Fall/NET-CEN/netcen-a2/tracker_server.py",
+		"/C/Users/Saad/Desktop/Junior Fall/NET-CEN/netcen-a2/Peer2/peerf.py",
+		"/C/Users/Saad/Desktop/Junior Fall/NET-CEN/netcen-a2/Peer1/peerf.py",
+		"/C/Users/Saad/Desktop/Junior Fall/NET-CEN/netcen-a2/Peer2/peer.py",
+		"/C/Users/Saad/Desktop/Junior Fall/NET-CEN/netcen-a2/Peer1/peer.py",
+		"/C/Users/Saad/Desktop/Junior Fall/NET-CEN/netcen-a2/lol.torrent",
+		"/C/Users/Saad/Desktop/part1/upload/genTorrent.py",
+		"/C/Users/Saad/Desktop/part1/tracker_server.py",
+		"/C/Users/Saad/Desktop/part1/test.py",
+		"/C/Users/Saad/Desktop/Junior Fall/NET-CEN/netcen-a2/oppa.torrent",
+		"/C/Users/Saad/Desktop/Junior Fall/NET-CEN/PA1/client1.py",
+		"/C/Users/Saad/AppData/Local/Temp/Rar$DIa0.535/peer.py",
+		"/C/Users/Saad/Desktop/Junior Fall/NET-CEN/netcen-a2/Peer2/test.torrent",
+		"/C/Users/Saad/Desktop/part1/upload/peer.torrent",
+		"/C/Users/Saad/Desktop/part1/upload/genTorrent.torrent",
+		"/C/Users/Saad/Desktop/Junior Fall/NET-CEN/netcen-a2/l1.torrent",
+		"/C/Users/Saad/Desktop/Junior Fall/NET-CEN/netcen-a2/kkk.torrent",
+		"/C/Games/Lula - The Sexy Empire/DATA/SAVE/SAVEGAME.  8",
+		"/C/Users/Saad/Desktop/part1/.vscode/settings.json",
+		"/C/Users/Saad/Desktop/part1/upload/peer.py",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa3/A3.txt",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa3/t.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa3/ans.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa3/test.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa3/test3.js",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/pa3/final.js",
+		"/C/Users/Saad/Desktop/WebCrawler/main.js",
+		"/C/Users/Saad/Desktop/listpics/SuperPowered_v0.12.10-pc/SuperPowered_v0.12.10.py",
+		"/C/Users/Saad/AppData/Local/Temp/Rar$DIa0.286/A3.js",
+		"/C/Users/Saad/AppData/Local/Temp/Rar$DIa0.858/config.json",
+		"/C/Users/Saad/Desktop/Junior Fall/NET-CEN/PA1/server.py",
+		"/C/Users/Saad/Desktop/WebCrawler/config.json",
+		"/C/Users/Saad/AppData/Local/Temp/Rar$DIa0.707/main.js",
+		"/C/Users/Saad/Desktop/Junior Fall/NET-CEN/PA1/Final/server/server.py",
+		"/C/Users/Saad/AppData/Local/Temp/Rar$DIa0.881/BH.hs",
+		"/C/Users/Saad/AppData/Local/Temp/Rar$DIa0.472/BH.hs",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/A1.hs",
+		"/C/Users/Saad/Downloads/BH (2).hs",
+		"/C/Users/Saad/Downloads/BH.hs",
+		"/C/Users/Saad/Desktop/BH.hs",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/2final/BH.hs",
+		"/C/Users/Saad/Desktop/Junior Fall/Advanced Programming/2/BH.hs",
+		"/C/Users/Saad/AppData/Local/Temp/Rar$DIa0.547/A1.hs",
+		"/C/Users/Saad/Downloads/BH (1).hs"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 102.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"topLeft",
+			"bottomLeft",
+			"s_w",
+			"topRight",
+			"bottomRight",
+			"sumPopulation",
+			"colAdd",
+			"rowAdd",
+			"op",
+			"m",
+			"k",
+			"vert",
+			"horizontal",
+			"hori",
+			"sizeX",
+			"west",
+			"singleInteraction",
+			"el",
+			"RCE",
+			"go",
+			"null",
+			"bal",
+			"players",
+			"message",
+			"to_server",
+			"send",
+			"serState",
+			"80001",
+			"torrdata.txt",
+			"ip",
+			"file2",
+			"torrdata",
+			"raw",
+			"6A",
+			"0000006A",
+			"rb",
+			"peer",
+			"genTorrent",
+			"peer",
+			"pipe",
+			"delay",
+			"fetch",
+			"then",
+			"sites",
+			"fetchres",
+			"crawler",
+			"enc",
+			"fulfill",
+			"1024",
+			"sdfunct",
+			"==",
+			"Color3",
+			"getpos",
+			"vel",
+			") ",
+			"vel",
+			"connectionSocket",
+			"mytext.txt",
+			"folder = os.getcwd()",
+			"word",
+			"fromElements",
+			"x",
+			"ma",
+			"pa",
+			"j",
+			"i",
+			"marker",
+			"basesize",
+			"bytesread",
+			"numToRead",
+			"outfd",
+			"fd",
+			"buffer",
+			"file",
+			"valid",
+			"valbit",
+			"validbit",
+			"const",
+			"book_status",
+			"tot_books",
+			"temp",
+			"booktitle",
+			"c",
+			"bookid",
+			"booktitle",
+			"today_date",
+			"ans",
+			"booktitle",
+			"c",
+			"booktitle",
+			"today_date",
+			"todaydate",
+			"bookid",
+			"EXCEPTION",
+			"NO_DATA_FOUND",
+			"2015",
+			"output",
+			"days_issued",
+			"book",
+			"book_tite",
+			"DEBUG",
+			"ready list",
+			"SimpleThreadSleep",
+			"GoToSleepFor",
+			"simpleThreadSleep",
+			"trace",
+			"n2",
+			"n1",
+			"n0",
+			"tcp1",
+			"sink1",
+			"qf",
+			"$qf",
+			"Leftovers",
+			"IIADDQ",
+			"mPORT",
+			"maxlength",
+			"IsEmpty",
+			"tadder",
+			"counter",
+			"tadder",
+			"fork",
+			"trainHelper",
+			"exitSemaphore",
+			"currentStation",
+			"entryTrain",
+			"count",
+			"id"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"n_w",
+			"s_w",
+			"s_e",
+			"n_e",
+			"s_w",
+			"total_pop",
+			"cpop",
+			"rpop",
+			"j",
+			"i",
+			"y",
+			"x",
+			"horizontal",
+			"undefined",
+			"fetchres",
+			"resolv",
+			"bufsize",
+			"self.sock",
+			"r",
+			"m",
+			"j",
+			"i",
+			"pa",
+			"ma",
+			"ba",
+			"b",
+			"num",
+			"output",
+			"input",
+			"buf",
+			"bstatus",
+			"maxnum",
+			"btitle",
+			"cond",
+			"book_id",
+			"book_title",
+			"current_date",
+			"ret",
+			"book_title",
+			"cond",
+			"current_date",
+			"2016",
+			"ret",
+			"current_date - j.issue_date",
+			"Dst",
+			"Router",
+			"Src",
+			"init",
+			"tlsema",
+			"cstation",
+			"comet",
+			"tadder",
+			"passnum",
+			"drop",
+			"pick",
+			"tmax",
+			"nums",
+			"loaded",
+			"tlsema",
+			"begin",
+			"cstation",
+			"tmax",
+			"cstation",
+			"tlsema",
+			"nums",
+			"clockend",
+			"endoftime",
+			"Alarm_Clock",
+			"Box",
+			"Mail",
+			"maxlength",
+			"vec",
+			"sbuf",
+			"addrsize",
+			"sock",
+			"buf",
+			"nsocket",
+			"sstorage",
+			"mysocket",
+			"sock",
+			"Electrical Lighting",
+			"Electrical_Device",
+			"Company_with_most_in_Drugs",
+			"Company_with_most_in_OTHERS",
+			"Company_with_most_in_MECH",
+			"Company_with_most_in_Elec",
+			"Company_with_most_in_DrugsandMedicine",
+			"Company_with_most_in_cmpandcmm",
+			"Company_with_most_in_chem",
+			"threshold",
+			"l",
+			"r",
+			"midpoint",
+			"k",
+			"characterv",
+			"newint",
+			"s",
+			"value",
+			"double",
+			"rt",
+			"k",
+			"AvLNode",
+			"n",
+			"temp",
+			"n",
+			"temp",
+			"cnode",
+			"poly2"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.android.sublime-project",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 158.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

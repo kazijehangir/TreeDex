@@ -24,5 +24,6 @@ export default {
   height: height - 24,
   greenboxheight: height*0.65,
   whiteboxheight: height*0.35,
+  profileboxheight: 93+(height*0.65),
   width: width
 }

@@ -33,6 +33,7 @@ import Profile from './src/pages/Profile'
 import MainSwiper from './src/pages/MainSwiper'
 import Quests from './src/pages/Quests'
 import News from './src/pages/News'
+import Settings from './src/pages/Settings'
 import containerStyles from './src/styles/Container'
 import buttonStyles from './src/styles/Button'
 import WebView from './src/pages/WebView'
@@ -150,7 +151,9 @@ export default class TreeDexRN extends Component {
                  onPressQuests={this._handleAction.bind(this,
                  { type: 'push', key: 'Quests' })}
                  onPressNews={this._handleAction.bind(this,
-                 { type: 'push', key: 'News'})} />
+                 { type: 'push', key: 'News'})}
+                 onPressSettings={this._handleAction.bind(this,
+                 { type: 'push', key: 'Settings' })} />
       }
       if(key === 'Quests'){
         return <Quests />
@@ -166,6 +169,11 @@ export default class TreeDexRN extends Component {
       }
       if (key == 'News1'){
         return <WebView/>
+
+      }
+
+      if (key == 'Settings'){
+        return <Settings/>
 
       }
 
@@ -188,28 +196,19 @@ export default class TreeDexRN extends Component {
       );
     }
     _renderBackButton(props) {
-      // alert(JSON.stringify(props))
-      switch (props.navigationState
-          .routes[props.navigationState.routes.length - 1].key) {
-        case 'Home':
-          return (<View></View>)
-        case 'MainSwiper':
-          return (<View></View>)
-        default:
-          return (
-            <TouchableOpacity
-              style={buttonStyles.navBackContainer}
-              onPress={() => props.onNavigateBack(this.handleBackAction)}>
-              <Image
-                style={buttonStyles.navBack} source={require('./src/assets/backButton.png')}
-              />
-            </TouchableOpacity>
-          )
-      }
+      return (
+        <TouchableOpacity
+          style={buttonStyles.navBackContainer}
+          onPress={() => props.onNavigateBack(this.handleBackAction)}>
+          <Image
+            style={buttonStyles.navBack} source={require('./src/assets/backButton.png')}
+          />
+        </TouchableOpacity>
+      )
     }
     _renderHeader = (sceneProps) => {
         const route = sceneProps.scene.route
-        if (route.key == 'Home')
+        if (route.key == 'Home' || route.key == 'MainSwiper')
           return null // Here we skip header on home and main screen
         // Next, we remove back navigation on second screen (optional)
         const onNavigateBack =
@@ -259,7 +258,7 @@ const createReducer = (initialState) => {
 const NavReducer = createReducer({
   index: 0,
   key: 'App',
-  routes: [{key: 'Home'}]
+  routes: [{key: 'MainSwiper'}]
 })
 
 AppRegistry.registerComponent('TreeDexRN', () => TreeDexRN);
