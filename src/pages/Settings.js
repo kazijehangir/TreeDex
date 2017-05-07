@@ -22,14 +22,17 @@ import ButtonSquare from '../components/ButtonSquare'
 //If you gonna change this please put it somewhere back too!!!
 // I put them back. - JK
 
-export default ({onPressQuests, onPressNews}) => (
-  <ScrollView style={containerStyles.explore}>
-    <Text style={textStyles.header}>Explore</Text>
-    <ButtonSquare onPress={onPressNews} title='Change Username'/>
-    <ButtonSquare onPress={onPressQuests} title= 'Change Password'/>
+export default ({onPressPass, onPressName}) => (
+
+  <View style={{flexDirection: 'row', width: 360, height: 50, justifyContent: 'center'}} >
+    <ScrollView style={containerStyles.explore}>
+      <Text style={textStyles.header}>Settings</Text>
+      <ButtonSquare onPress={onPressName} title='Change Username'/>
+      <ButtonSquare onPress={onPressPass} title= 'Change Password'/>
 
 
-    
-    
-  </ScrollView>
+
+      
+    </ScrollView>
+  </View>
 )

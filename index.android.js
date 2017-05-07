@@ -34,6 +34,8 @@ import MainSwiper from './src/pages/MainSwiper'
 import Quests from './src/pages/Quests'
 import News from './src/pages/News'
 import Settings from './src/pages/Settings'
+import ChangeName from './src/pages/ChangeName'
+import ChangePass from './src/pages/ChangePass'
 import containerStyles from './src/styles/Container'
 import buttonStyles from './src/styles/Button'
 import WebView from './src/pages/WebView'
@@ -173,7 +175,11 @@ export default class TreeDexRN extends Component {
       }
 
       if (key == 'Settings'){
-        return <Settings/>
+        return <Settings
+                 onPressName={this._handleAction.bind(this,
+                 { type: 'push', key: 'ChangeName' })}
+                 onPressPass={this._handleAction.bind(this,
+                 { type: 'push', key: 'ChangePass' })} />
 
       }
 
