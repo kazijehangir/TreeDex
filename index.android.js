@@ -89,6 +89,8 @@ export default class TreeDexRN extends Component {
       }
       if (key === 'Register') {
         return <Register
+                onSuccessRegister={this._handleAction.bind(this,
+                {type: 'push', key: 'MainSwiper'})}
                 goBack={this.handleBackAction.bind(this)}
                 onPress={this._handleAction.bind(this,
                 { type: 'push', key: 'Login' })} />
