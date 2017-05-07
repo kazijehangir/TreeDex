@@ -250,7 +250,7 @@ const createReducer = (initialState) => {
 const NavReducer = createReducer({
   index: 0,
   key: 'App',
-  routes: [{key: 'Home'}]
+  routes: [{key: 'MainSwiper'}]
 })
 
 AppRegistry.registerComponent('TreeDexRN', () => TreeDexRN);

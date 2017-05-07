@@ -20,14 +20,14 @@ export default ({ onPressQuests, onPressNews}) => (
     <Image
           source = {require('../images/profile_background.png')}
 
-          
 
 
-          style={{width: null, height:Constants.greenboxheight, alignSelf: 'stretch',justifyContent: 'center',alignItems: 'center' }}>
+
+          style={{width: null, height:Constants.profileboxheight, alignSelf: 'stretch',justifyContent: 'center',alignItems: 'center' }}>
 
            
            <View 
-                style={{flexDirection: 'row', width: 360, height: 50}} >
+                style={{flexDirection: 'row', width: 360, height: 50, justifyContent: 'space-between'}} >
                 <TouchableHighlight onPress={onPressNews}>
                 <Image source={require('../images/edit_icon.png')} style={{width: 50, height: 50}}></Image>
                 </TouchableHighlight>
@@ -53,19 +53,7 @@ export default ({ onPressQuests, onPressNews}) => (
     </Image>    
 
         <View>
-          <View 
-                style={{flexDirection: 'row', width: 360, height: 50, backgroundColor: '#00796b'}} >
-                <TouchableHighlight onPress={onPressNews}>
-                <Image source={require('../images/edit_icon.png')} style={{width: 50, height: 50}}></Image>
-                </TouchableHighlight>
-                <Text  style={styles.titleText}>       EDIT PROFILE</Text>
-          </View>
-          <View style={{flexDirection: 'row', width: 360, height: 50, backgroundColor: '#21b48c'}}>
-                <TouchableHighlight onPress={onPressNews}>
-                <Image source={require('../images/badges_icon.png')} style={{width: 50, height: 50}}></Image>
-                </TouchableHighlight>
-                <Text style={styles.titleText}>        BADGES</Text>
-          </View>
+         
           <View style={{flexDirection: 'row', width: 360, height: 50, backgroundColor: '#afeeee'}}>
                 <TouchableHighlight onPress={onPressNews}>
                 <Image source={require('../images/adopt_a_plant_icon.png')} style={{width: 50, height: 50}}></Image>
