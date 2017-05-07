@@ -20,7 +20,7 @@ import textStyles from '../styles/Text'
 import ButtonCustom from '../components/ButtonCustom'
 import ButtonInverted from '../components/ButtonInverted'
 import * as firebase from "firebase";
-
+import Header from '../components/header'
 var state = {}
 
 const usernameChangeHandler = ev => {
@@ -45,24 +45,42 @@ const passwordChangeHandler = ev => {
 //   messagingSenderId: "826678556599"
 // };
 // const firebaseApp = firebase.initializeApp(config);
-
+var loaded = true
 const onPressRegister = async (email, pass, onSuccessRegister) => {
-  var cond = true
+  // var cond = true
   try {
     // if(cond){
     //   onSuccessRegister()
     // }
-    await firebase.auth()
-      .createUserWithEmailAndPassword(email, pass);
+    loaded = false
+    userData = await firebase.auth()
+            .createUserWithEmailAndPassword(email, pass);
+    loaded = true
       console.log("Account created");
+      alert('Your account was created!');
       onSuccessRegister()
   } catch (error) {
-    console.log(error.toString())
-  }
+    switch(error.code){
+
+        case "EMAIL_TAKEN":
+          alert("The new user account cannot be created because the email is already in use.");
+        break;
+
+        case "INVALID_EMAIL":
+          alert("The specified email is not a valid email.");
+        break;
+
+        default:
+          alert("Error creating user:");
+      }
+
 }
+    console.log(error.toString())
+}
+
 export default ({onPress, goBack, onSuccessRegister}) => (
  <View style={containerStyles.container}>
-   
+   <Header text="Signup" loaded={loaded} />
    <Text style={textStyles.subtitle} >Your Username will be used to login</Text>
 
    <TextInput placeholder='Username'
