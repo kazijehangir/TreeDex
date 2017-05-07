@@ -27,7 +27,16 @@ const _onBarCodeRead = (e) => {
     "Type: " + e.type + "\nData: " + e.data
   )
 }
-
+const checkUser = (ev) => {
+  if (this.state) {
+    alert(JSON.stringify(this.state.user) + " is logged in.")
+  } else {
+    alert("No user logged in.")
+  }
+}
+const logout = (ev) => {
+  alert("Havent implemented logout yet")
+}
 export default ({ onPressQuests, onPressNews, onPressProfile}) => {
   if(state.showCamera) {
     return (
@@ -42,8 +51,10 @@ export default ({ onPressQuests, onPressNews, onPressProfile}) => {
           type={state.cameraType}
         >
         <ButtonCustom onPress={onPressProfile} title='Profile' />
+        <ButtonCustom onPress={checkUser} title='Check User' />
+        <ButtonCustom onPress={logout} title='Logout' />
         </Camera>
-      // </View>  
+      // </View>
     );
   } else {
     return (

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as firebase from "firebase";
+// import * as firebase from "firebase";
 // import { Card, Button } from 'react-native-material-design';
 import {
   AppRegistry,
@@ -15,7 +15,8 @@ import {
   Dimensions,
   ScrollView,
   Platform,
-  BackAndroid
+  BackAndroid,
+  AsyncStorage
 } from 'react-native';
 
 const {
@@ -35,7 +36,10 @@ import News from './src/pages/News'
 import containerStyles from './src/styles/Container'
 import buttonStyles from './src/styles/Button'
 import WebView from './src/pages/WebView'
+import Constants from './src/Constants'
 // import { WebView } from 'react-native';
+
+// TODO: initialize firebase App
 
 
 // Initialize Firebase
@@ -47,7 +51,7 @@ import WebView from './src/pages/WebView'
 //   storageBucket: "treedex-8cb38.appspot.com",
 //   messagingSenderId: "826678556599"
 // };
-// const firebaseApp = firebase.initializeApp(config);
+const firebase = Constants.firebase
 
 export default class TreeDexRN extends Component {
     constructor(props) {
@@ -65,6 +69,18 @@ export default class TreeDexRN extends Component {
           }
         })
       }
+    }
+    componentWillMount(){
+      firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+          // User is signed in.
+          // alert(JSON.stringify(user) + " signed in.")
+          this.setState({user: user})
+        } else {
+          alert("No User signed in.")
+        }
+      })
+
     }
     _handleAction (action) {
         const newState = NavReducer(this.state.navState, action);
@@ -197,7 +213,7 @@ export default class TreeDexRN extends Component {
     }
 }
 
-function createReducer(initialState) {
+const createReducer = (initialState) => {
   return (currentState = initialState, action) => {
     switch (action.type) {
       case 'push':

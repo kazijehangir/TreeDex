@@ -23,11 +23,11 @@ import ButtonSquare from '../components/ButtonSquare'
 // I put them back. - JK
 
 export default ({onPressQuests, onPressNews}) => (
- <ScrollView style={containerStyles.explore}>
-  <Text style={textStyles.header}>Explore</Text>
-  <ButtonSquare onPress={onPressNews} title='NEWS'/>
-  <ButtonSquare onPress={onPressQuests} title= 'QUESTS'/>
-  <Image source={require('../images/news1.jpg')} style={containerStyles.ExploreImage}/>
-  <Image source={require('../images/plant.jpg')} style={containerStyles.ExploreImage}/>
- </ScrollView>
+  <ScrollView style={containerStyles.explore}>
+    <Text style={textStyles.header}>Explore</Text>
+    <ButtonSquare onPress={onPressNews} title='NEWS'/>
+    <ButtonSquare onPress={onPressQuests} title= 'QUESTS'/>
+    <Image source={require('../images/news1.jpg')} style={containerStyles.ExploreImage}/>
+    <Image source={require('../images/plant.jpg')} style={containerStyles.ExploreImage}/>
+  </ScrollView>
 )
