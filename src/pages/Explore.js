@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import {
   AppRegistry,
   StyleSheet,
@@ -14,72 +15,177 @@ import {
   BackAndroid,
   TouchableOpacity
 } from 'react-native';
-import {
-  Card,
-  CardImage,
-  CardTitle,
-  CardContent,
-  CardAction
-} from 'react-native-card-view'
-import Button from 'react-native-button';
-import Colors from '../Colors'
-
-
 
 import containerStyles from '../styles/Container'
 import textStyles from '../styles/Text'
 import ButtonCustom from '../components/ButtonCustom'
 import ButtonSquare from '../components/ButtonSquare'
+import Button from 'react-native-button';
+import Colors from '../Colors'
 import ButtonStyles from '../styles/Button'
-import Constants from '../Constants'
 
-//If you gonna change this please put it somewhere back too!!!
-// I put them back. - JK
-//I changed it a bit. -Basit
 
-export default ({onPressQuests, onPressNews, onPressSettings}) => (
-  <View style={{flex:1}}>
-  <Text style={textStyles.header}>need a name for this page</Text>
-    <Card >
-      <CardImage>
+
+export default () => (
+  <ScrollView style={{flex:1}}>
+    <View style ={{flex:1,flexDirection:'row'}}>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
         <Image
-          style={{height:219}}
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
           source={require('../images/plant.jpg')}
         />
-      </CardImage>
-      <CardAction seperator>
-        <TouchableOpacity style={ButtonStyles.footerButton} onPress={onPressQuests}>
-          <Text style={textStyles.footerText}>News</Text>
-        </TouchableOpacity>
-      </CardAction>
-    </Card>
-    <View style={{flexDirection:'row',flex:1,marginBottom:30}}>
-      <Card>
-        <CardImage>
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
         <Image
-          style={{height:209}}
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
           source={require('../images/plant.jpg')}
         />
-        </CardImage>
-        <CardAction>
-          <TouchableOpacity style={ButtonStyles.footerButton} onPress={onPressQuests}>
-            <Text style={textStyles.footerText}>Explore</Text>
-          </TouchableOpacity>
-        </CardAction>
-      </Card>
-      <Card>
-        <CardImage>
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
         <Image
-          style={{height:209}}
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
           source={require('../images/plant.jpg')}
         />
-        </CardImage>
-        <CardAction >
-          <TouchableOpacity style={ButtonStyles.footerButton} onPress={onPressSettings}>
-            <Text style={textStyles.footerText}>Settings</Text>
-          </TouchableOpacity>
-        </CardAction>
-      </Card>
+      </Button>
     </View>
-  </View>
+    <View style ={{flex:1,flexDirection:'row'}}>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+    </View>
+    <View style ={{flex:1,flexDirection:'row'}}>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+    </View>
+    <View style ={{flex:1,flexDirection:'row'}}>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+    </View>
+    <View style ={{flex:1,flexDirection:'row'}}>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+    </View>
+    <View style={containerStyles.footer}>
+      <TouchableOpacity
+        style={{borderColor: Colors.primary,
+            borderWidth: StyleSheet.hairlineWidth,
+            paddingHorizontal: 20,
+            paddingVertical: 10,
+            borderRadius: 5,
+              }}
+         onPress={() => console.log('load more')}
+       >
+        <Text style={{color:Colors.primary,fontWeight:'500'}}>Load More</Text>
+      </TouchableOpacity>
+    </View>
+
+  </ScrollView>
 )

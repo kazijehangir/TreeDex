@@ -7,11 +7,13 @@ import {
   View,
   Alert,
   ScrollView,
+  TouchableHighlight
 } from 'react-native';
 import Camera from 'react-native-camera'
 
 import Constants from '../Constants'
 import textStyles from '../styles/Text'
+import buttonStyles from '../styles/Button'
 import containerStyles from '../styles/Container'
 import ButtonCustom from '../components/ButtonCustom'
 import ButtonSquare from '../components/ButtonSquare'
@@ -58,7 +60,12 @@ export default ({ user, signout, onPressQuests, onPressNews, onPressProfile}) =>
           aspect={Camera.constants.Aspect.fill}
           type={state.cameraType}
         >
-        <ButtonCustom onPress={onPressProfile} title='Profile' />
+        <TouchableHighlight
+          underlayColor='#EFEFEF'
+          onPress={onPressProfile}
+          style={buttonStyles.profileButton}>
+            <Text style={buttonStyles.buttonText}>Profile</Text>
+        </TouchableHighlight>
         <ButtonCustom onPress={checkUser} title='Check User' />
         <ButtonCustom onPress={signout} title='Logout' />
         </Camera>
