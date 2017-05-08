@@ -108,22 +108,24 @@ class Register extends React.Component{
     };
     // alert(this.state.email)
   }
-  signup(){
+ async signup(){
 
     this.setState({
       loaded: true
     });
     // alert(this.state.passnword)
-    Constants.firebaseApp.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then(function(user){
-      this.setState({
+    try{
+      userData = await Constants.firebaseApp.auth()
+       .createUserWithEmailAndPassword(this.state.email, this.state.password)
+       this.setState({
         email: '',
         password: '',
         loaded: false
       });
       alert('Your account was created!');
       this.props.onSuccessRegister()
-    }).catch(function(error) {
-        switch(error.code){
+    } catch(error) {
+      switch(error.code){
 
           case "EMAIL_TAKEN":
             alert("The new user account cannot be created because the email is already in use.");
@@ -136,10 +138,36 @@ class Register extends React.Component{
           default:
             alert("Error creating user:");
         }
+        this.setState({
+          loaded: false
+        })
+    }
+    // Constants.firebaseApp.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then(function(user){
+    //   this.setState({
+    //     email: '',
+    //     password: '',
+    //     loaded: false
+    //   });
+    //   alert('Your account was created!');
+    //   this.props.onSuccessRegister()
+    // }).catch(function(error) {
+    //     switch(error.code){
+
+    //       case "EMAIL_TAKEN":
+    //         alert("The new user account cannot be created because the email is already in use.");
+    //       break;
+
+    //       case "INVALID_EMAIL":
+    //         alert("The specified email is not a valid email.");
+    //       break;
+
+    //       default:
+    //         alert("Error creating user:");
+    //     }
 
       
 
-    });
+    // });
 
   }
   render(){
@@ -147,7 +175,8 @@ class Register extends React.Component{
        <View style={containerStyles.container}>
    
           <Text style={textStyles.subtitle} >Sign Up</Text>
-          <ActivityIndicator animating = {this.state.loaded}
+          <ActivityIndicator animating = {true}
+              opacity= {this.state.loaded ? 1:0}
               style = {containerStyles.activityIndicator} size = "large"
           />
           <TextInput placeholder='Username'
