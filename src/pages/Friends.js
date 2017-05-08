@@ -20,6 +20,8 @@ import textStyles from '../styles/Text'
 import ButtonCustom from '../components/ButtonCustom'
 import Constants from '../Constants'
 import buttonStyles from '../styles/Button.js'
+import Colors from '../Colors'
+
 
 const Row = (props) => (
   <View style={containerStyles.friendsList}>
@@ -42,8 +44,16 @@ const Header = (props) => (
 
 const Footer = (props) => (
   <View style={containerStyles.footer}>
-    <TouchableOpacity style={buttonStyles.footerButton} onPress={() => console.log('load more')}>
-      <Text style={textStyles.footerText}>Load More</Text>
+    <TouchableOpacity
+      style={{borderColor: Colors.primary,
+          borderWidth: StyleSheet.hairlineWidth,
+          paddingHorizontal: 20,
+          paddingVertical: 10,
+          borderRadius: 5,
+            }}
+       onPress={() => console.log('load more')}
+     >
+      <Text style={{color:Colors.primary}}>Load More</Text>
     </TouchableOpacity>
   </View>
 );

@@ -35,12 +35,14 @@ export default StyleSheet.create({
   },
   header:{
     fontFamily: 'Roboto',
-    fontSize: 30,
+    fontSize: 25,
+    fontWeight:'200',
     color: "#FFFFFF",
     textAlign: 'left',
     position:'relative',
     height: 50,
-    padding: 5,
+    paddingVertical: 6,
+    paddingHorizontal:10,
     backgroundColor: Colors.primary
   },
    welcomeLabel1: {
@@ -73,6 +75,7 @@ export default StyleSheet.create({
   },
   footerText: {
     color: Colors.primary,
+    fontSize:20
   },
   sectionHeaderText: {
     fontSize: 13,

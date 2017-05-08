@@ -19,6 +19,15 @@ export default StyleSheet.create({
     marginRight: 16,
     backgroundColor: Colors.background
   },
+  profileButton: {
+    height: 45,
+    marginTop: 0,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: Colors.primary,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#FFFFFF'
+  },
   buttonInverted: {
     height: 45,
     elevation: 8,
@@ -77,8 +86,16 @@ export default StyleSheet.create({
   footerButton: {
     borderColor: Colors.primary,
     borderWidth: StyleSheet.hairlineWidth,
-    paddingHorizontal: 20,
-    paddingVertical: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
     borderRadius: 5,
+  },
+  newsButton :{
+    padding: 3,
+    overflow: 'hidden',
+    borderRadius: 4,
+    borderWidth: 1,
+    borderColor:Colors.primary,
+    borderTopColor: Colors.primary
   },
 })

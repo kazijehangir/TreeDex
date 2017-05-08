@@ -31,33 +31,24 @@ import Login from './src/pages/Login'
 import Main from './src/pages/Main'
 import Profile from './src/pages/Profile'
 import MainSwiper from './src/pages/MainSwiper'
-import Quests from './src/pages/Quests'
+import Explore from './src/pages/Explore'
 import News from './src/pages/News'
 import Settings from './src/pages/Settings'
+import ChangeName from './src/pages/ChangeName'
+import ChangePass from './src/pages/ChangePass'
 import containerStyles from './src/styles/Container'
 import buttonStyles from './src/styles/Button'
 import WebView from './src/pages/WebView'
 import Constants from './src/Constants'
 // import { WebView } from 'react-native';
 
-// TODO: initialize firebase App
-
-
-// Initialize Firebase
-// var config = {
-//   apiKey: "AIzaSyC-4zmR4cVvrezgDh0MxsnJA5awezVe5kk",
-//   authDomain: "treedex-8cb38.firebaseapp.com",
-//   databaseURL: "https://treedex-8cb38.firebaseio.com",
-//   projectId: "treedex-8cb38",
-//   storageBucket: "treedex-8cb38.appspot.com",
-//   messagingSenderId: "826678556599"
-// };
 
 export default class TreeDexRN extends Component {
     constructor(props) {
       super(props)
       this.state = {
-        navState: NavReducer(undefined, {})
+        navState: NavReducer(undefined, {}),
+        headerTitle: 'TreeDex'
       }
       if (Platform.OS === 'android') {
         BackAndroid.addEventListener('hardwareBackPress', () => {
@@ -70,7 +61,7 @@ export default class TreeDexRN extends Component {
         })
       }
     }
-    componentWillMount(){
+    componentDidMount(){
       Constants.firebaseApp.auth().onAuthStateChanged((user) => {
         if (user) {
           // User is signed in.
@@ -86,6 +77,9 @@ export default class TreeDexRN extends Component {
 
         }
       })
+    }
+    _setHeaderTitle(title) {
+      setState({headerTitle: title})
     }
     async _signOut() {
       // alert("Signing out")
@@ -139,24 +133,26 @@ export default class TreeDexRN extends Component {
         return <MainSwiper
                  user={this.state.user}
                  onPressSignout={this._signOut.bind(this)}
-                 onPressQuests={this._handleAction.bind(this,
-                 { type: 'push', key: 'Quests' })}
+                 onPressExplore={this._handleAction.bind(this,
+                 { type: 'push', key: 'Explore' })}
                  onPressNews={this._handleAction.bind(this,
                  { type: 'push', key: 'News'})}
                  onPressProfile={this._handleAction.bind(this,
-                 { type: 'push', key: 'Profile'})} />
+                 { type: 'push', key: 'Profile'})}
+                 onPressSettings={this._handleAction.bind(this,
+                 { type: 'push', key: 'Settings' })} />
       }
       if (key === 'Profile') {
         return <Profile
-                 onPressQuests={this._handleAction.bind(this,
-                 { type: 'push', key: 'Quests' })}
+                 onPressExplore={this._handleAction.bind(this,
+                 { type: 'push', key: 'Explore' })}
                  onPressNews={this._handleAction.bind(this,
                  { type: 'push', key: 'News'})}
                  onPressSettings={this._handleAction.bind(this,
                  { type: 'push', key: 'Settings' })} />
       }
-      if(key === 'Quests'){
-        return <Quests />
+      if(key === 'Explore'){
+        return <Explore />
       }
       if(key === 'News'){
         return <News
@@ -172,10 +168,25 @@ export default class TreeDexRN extends Component {
 
       }
 
-      if (key == 'Settings'){
-        return <Settings/>
+      if (key == 'ChangeName'){
+        return <ChangeName/>
 
       }
+
+      if (key == 'ChangePass'){
+        return <ChangePass/>
+
+      }
+
+      if (key == 'Settings'){
+        return <Settings
+                 onPressName={this._handleAction.bind(this,
+                 { type: 'push', key: 'ChangeName' })}
+                 onPressPass={this._handleAction.bind(this,
+                 { type: 'push', key: 'ChangePass' })} />
+
+      }
+
 
     }
     _renderScene(props) {
@@ -187,10 +198,14 @@ export default class TreeDexRN extends Component {
         );
     }
     _renderTitleComponent(props) {
+      // alert(JSON.stringify(this.state))
+      if (!this.state.headerTitle) {
+        this._setHeaderTitle(props.scene.route.key)
+      }
       return (
         <NavigationHeader.Title >
           <Text style={containerStyles.navHeaderText}>
-          {props.scene.route.key}
+          {this.state.headerTitle}
           </Text>
         </NavigationHeader.Title>
       );
@@ -208,15 +223,17 @@ export default class TreeDexRN extends Component {
     }
     _renderHeader = (sceneProps) => {
         const route = sceneProps.scene.route
-        if (route.key == 'Home' || route.key == 'MainSwiper')
+        if (route.key == 'Home')
           return null // Here we skip header on home and main screen
         // Next, we remove back navigation on second screen (optional)
-        const onNavigateBack =
-          sceneProps.scene.index > 1 ? this.handleBackAction : undefined
+        let onNavigateBack = this.handleBackAction
+        if (route.key == 'Home' || route.key == 'MainSwiper')
+          onNavigateBack = undefined
+          // sceneProps.scene.index > 1 ? this.handleBackAction : undefined
         return (
             <NavigationHeader
                 {...sceneProps}
-                renderTitleComponent={this._renderTitleComponent}
+                renderTitleComponent={this._renderTitleComponent.bind(this)}
                 onNavigateBack={this.handleBackAction.bind(this)}
                 style={containerStyles.navHeader}
                 renderLeftComponent={this._renderBackButton}
@@ -258,7 +275,7 @@ const createReducer = (initialState) => {
 const NavReducer = createReducer({
   index: 0,
   key: 'App',
-  routes: [{key: 'MainSwiper'}]
+  routes: [{key: 'Home'}]
 })
 
 AppRegistry.registerComponent('TreeDexRN', () => TreeDexRN);
