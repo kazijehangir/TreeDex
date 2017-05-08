@@ -73,6 +73,7 @@ export default StyleSheet.create({
   },
   footerText: {
     color: Colors.primary,
+    fontSize:20
   },
   sectionHeaderText: {
     fontSize: 13,

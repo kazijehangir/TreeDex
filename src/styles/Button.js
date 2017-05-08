@@ -77,8 +77,8 @@ export default StyleSheet.create({
   footerButton: {
     borderColor: Colors.primary,
     borderWidth: StyleSheet.hairlineWidth,
-    paddingHorizontal: 20,
-    paddingVertical: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
     borderRadius: 5,
   },
   newsButton :{

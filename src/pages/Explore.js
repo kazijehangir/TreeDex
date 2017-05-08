@@ -12,6 +12,7 @@ import {
   ScrollView,
   Platform,
   BackAndroid,
+  TouchableOpacity
 } from 'react-native';
 import {
   Card,
@@ -35,6 +36,7 @@ import Constants from '../Constants'
 //If you gonna change this please put it somewhere back too!!!
 // I put them back. - JK
 //I changed it a bit. -Basit
+
 export default ({onPressQuests, onPressNews}) => (
   <View style={{flex:1}}>
   <Text style={textStyles.header}>need a name for this page</Text>
@@ -46,12 +48,9 @@ export default ({onPressQuests, onPressNews}) => (
         />
       </CardImage>
       <CardAction seperator>
-        <Button
-          containerStyle={ButtonStyles.newsButton}
-          style={{fontFamily:'Roboto',fontSize: 25, color: Colors.primary}}
-          onPress={onPressNews}>
-          News
-        </Button>
+        <TouchableOpacity style={ButtonStyles.footerButton} onPress={onPressQuests}>
+          <Text style={textStyles.footerText}>News</Text>
+        </TouchableOpacity>
       </CardAction>
     </Card>
     <View style={{flexDirection:'row',flex:1,marginBottom:30}}>
@@ -63,11 +62,9 @@ export default ({onPressQuests, onPressNews}) => (
         />
         </CardImage>
         <CardAction>
-          <Button
-            containerStyle={ButtonStyles.newsButton}
-            style={{fontSize: 25, color: Colors.primary}}>
-            Explore
-          </Button>
+          <TouchableOpacity style={ButtonStyles.footerButton} onPress={onPressQuests}>
+            <Text style={textStyles.footerText}>Explore</Text>
+          </TouchableOpacity>
         </CardAction>
       </Card>
       <Card>
@@ -78,11 +75,9 @@ export default ({onPressQuests, onPressNews}) => (
         />
         </CardImage>
         <CardAction >
-          <Button
-            containerStyle={ButtonStyles.newsButton}
-            style={{fontSize: 25, color: Colors.primary}}>
-            Settings
-          </Button>
+          <TouchableOpacity style={ButtonStyles.footerButton} onPress={onPressQuests}>
+            <Text style={textStyles.footerText}>Settings</Text>
+          </TouchableOpacity>
         </CardAction>
       </Card>
     </View>

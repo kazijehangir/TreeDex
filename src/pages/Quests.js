@@ -19,11 +19,130 @@ import containerStyles from '../styles/Container'
 import textStyles from '../styles/Text'
 import ButtonCustom from '../components/ButtonCustom'
 import ButtonSquare from '../components/ButtonSquare'
+import Button from 'react-native-button';
+import Colors from '../Colors'
+import ButtonStyles from '../styles/Button'
+
+
 
 export default () => (
- <View style={containerStyles.container}>
-   {/*<Text style={textStyles.title}>This is the Quests page</Text>
-   <ButtonCustom onPress={console.log('button pressed')} title='sample button' />*/}
-    
- </View>  
+  <ScrollView style={{flex:1}}>
+    <View style ={{flex:1,flexDirection:'row'}}>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+    </View>
+    <View style ={{flex:1,flexDirection:'row'}}>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+    </View>
+    <View style ={{flex:1,flexDirection:'row'}}>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+    </View>
+    <View style ={{flex:1,flexDirection:'row'}}>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+    </View>
+
+  </ScrollView>
 )
