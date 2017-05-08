@@ -34,7 +34,7 @@ import Constants from '../Constants'
 
 //If you gonna change this please put it somewhere back too!!!
 // I put them back. - JK
-
+//I changed it a bit. -Basit
 export default ({onPressQuests, onPressNews}) => (
   <View style={{flex:1}}>
   <Text style={textStyles.header}>need a name for this page</Text>
