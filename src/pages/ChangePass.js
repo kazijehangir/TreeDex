@@ -73,10 +73,6 @@ export default ({onPress, goBack, onSuccessRegister}) => (
    <Header text="Signup" loaded={loaded} />
    <Text style={textStyles.subtitle} >Change Password</Text>
 
-   <TextInput placeholder='Old Password'
-    style={inputStyles.passwordInput}
-    secureTextEntry={true}
-    onChange={passwordChangeHandler}></TextInput>
 
    <TextInput placeholder='Type New Password'
     style={inputStyles.passwordInput}
