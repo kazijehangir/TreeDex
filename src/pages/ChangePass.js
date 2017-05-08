@@ -19,7 +19,7 @@ import inputStyles from '../styles/Input'
 import textStyles from '../styles/Text'
 import ButtonCustom from '../components/ButtonCustom'
 import ButtonInverted from '../components/ButtonInverted'
-import * as firebase from "firebase";
+import Constants from '../Constants'
 import Header from '../components/header'
 var state = {}
 
@@ -47,19 +47,13 @@ const passwordChangeHandler = ev => {
 // const firebaseApp = firebase.initializeApp(config);
 var loaded = true
 const onPressRegister = async (pass) => {
-  // var cond = true
-  try {
-    // if(cond){
-    //   onSuccessRegister()
-    // }
-    //loaded = false
-    userData = await firebase.auth()
-            .updatePassword (pass);
-    //loaded = true
-      console.log("Password Changed");
-      alert('Your Password Was Changed!');
-      
-  } catch (error) {
+  loaded = false
+  var user = Constants.firebase.auth().currentUser;
+  user.updatePassword(pass).then((userData) => {
+    loaded = true
+    console.log("Pasword Changed");
+    alert('Your Password was changed!');
+  }, (error) => {
     switch(error.code){
 
         case "INVALID PASSWORD":
@@ -70,7 +64,7 @@ const onPressRegister = async (pass) => {
           alert("Error changing password");
       }
 
-}
+})
     console.log(error.toString())
 }
 
