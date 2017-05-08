@@ -27,7 +27,7 @@ export default ({onPressPass, onPressName}) => (
   <View style={{flexDirection: 'row', width: 360, height: 50, justifyContent: 'center'}} >
     <ScrollView style={containerStyles.explore}>
       <Text style={textStyles.header}>Settings</Text>
-      <ButtonSquare onPress={onPressName} title='Change Username'/>
+      <ButtonSquare onPress={onPressName} title='Change Email'/>
       <ButtonSquare onPress={onPressPass} title= 'Change Password'/>
 
 
