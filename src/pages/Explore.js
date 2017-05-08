@@ -37,7 +37,7 @@ import Constants from '../Constants'
 // I put them back. - JK
 //I changed it a bit. -Basit
 
-export default ({onPressQuests, onPressNews}) => (
+export default ({onPressQuests, onPressNews, onPressSettings}) => (
   <View style={{flex:1}}>
   <Text style={textStyles.header}>need a name for this page</Text>
     <Card >
@@ -75,7 +75,7 @@ export default ({onPressQuests, onPressNews}) => (
         />
         </CardImage>
         <CardAction >
-          <TouchableOpacity style={ButtonStyles.footerButton} onPress={onPressQuests}>
+          <TouchableOpacity style={ButtonStyles.footerButton} onPress={onPressSettings}>
             <Text style={textStyles.footerText}>Settings</Text>
           </TouchableOpacity>
         </CardAction>

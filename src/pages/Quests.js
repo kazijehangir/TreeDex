@@ -12,7 +12,8 @@ import {
   Dimensions,
   ScrollView,
   Platform,
-  BackAndroid
+  BackAndroid,
+  TouchableOpacity
 } from 'react-native';
 
 import containerStyles from '../styles/Container'
@@ -142,6 +143,19 @@ export default () => (
           source={require('../images/plant.jpg')}
         />
       </Button>
+    </View>
+    <View style={containerStyles.footer}>
+      <TouchableOpacity
+        style={{borderColor: Colors.primary,
+            borderWidth: StyleSheet.hairlineWidth,
+            paddingHorizontal: 20,
+            paddingVertical: 10,
+            borderRadius: 5,
+              }}
+         onPress={() => console.log('load more')}
+       >
+        <Text style={{color:Colors.primary}}>Load More</Text>
+      </TouchableOpacity>
     </View>
 
   </ScrollView>

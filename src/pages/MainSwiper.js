@@ -9,7 +9,7 @@ import News from './News'
 import containerStyles from '../styles/Container'
 import Constants from '../Constants'
 
-export default ({ user, onPressSignout, onPressQuests, onPressNews, onPressProfile}) => (
+export default ({ user, onPressSignout, onPressQuests, onPressNews, onPressProfile,onPressSettings}) => (
     <Swiper style={containerStyles.swiper}
         showsButtons={true} loop={false} index={1}>
         <FriendsPage/>
@@ -20,6 +20,7 @@ export default ({ user, onPressSignout, onPressQuests, onPressNews, onPressProfi
         <ExplorePage
             onPressNews={onPressNews}
             onPressQuests={onPressQuests}
+            onPressSettings={onPressSettings}
         />
     </Swiper>
 
