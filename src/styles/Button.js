@@ -19,6 +19,15 @@ export default StyleSheet.create({
     marginRight: 16,
     backgroundColor: Colors.background
   },
+  profileButton: {
+    height: 45,
+    marginTop: 0,
+    borderWidth: StyleSheet.hairlineWidth,
+    borderColor: Colors.primary,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#FFFFFF'
+  },
   buttonInverted: {
     height: 45,
     elevation: 8,

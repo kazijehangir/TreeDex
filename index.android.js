@@ -31,7 +31,7 @@ import Login from './src/pages/Login'
 import Main from './src/pages/Main'
 import Profile from './src/pages/Profile'
 import MainSwiper from './src/pages/MainSwiper'
-import Quests from './src/pages/Quests'
+import Explore from './src/pages/Explore'
 import News from './src/pages/News'
 import Settings from './src/pages/Settings'
 import ChangeName from './src/pages/ChangeName'
@@ -141,26 +141,26 @@ export default class TreeDexRN extends Component {
         return <MainSwiper
                  user={this.state.user}
                  onPressSignout={this._signOut.bind(this)}
-                 onPressQuests={this._handleAction.bind(this,
-                 { type: 'push', key: 'Quests' })}
+                 onPressExplore={this._handleAction.bind(this,
+                 { type: 'push', key: 'Explore' })}
                  onPressNews={this._handleAction.bind(this,
                  { type: 'push', key: 'News'})}
                  onPressProfile={this._handleAction.bind(this,
-                 { type: 'push', key: 'Profile'})} 
+                 { type: 'push', key: 'Profile'})}
                  onPressSettings={this._handleAction.bind(this,
                  { type: 'push', key: 'Settings' })} />
       }
       if (key === 'Profile') {
         return <Profile
-                 onPressQuests={this._handleAction.bind(this,
-                 { type: 'push', key: 'Quests' })}
+                 onPressExplore={this._handleAction.bind(this,
+                 { type: 'push', key: 'Explore' })}
                  onPressNews={this._handleAction.bind(this,
                  { type: 'push', key: 'News'})}
                  onPressSettings={this._handleAction.bind(this,
                  { type: 'push', key: 'Settings' })} />
       }
-      if(key === 'Quests'){
-        return <Quests />
+      if(key === 'Explore'){
+        return <Explore />
       }
       if(key === 'News'){
         return <News
