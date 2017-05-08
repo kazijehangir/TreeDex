@@ -81,4 +81,12 @@ export default StyleSheet.create({
     paddingVertical: 10,
     borderRadius: 5,
   },
+  newsButton :{
+    padding: 3,
+    overflow: 'hidden',
+    borderRadius: 4,
+    borderWidth: 1,
+    borderColor:Colors.primary,
+    borderTopColor: Colors.primary
+  },
 })
