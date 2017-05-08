@@ -100,20 +100,17 @@ export default ({onPress, goBack, onSuccessRegister}) => (
 class Register extends React.Component{
   constructor(props){
     super(props);
-  //  alert(JSON.stringify(this.props))
     this.state = {
       loaded: false,
       email: '',
       password: ''
     };
-    // alert(this.state.email)
   }
  async signup(){
 
     this.setState({
       loaded: true
     });
-    // alert(this.state.passnword)
     try{
       userData = await Constants.firebaseApp.auth()
        .createUserWithEmailAndPassword(this.state.email, this.state.password)
@@ -136,39 +133,12 @@ class Register extends React.Component{
           break;
 
           default:
-            alert("Error creating user:");
+            alert(error);
         }
         this.setState({
           loaded: false
         })
     }
-    // Constants.firebaseApp.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then(function(user){
-    //   this.setState({
-    //     email: '',
-    //     password: '',
-    //     loaded: false
-    //   });
-    //   alert('Your account was created!');
-    //   this.props.onSuccessRegister()
-    // }).catch(function(error) {
-    //     switch(error.code){
-
-    //       case "EMAIL_TAKEN":
-    //         alert("The new user account cannot be created because the email is already in use.");
-    //       break;
-
-    //       case "INVALID_EMAIL":
-    //         alert("The specified email is not a valid email.");
-    //       break;
-
-    //       default:
-    //         alert("Error creating user:");
-    //     }
-
-      
-
-    // });
-
   }
   render(){
     return(
