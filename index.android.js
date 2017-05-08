@@ -59,7 +59,8 @@ export default class TreeDexRN extends Component {
     constructor(props) {
       super(props)
       this.state = {
-        navState: NavReducer(undefined, {})
+        navState: NavReducer(undefined, {}),
+        headerTitle: 'TreeDex'
       }
       if (Platform.OS === 'android') {
         BackAndroid.addEventListener('hardwareBackPress', () => {
@@ -72,7 +73,7 @@ export default class TreeDexRN extends Component {
         })
       }
     }
-    componentWillMount(){
+    componentDidMount(){
       Constants.firebaseApp.auth().onAuthStateChanged((user) => {
         if (user) {
           // User is signed in.
@@ -88,6 +89,9 @@ export default class TreeDexRN extends Component {
 
         }
       })
+    }
+    _setHeaderTitle(title) {
+      setState({headerTitle: title})
     }
     async _signOut() {
       // alert("Signing out")
@@ -204,6 +208,10 @@ export default class TreeDexRN extends Component {
         );
     }
     _renderTitleComponent(props) {
+      // alert(JSON.stringify(this.state))
+      // if (this.state.headerTitle) {
+      //   this._setHeaderTitle(props.scene.route.key)
+      // }
       return (
         <NavigationHeader.Title >
           <Text style={containerStyles.navHeaderText}>
@@ -275,7 +283,7 @@ const createReducer = (initialState) => {
 const NavReducer = createReducer({
   index: 0,
   key: 'App',
-  routes: [{key: 'MainSwiper'}]
+  routes: [{key: 'Home'}]
 })
 
 AppRegistry.registerComponent('TreeDexRN', () => TreeDexRN);
