@@ -54,11 +54,10 @@ const onPressRegister = async (email, pass, onSuccessRegister) => {
     // }
     loaded = false
     userData = await firebase.auth()
-            .createUserWithEmailAndPassword(email, pass);
+            .updateEmail(email);
     loaded = true
-      console.log("Account created");
-      alert('Your account was created!');
-      onSuccessRegister()
+      console.log("Email Address Changed");
+      alert('Your Email Address was changed!');
   } catch (error) {
     switch(error.code){
 
@@ -71,7 +70,7 @@ const onPressRegister = async (email, pass, onSuccessRegister) => {
         break;
 
         default:
-          alert("Error creating user:");
+          alert("Error changing Email:");
       }
 
 }
@@ -80,25 +79,17 @@ const onPressRegister = async (email, pass, onSuccessRegister) => {
 
 export default ({onPress, goBack, onSuccessRegister}) => (
  <View style={containerStyles.container}>
-   <Header text="Signup" loaded={loaded} />
-   <Text style={textStyles.subtitle} >Your Username will be used to login</Text>
+   <Header text="Email Change" loaded={loaded} />
+   <Text style={textStyles.subtitle} >Change your Email</Text>
 
-   <TextInput placeholder='Username'
+   <TextInput placeholder='New Email'
     style={inputStyles.emailInput}
     onChange={usernameChangeHandler}></TextInput>
 
-   <TextInput placeholder='Email'
-    style={inputStyles.emailInput}
-    onChange={emailChangeHandler}></TextInput>
 
-   <TextInput placeholder='Password'
-    style={inputStyles.passwordInput}
-    secureTextEntry={true}
-    onChange={passwordChangeHandler}></TextInput>
 
-   <ButtonInverted title='Register' onPress={() => onPressRegister(state.email, state.pass, onSuccessRegister)} />
+   <ButtonInverted title='Change Email' onPress={() => onPressRegister(state.email, state.pass, onSuccessRegister)} />
 
-   <ButtonCustom onPress={onPress} title='Or go to Login' />
   
  </View>
 )
