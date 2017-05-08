@@ -19,7 +19,8 @@ import inputStyles from '../styles/Input'
 import textStyles from '../styles/Text'
 import ButtonCustom from '../components/ButtonCustom'
 import ButtonInverted from '../components/ButtonInverted'
-import * as firebase from "firebase";
+// import * as firebase from "firebase";
+import Constants from '../Constants'
 import Header from '../components/header'
 var state = {}
 
@@ -48,33 +49,27 @@ const passwordChangeHandler = ev => {
 var loaded = true
 const onPressRegister = async (email, pass, onSuccessRegister) => {
   // var cond = true
-  try {
-    // if(cond){
-    //   onSuccessRegister()
-    // }
-    loaded = false
-    userData = await firebase.auth()
-            .updateEmail(email);
+  loaded = false
+  var user = Constants.firebase.auth().currentUser;
+
+  user.updateEmail(email).then((userData) => {
     loaded = true
-      console.log("Email Address Changed");
-      alert('Your Email Address was changed!');
-  } catch (error) {
+    console.log("Email Address Changed");
+    alert('Your Email Address was changed!');
+  }, (error) => {
     switch(error.code){
+      case "EMAIL_TAKEN":
+        alert("The new user account cannot be created because the email is already in use.");
+      break;
 
-        case "EMAIL_TAKEN":
-          alert("The new user account cannot be created because the email is already in use.");
-        break;
+      case "INVALID_EMAIL":
+        alert("The specified email is not a valid email.");
+      break;
 
-        case "INVALID_EMAIL":
-          alert("The specified email is not a valid email.");
-        break;
-
-        default:
-          alert("Error changing Email:");
-      }
-
-}
-    console.log(error.toString())
+      default:
+        alert("Error changing Email:" + JSON.stringify(error));
+    }
+  })
 }
 
 export default ({onPress, goBack, onSuccessRegister}) => (
@@ -84,12 +79,12 @@ export default ({onPress, goBack, onSuccessRegister}) => (
 
    <TextInput placeholder='New Email'
     style={inputStyles.emailInput}
-    onChange={usernameChangeHandler}></TextInput>
+    onChange={emailChangeHandler}></TextInput>
 
 
 
    <ButtonInverted title='Change Email' onPress={() => onPressRegister(state.email, state.pass, onSuccessRegister)} />
 
-  
+
  </View>
 )

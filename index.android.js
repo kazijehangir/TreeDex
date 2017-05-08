@@ -199,13 +199,13 @@ export default class TreeDexRN extends Component {
     }
     _renderTitleComponent(props) {
       // alert(JSON.stringify(this.state))
-      // if (this.state.headerTitle) {
-      //   this._setHeaderTitle(props.scene.route.key)
-      // }
+      if (!this.state.headerTitle) {
+        this._setHeaderTitle(props.scene.route.key)
+      }
       return (
         <NavigationHeader.Title >
           <Text style={containerStyles.navHeaderText}>
-          {props.scene.route.key}
+          {this.state.headerTitle}
           </Text>
         </NavigationHeader.Title>
       );
@@ -223,15 +223,17 @@ export default class TreeDexRN extends Component {
     }
     _renderHeader = (sceneProps) => {
         const route = sceneProps.scene.route
-        if (route.key == 'Home' || route.key == 'MainSwiper')
+        if (route.key == 'Home')
           return null // Here we skip header on home and main screen
         // Next, we remove back navigation on second screen (optional)
-        const onNavigateBack =
-          sceneProps.scene.index > 1 ? this.handleBackAction : undefined
+        let onNavigateBack = this.handleBackAction
+        if (route.key == 'Home' || route.key == 'MainSwiper')
+          onNavigateBack = undefined
+          // sceneProps.scene.index > 1 ? this.handleBackAction : undefined
         return (
             <NavigationHeader
                 {...sceneProps}
-                renderTitleComponent={this._renderTitleComponent}
+                renderTitleComponent={this._renderTitleComponent.bind(this)}
                 onNavigateBack={this.handleBackAction.bind(this)}
                 style={containerStyles.navHeader}
                 renderLeftComponent={this._renderBackButton}
