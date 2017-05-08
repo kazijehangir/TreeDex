@@ -47,7 +47,7 @@ const passwordChangeHandler = ev => {
 // };
 // const firebaseApp = firebase.initializeApp(config);
 var loaded = true
-const onPressRegister = async (email, pass, onSuccessRegister) => {
+const onPressEmail = async (email, pass) => {
   // var cond = true
   loaded = false
   var user = Constants.firebase.auth().currentUser;
@@ -72,7 +72,7 @@ const onPressRegister = async (email, pass, onSuccessRegister) => {
   })
 }
 
-export default ({onPress, goBack, onSuccessRegister}) => (
+export default ({onPress, goBack}) => (
  <View style={containerStyles.container}>
    <Header text="Email Change" loaded={loaded} />
    <Text style={textStyles.subtitle} >Change your Email</Text>
@@ -83,7 +83,7 @@ export default ({onPress, goBack, onSuccessRegister}) => (
 
 
 
-   <ButtonInverted title='Change Email' onPress={() => onPressRegister(state.email, state.pass, onSuccessRegister)} />
+   <ButtonInverted title='Change Email' onPress={() => onPressEmail(state.email, state.pass)} />
 
 
  </View>

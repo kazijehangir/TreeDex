@@ -46,7 +46,7 @@ const passwordChangeHandler = ev => {
 // };
 // const firebaseApp = firebase.initializeApp(config);
 var loaded = true
-const onPressRegister = async (pass) => {
+const onPressPass = async (pass) => {
   loaded = false
   var user = Constants.firebase.auth().currentUser;
   user.updatePassword(pass).then((userData) => {
@@ -55,22 +55,20 @@ const onPressRegister = async (pass) => {
     alert('Your Password was changed!');
   }, (error) => {
     switch(error.code){
+    
+      case "INVALID_PASSWORD":
+        alert("The specified password is not valid.");
+      break;
 
-        case "INVALID PASSWORD":
-          alert("The new password is invalid.");
-        break;
-
-        default:
-          alert("Error changing password");
-      }
-
-})
-    console.log(error.toString())
+      default:
+        alert("Error changing Password:" + JSON.stringify(error));
+    }
+  })
 }
 
-export default ({onPress, goBack, onSuccessRegister}) => (
+export default ({onPress, goBack}) => (
  <View style={containerStyles.container}>
-   <Header text="Signup" loaded={loaded} />
+   <Header text="Change Password" loaded={loaded} />
    <Text style={textStyles.subtitle} >Change Password</Text>
 
 
@@ -84,7 +82,7 @@ export default ({onPress, goBack, onSuccessRegister}) => (
     secureTextEntry={true}
     onChange={passwordChangeHandler}></TextInput>
 
-   <ButtonInverted title='Change Password' onPress={() => onPressRegister(state.pass)} />
+   <ButtonInverted title='Change Password' onPress={() => onPressPass(state.pass)} />
 
   
  </View>
