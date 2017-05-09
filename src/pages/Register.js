@@ -48,6 +48,7 @@ class Register extends React.Component{
        this.setState({
         email: '',
         password: '',
+        username: '',
         name:'',
         loaded: false
       });
@@ -55,7 +56,8 @@ class Register extends React.Component{
       
      try{
         await userData.updateProfile({
-              displayName: this.state.name
+              displayName: this.state.name,
+              userName: this.state.userName
               })
      } catch(error){
         alert(error)
@@ -93,6 +95,12 @@ class Register extends React.Component{
           style={inputStyles.nameInput}
           onChangeText={(text)=> this.setState({name:text})}
           value={this.state.name}
+          ></TextInput>
+
+          <TextInput placeholder='Username'
+          style={inputStyles.nameInput}
+          onChangeText={(text)=> this.setState({username:text})}
+          value={this.state.username}
           ></TextInput>
 
           <TextInput placeholder='Email'

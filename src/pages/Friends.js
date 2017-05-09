@@ -63,7 +63,7 @@ class Friends extends React.Component {
     super(props);
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     this.state = {
-      dataSource: ds.cloneWithRows([{name:'Ali'}, {name:'Wali'}]),
+      dataSource: ds.cloneWithRows([{name:'Ali'}, {name:'Wali'},{name:'kali'},{name:'Gali'},{name:'Mali'},{name:'Dali'},{name:'Bali'},{name:'Qali'}]),
     };
   }
   componentWillMount() {
