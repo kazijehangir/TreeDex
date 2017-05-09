@@ -11,6 +11,8 @@ import {
   TouchableOpacity
 } from 'react-native';
 import Camera from 'react-native-camera'
+import ModalDropdown from 'react-native-modal-dropdown';
+
 
 import Constants from '../Constants'
 import textStyles from '../styles/Text'
@@ -18,6 +20,7 @@ import buttonStyles from '../styles/Button'
 import containerStyles from '../styles/Container'
 import ButtonCustom from '../components/ButtonCustom'
 import ButtonSquare from '../components/ButtonSquare'
+import Colors from '../Colors'
 // import ButtonCustom from '../components/ButtonCustom'
 
 //global stuct maintaining the state
@@ -47,6 +50,16 @@ const checkUser = (ev) => {
   }
 }
 
+const _dropdown_6_onSelect = (idx, value) => {
+      if (idx === '0'){
+        onPressSettings
+      } else {
+        signout
+      }
+  }
+  const DEMO_OPTIONS_1 = ['Account','Logout','About Us','Contact Us'];
+
+
 export default ({ user, signout, onPressSettings, onPressNews, onPressProfile}) => {
   state.user = user
   if(state.showCamera) {
@@ -70,7 +83,6 @@ export default ({ user, signout, onPressSettings, onPressNews, onPressProfile}) 
             />
           </View>
           <TouchableOpacity
-            underlayColor='#EFEFEF'
             onPress={onPressProfile}
             style={buttonStyles.profileButton}>
             <Image
@@ -79,16 +91,18 @@ export default ({ user, signout, onPressSettings, onPressNews, onPressProfile}) 
               resizeMode="cover"
             />
           </TouchableOpacity>
-          <TouchableOpacity
-            underlayColor='#EFEFEF'
-            onPress={onPressSettings}
-            style={buttonStyles.profileButton}>
-            <Image
-              source={require('../images/settings.png')}
-              style={{flex:1, height:45, width:45,borderRadius:22.5,alignSelf:'stretch'}}
-              resizeMode="cover"
-            />
-          </TouchableOpacity>
+          <ModalDropdown ref={el => this._dropdown_5 = el}
+          style={containerStyles.dropDown}
+             options={DEMO_OPTIONS_1}
+             textStyle={{backgroundColor:Colors.primary}}
+             onSelect={(idx , value) => {idx === 0 ? onPressSettings : console.log(idx)}}>
+             <View style={buttonStyles.profileButton}>
+                <Image
+                  style={{flex:1, height:45, width:45,borderRadius:22.5,alignSelf:'stretch'}}
+                   source={require('../images/settings.png')}
+                />
+              </View>
+            </ModalDropdown>
         </View>
         </Camera>
       // </View>

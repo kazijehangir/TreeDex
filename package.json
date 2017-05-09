@@ -15,6 +15,7 @@
     "react-native-card-view": "0.0.3",
     "react-native-firebase": "^1.0.0-alpha13",
     "react-native-material-design": "^0.3.7",
+    "react-native-modal-dropdown": "^0.4.2",
     "react-native-swiper": "^1.5.4"
   },
   "devDependencies": {

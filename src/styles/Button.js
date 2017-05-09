@@ -25,7 +25,7 @@ export default StyleSheet.create({
     width:45,
     marginTop:8,
     borderRadius: 22.5,
-    borderWidth: StyleSheet.hairlineWidth,
+    borderWidth: 0,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'transparent'

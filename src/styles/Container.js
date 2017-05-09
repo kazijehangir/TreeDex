@@ -101,10 +101,15 @@ export default StyleSheet.create({
     height: 45,
     width:45,
     marginTop:8,
+    marginLeft:8,
     borderRadius: 22.5,
     borderWidth: StyleSheet.hairlineWidth,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white'
-  }
+  },
+  dropDown: {
+    marginRight:8,
+  },
+
 })
