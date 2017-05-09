@@ -43,14 +43,20 @@ class Main extends React.Component {
     // alert(JSON.stringify(this.state))
     // alert(JSON.stringify(e.data.name))
     if(this.state.showCamera){
+      // let st = e.data
+      // data = st.filter((ch) => ch != '\\')
+      // let test = "{\"name\":\"Gul e Nishtar\",\"url\":\"to fill\",\"imageURL\":\"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/gulenishtar.jpg?alt=media&token=0d5d07c0-c396-4c04-88df-a8d79a72ca38\",\"age\":\"nill\",\"plantedBy\":\"nill\",\"location\":\"LUMS - Academic Block (Outgate Side)\"}"
+      // alert(e.data)
+      data = JSON.parse(e.data)
+      // alert(data)
       Alert.alert(
-        e.data.name,
+        data.name,
         'Congratulations! You successfully scanned a plant!' + '\n'
-        + 'Age: ' + e.data.age + '\n'
-        + 'Planted by: ' + e.data.plantedBy + '\n'
-        + 'Location: ' + e.data.location,
+        + 'Age:\t' + data.age + '\n'
+        + 'Planted by:\t' + data.plantedBy + '\n'
+        + 'Location:\t' + data.location,
         [
-          {text: 'More info...', onPress: () => this.openUrl(e.data.url)},
+          {text: 'More info...', onPress: () => this.openUrl(data.url)},
           {text: 'Dismiss', onPress: () => this.setState({showCamera: true}), style: 'cancel'},
         ],
         // "Type: " + e.type + "\nData: " + e.data
