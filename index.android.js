@@ -176,8 +176,8 @@ export default class TreeDexRN extends Component {
 
       }
 
-      if (key == 'ChangeName'){
-        return <ChangeName
+      if (key == 'ChangeEmail'){
+        return <ChangeEmail
           setHeaderTitle={this._setHeaderTitle.bind(this)}/>
 
       }
