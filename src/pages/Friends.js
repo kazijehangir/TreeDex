@@ -24,11 +24,26 @@ import Colors from '../Colors'
 
 
 const Row = (props) => (
-  <View style={containerStyles.friendsList}>
-    <Image source={require('../images/profilePic.png')} style={containerStyles.photo} />
-    <Text style={textStyles.friends}>
-      {props.name}
-    </Text>
+  <View style={{flexDirection:'row',justifyContent:'space-between',backgroundColor:Colors.background}}>
+    <View style={containerStyles.friendsList}>
+      <Image source={require('../images/profilePic.png')} style={containerStyles.photo} />
+      <Text style={textStyles.friends}>
+        {props.name}
+      </Text>
+    </View>
+    <TouchableHighlight
+      onPress={()=>{}}
+      underlayColor={Colors.primaryLight}
+      style={{alignItems:'center',flex:0.4,padding:5,margin:8,borderRadius:15,backgroundColor: Colors.primary}}>
+        <Text
+          style={{textAlign: 'center',
+              padding: 8,
+              fontWeight: '200',
+              fontSize: 15,
+              color: '#FFFFFF',}}>
+              Add Friend
+        </Text>
+    </TouchableHighlight>
   </View>
 );
 
