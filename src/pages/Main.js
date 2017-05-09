@@ -14,6 +14,8 @@ import Camera from 'react-native-camera'
 import ModalDropdown from 'react-native-modal-dropdown';
 import { Icon } from 'react-native-material-design';
 
+import { Checkbox } from 'react-native-material-design';
+
 import Constants from '../Constants'
 import textStyles from '../styles/Text'
 import buttonStyles from '../styles/Button'
