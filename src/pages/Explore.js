@@ -23,8 +23,10 @@ import ButtonSquare from '../components/ButtonSquare'
 import Button from 'react-native-button';
 import Colors from '../Colors'
 import ButtonStyles from '../styles/Button'
+
 import Constants from '../Constants'
 
+>>>>>>> 4f5cd5bfa1744db327bd5122d963ceb0a111c0ec
 
 export default () => (
   <ScrollView style={{height: Constants.height}}>
@@ -34,6 +36,7 @@ export default () => (
         style={{flex:1}}
       >
         <Image
+
           style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
           source={require('../images/plant.jpg')}
         />
@@ -43,6 +46,7 @@ export default () => (
         style={{flex:1}}
       >
         <Image
+
           style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
           source={require('../images/plant.jpg')}
         />
@@ -52,6 +56,7 @@ export default () => (
         style={{flex:1}}
       >
         <Image
+
           style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
           source={require('../images/plant.jpg')}
         />

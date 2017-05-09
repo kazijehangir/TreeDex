@@ -102,7 +102,7 @@ class Main extends React.Component {
                 </View>
               </ModalDropdown>
           </View>
-          </Camera>
+        </Camera>
         // </View>
       );
     } else {
