@@ -79,7 +79,7 @@ export default class TreeDexRN extends Component {
       })
     }
     _setHeaderTitle(title) {
-      setState({headerTitle: title})
+      this.setState({headerTitle: title})
     }
     async _signOut() {
       // alert("Signing out")
