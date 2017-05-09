@@ -110,6 +110,7 @@ export default StyleSheet.create({
   },
   dropDown: {
     marginRight:8,
+    // height:1
   },
 
 })
