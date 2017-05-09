@@ -18,7 +18,7 @@ class Home extends React.Component {
     this.state = {}
   }
   componentWillMount() {
-    this.props.setHeaderTitle('Home')
+    // this.props.setHeaderTitle('Home')
   }
   render() {
     return (

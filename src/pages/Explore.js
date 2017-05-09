@@ -26,8 +26,25 @@ import ButtonStyles from '../styles/Button'
 
 import Constants from '../Constants'
 
+const Header = (props) => (
+  <View style={containerStyles.searchBar}>
+    <TextInput
+      style={textStyles.input}
+      placeholder="Search..."
+      onChangeText={(text) => console.log('searching for ', text)}
+    />
+  </View>
+);
+
 export default () => (
   <ScrollView style={{height: Constants.height}}>
+    <View style={containerStyles.searchBar}>
+      <TextInput
+        style={textStyles.input}
+        placeholder="Search..."
+        onChangeText={(text) => console.log('searching for ', text)}
+      />
+    </View>
     <View style ={{flex:1,flexDirection:'row'}}>
       <Button
         onPress={()=>{}}
