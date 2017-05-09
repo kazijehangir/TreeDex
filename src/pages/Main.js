@@ -50,17 +50,17 @@ const checkUser = (ev) => {
   }
 }
 
-const _dropdown_6_onSelect = (idx, value) => {
+_dropdown_6_onSelect = (idx, value, onPressSettings,onPressSignout) => {
       if (idx === '0'){
-        onPressSettings
+        onPressSettings()
       } else {
-        signout
+        onPressSignout()
       }
   }
   const DEMO_OPTIONS_1 = ['Account','Logout','About Us','Contact Us'];
 
 
-export default ({ user, signout, onPressSettings, onPressNews, onPressProfile}) => {
+export default ({ user, onPressSignout, onPressSettings, onPressNews, onPressProfile}) => {
   state.user = user
   if(state.showCamera) {
     return (
@@ -95,7 +95,7 @@ export default ({ user, signout, onPressSettings, onPressNews, onPressProfile}) 
           style={containerStyles.dropDown}
              options={DEMO_OPTIONS_1}
              textStyle={{backgroundColor:Colors.primary}}
-             onSelect={(idx , value) => {idx === 0 ? onPressSettings : console.log(idx)}}>
+             onSelect={(idx , value) => this._dropdown_6_onSelect(idx,value,onPressSettings,onPressSignout)}>
              <View style={buttonStyles.profileButton}>
                 <Image
                   style={{flex:1, height:45, width:45,borderRadius:22.5,alignSelf:'stretch'}}

@@ -15,7 +15,7 @@ export default ({ user, onPressSignout, onPressExplore, onPressNews, onPressProf
         <FriendsPage/>
         <MainPage
          user={user}
-         signout={onPressSignout}
+         onPressSignout={onPressSignout}
          onPressSettings={onPressSettings}
          onPressProfile={onPressProfile} />
         <SecondaryNavigation
