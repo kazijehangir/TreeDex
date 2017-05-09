@@ -99,6 +99,10 @@ export default class TreeDexRN extends Component {
       this.setState({WebViewUrl: url})
     }
     _handleAction (action) {
+        if(this.state.navState.routes
+            [this.state.navState.routes.length-1].key === action.key) {
+              return false
+        }
         const newState = NavReducer(this.state.navState, action);
         if (newState === this.state.navState) {
           return false;
@@ -112,6 +116,9 @@ export default class TreeDexRN extends Component {
        return this._handleAction({ type: 'pop' });
     }
     _renderRoute (key) {
+      // if (this.state.navState.routes[this.state.navState.routes.length-1] === key) {
+      //   return false
+      // }
       if (key === 'Home') {
         return <Home
                  setHeaderTitle={this._setHeaderTitle.bind(this)}
@@ -306,7 +313,7 @@ const createReducer = (initialState) => {
 const NavReducer = createReducer({
   index: 0,
   key: 'App',
-  routes: [{key: 'MainSwiper'}]
+  routes: [{key: 'Home'}]
 })
 
 AppRegistry.registerComponent('TreeDexRN', () => TreeDexRN);
