@@ -21,13 +21,16 @@ class MainSwiper extends React.Component {
     return (
       <Swiper style={containerStyles.swiper}
           showsButtons={true} loop={false} index={1}>
-          <FriendsPage/>
+          <FriendsPage
+            setHeaderTitle={this.props.setHeaderTitle} />
           <MainPage
+           setHeaderTitle={this.props.setHeaderTitle}
            user={this.props.user}
            onPressSignout={this.props.onPressSignout}
            onPressSettings={this.props.onPressSettings}
            onPressProfile={this.props.onPressProfile} />
           <SecondaryNavigation
+              setHeaderTitle={this.props.setHeaderTitle}
               onPressNews={this.props.onPressNews}
               onPressExplore={this.props.onPressExplore}
               onPressSettings={this.props.onPressSettings}
