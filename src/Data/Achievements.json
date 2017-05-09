@@ -1,0 +1,17 @@
+{
+  "001":{
+    "name":"First Plant Scanned",
+    "badge":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/Badges%2Fadopt_a_plant_icon.png?alt=media&token=c1fd28c2-dda1-4ae4-8e97-2527b3728523",
+    "conditoins":"First popUp displayed after scanning and badge === nill"
+  },
+  "002":{
+    "name":"Edited Profile Picture",
+    "badge":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/Badges%2Fedit_icon.png?alt=media&token=feab275c-c8de-474b-b88a-ba581004ccc2",
+    "conditoins":"First popUp displayed after scanning"
+  },
+  "003":{
+    "name":"Found Daoo",
+    "badge":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/Badges%2Fbadges_icon.png?alt=media&token=d01b9379-32aa-4650-b064-fdd1925d8e1a",
+    "conditoins":"Scan results in information for Daoo"
+  }
+}
