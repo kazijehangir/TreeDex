@@ -100,6 +100,7 @@ export default ({ user, onPressSignout, onPressSettings, onPressNews, onPressPro
                 <Image
                   style={{flex:1, height:45, width:45,borderRadius:22.5,alignSelf:'stretch'}}
                    source={require('../images/settings.png')}
+                   resizeMode="cover"
                 />
               </View>
             </ModalDropdown>

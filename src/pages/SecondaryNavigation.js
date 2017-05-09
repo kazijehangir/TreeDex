@@ -39,13 +39,6 @@ import Constants from '../Constants'
 
 export default ({onPressExplore, onPressNews}) => (
   <ScrollView>
-    <View style={{flex:0.1}}>
-      <Card>
-          <Text style={{fontSize:30,fontWeight:'200',color:Colors.primary,marginLeft:0}}>
-            TreeDex
-          </Text>
-      </Card>
-    </View>
     <View style={{flex:1}}>
     <Card >
       <CardImage>

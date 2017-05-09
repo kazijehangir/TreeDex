@@ -24,7 +24,7 @@ import Button from 'react-native-button';
 import Colors from '../Colors'
 import ButtonStyles from '../styles/Button'
 
-
+var {screenHeight,screenWidth} = Dimensions.get('window')
 
 export default () => (
   <ScrollView style={{flex:1}}>
@@ -34,7 +34,7 @@ export default () => (
         style={{flex:1}}
       >
         <Image
-          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1,alignSelf:'stretch',flex:1}}
           source={require('../images/plant.jpg')}
         />
       </Button>
@@ -43,7 +43,7 @@ export default () => (
         style={{flex:1}}
       >
         <Image
-          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1,alignSelf:'stretch',flex:1}}
           source={require('../images/plant.jpg')}
         />
       </Button>
@@ -52,7 +52,7 @@ export default () => (
         style={{flex:1}}
       >
         <Image
-          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1,alignSelf:'stretch',flex:1}}
           source={require('../images/plant.jpg')}
         />
       </Button>
