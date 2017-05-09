@@ -32,7 +32,7 @@ class Profile extends React.Component {
         <Image
           source = {require('../images/profpic1.jpg')}
           style={{width: null, height:Constants.profileboxheight, alignSelf: 'stretch',justifyContent: 'center',alignItems: 'center' }}>
-          <Image source={require('../images/profilePic.png')}
+          <Image source={require('../images/profileImage.png')}
             style={{width: 150, height: 150}}/>
           <View
             style={{flexDirection: 'row', width: 360, height: 50, justifyContent: 'center'}} >

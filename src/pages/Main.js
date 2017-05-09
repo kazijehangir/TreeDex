@@ -13,7 +13,7 @@ import {
 import Camera from 'react-native-camera'
 import ModalDropdown from 'react-native-modal-dropdown';
 import { Icon } from 'react-native-material-design';
-
+import { Avatar } from 'react-native-material-design';
 import Constants from '../Constants'
 import textStyles from '../styles/Text'
 import buttonStyles from '../styles/Button'
@@ -104,27 +104,28 @@ class Main extends React.Component {
             type={this.state.cameraType}
           >
           <View style={{flexDirection:'row',justifyContent:'space-between'}}>
-            <View style={containerStyles.smallCircle}>
-              <Image
-                source = {require('../../android/app/src/main/res/mipmap-hdpi/ic_launcher.png')}
-                style={{flex:1, height:45, width:45,borderRadius:22.5,alignSelf:'stretch'}}
-                resizeMode="cover"
-              />
-            </View>
-            <TouchableOpacity
-              onPress={this.props.onPressProfile}>
-              <View style={{marginTop: 8}}>
-                 <Icon name="portrait" color="rgba(204, 204, 204,0.9)" size={40}/>
-               </View>
-            </TouchableOpacity>
-            <ModalDropdown
-               style={containerStyles.dropDown}
-               options={this.state.DEMO_OPTIONS_1}
-               textStyle={{backgroundColor:Colors.primary}}
-               onSelect={(idx, value) => this.dropdown(idx,value)}>
-               <View style={{marginTop: 8}}>
-                 <Icon name="settings" color="rgba(204, 204, 204,0.9)" size={40}/>
-               </View>
+            
+              <View style={containerStyles.smallCircle}>
+                <Image
+                  source = {require('../../android/app/src/main/res/mipmap-hdpi/ic_launcher.png')}
+                  style={{flex:1, height:45, width:45,borderRadius:22.5,alignSelf:'stretch'}}
+                  resizeMode="cover"
+                />
+              </View>
+              <TouchableOpacity
+                onPress={this.props.onPressProfile}>
+                <View style={{marginTop: 8}}>
+                  <Icon name="portrait" color="rgba(204, 204, 204,0.9)" size={40}/>
+                </View>
+              </TouchableOpacity>
+                <ModalDropdown
+                  style={containerStyles.dropDown}
+                  options={this.state.DEMO_OPTIONS_1}
+                  textStyle={{backgroundColor:Colors.primary}}
+                  onSelect={(idx, value) => this.dropdown(idx,value)}>
+                  <View style={{marginTop: 8}}>
+                    <Icon name="settings" color="rgba(204, 204, 204,0.9)" size={40}/>
+                  </View>
                
                {/*<View style={buttonStyles.profileButton}>
                   <Image
