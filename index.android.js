@@ -38,7 +38,7 @@ import ChangeEmail from './src/pages/ChangeEmail'
 import ChangePass from './src/pages/ChangePass'
 import containerStyles from './src/styles/Container'
 import buttonStyles from './src/styles/Button'
-import WebView from './src/pages/WebView'
+import WebViewCustom from './src/pages/WebViewCustom'
 import Constants from './src/Constants'
 // import { WebView } from 'react-native';
 
@@ -94,6 +94,12 @@ export default class TreeDexRN extends Component {
         alert("Error Signing out!")
       }
 
+    }
+    openWebUrl(url) {
+      this.setState({WebViewUrl: url}, () => {
+        console.log(this.state.WebViewUrl)
+        this._handleAction({type:'push', key: 'WebViewCustom'})
+      })
     }
     _handleAction (action) {
         const newState = NavReducer(this.state.navState, action);
@@ -161,16 +167,12 @@ export default class TreeDexRN extends Component {
       if(key === 'News'){
         return <News
                 setHeaderTitle={this._setHeaderTitle.bind(this)}
-                onPressNews={this._handleAction.bind(this,
-                 { type: 'push', key: 'News1' })}
-                 onPressSubNews1={this._handleAction.bind(this,
-                 { type: 'push', key: 'News1' })}
-                 onPressSubNews2={this._handleAction.bind(this,
-                 { type: 'push', key: 'News1' })}/>
+                openWebUrl={this.openWebUrl.bind(this)}/>
       }
-      if (key == 'News1'){
-        return <WebView
-                  setHeaderTitle={this._setHeaderTitle.bind(this)}/>
+      if (key == 'WebViewCustom'){
+        return <WebViewCustom
+                  setHeaderTitle={this._setHeaderTitle.bind(this)}
+                  url={this.state.WebViewUrl}/>
 
       }
 
