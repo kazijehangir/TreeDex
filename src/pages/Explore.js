@@ -24,17 +24,20 @@ import Button from 'react-native-button';
 import Colors from '../Colors'
 import ButtonStyles from '../styles/Button'
 
-var {screenHeight,screenWidth} = Dimensions.get('window')
+import Constants from '../Constants'
+
+>>>>>>> 4f5cd5bfa1744db327bd5122d963ceb0a111c0ec
 
 export default () => (
-  <ScrollView style={{flex:1}}>
+  <ScrollView style={{height: Constants.height}}>
     <View style ={{flex:1,flexDirection:'row'}}>
       <Button
         onPress={()=>{}}
         style={{flex:1}}
       >
         <Image
-          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1,alignSelf:'stretch',flex:1}}
+
+          style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
           source={require('../images/plant.jpg')}
         />
       </Button>
@@ -43,7 +46,8 @@ export default () => (
         style={{flex:1}}
       >
         <Image
-          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1,alignSelf:'stretch',flex:1}}
+
+          style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
           source={require('../images/plant.jpg')}
         />
       </Button>
@@ -52,7 +56,8 @@ export default () => (
         style={{flex:1}}
       >
         <Image
-          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1,alignSelf:'stretch',flex:1}}
+
+          style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
           source={require('../images/plant.jpg')}
         />
       </Button>
@@ -63,7 +68,7 @@ export default () => (
         style={{flex:1}}
       >
         <Image
-          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
           source={require('../images/plant.jpg')}
         />
       </Button>
@@ -72,7 +77,7 @@ export default () => (
         style={{flex:1}}
       >
         <Image
-          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
           source={require('../images/plant.jpg')}
         />
       </Button>
@@ -81,36 +86,7 @@ export default () => (
         style={{flex:1}}
       >
         <Image
-          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
-          source={require('../images/plant.jpg')}
-        />
-      </Button>
-    </View>
-    <View style ={{flex:1,flexDirection:'row'}}>
-      <Button
-        onPress={()=>{}}
-        style={{flex:1}}
-      >
-        <Image
-          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
-          source={require('../images/plant.jpg')}
-        />
-      </Button>
-      <Button
-        onPress={()=>{}}
-        style={{flex:1}}
-      >
-        <Image
-          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
-          source={require('../images/plant.jpg')}
-        />
-      </Button>
-      <Button
-        onPress={()=>{}}
-        style={{flex:1}}
-      >
-        <Image
-          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
           source={require('../images/plant.jpg')}
         />
       </Button>
@@ -121,7 +97,7 @@ export default () => (
         style={{flex:1}}
       >
         <Image
-          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
           source={require('../images/plant.jpg')}
         />
       </Button>
@@ -130,7 +106,7 @@ export default () => (
         style={{flex:1}}
       >
         <Image
-          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
           source={require('../images/plant.jpg')}
         />
       </Button>
@@ -139,7 +115,7 @@ export default () => (
         style={{flex:1}}
       >
         <Image
-          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
           source={require('../images/plant.jpg')}
         />
       </Button>
@@ -150,7 +126,7 @@ export default () => (
         style={{flex:1}}
       >
         <Image
-          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
           source={require('../images/plant.jpg')}
         />
       </Button>
@@ -159,7 +135,7 @@ export default () => (
         style={{flex:1}}
       >
         <Image
-          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
           source={require('../images/plant.jpg')}
         />
       </Button>
@@ -168,7 +144,65 @@ export default () => (
         style={{flex:1}}
       >
         <Image
-          style={{height:100,width:119.9,borderWidth:2,borderColor:'black',borderWidth:1}}
+          style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+    </View>
+    <View style ={{flex:1,flexDirection:'row'}}>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+    </View>
+    <View style ={{flex:1,flexDirection:'row'}}>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
           source={require('../images/plant.jpg')}
         />
       </Button>

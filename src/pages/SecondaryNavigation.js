@@ -47,44 +47,35 @@ class SecondaryNavigation extends React.Component {
   }
   render() {
     return (
-      <ScrollView>
-        <View style={{flex:0.1}}>
+      <ScrollView style={{height: Constants.height}}>
+        <Card >
+          <CardImage>
+            <Image
+              style={{height:219}}
+              source={require('../images/plant.jpg')}
+              />
+          </CardImage>
+          <CardAction seperator>
+            <TouchableOpacity style={ButtonStyles.footerButton} onPress={this.props.onPressNews}>
+              <Text style={textStyles.footerText}>News</Text>
+            </TouchableOpacity>
+          </CardAction>
+        </Card>
+        <View style={{flexDirection:'row',flex:1,marginBottom:30}}>
           <Card>
-            <Text style={{fontSize:30,fontWeight:'200',color:Colors.primary,marginLeft:0}}>
-              TreeDex
-            </Text>
-          </Card>
-        </View>
-        <View style={{flex:1}}>
-          <Card >
             <CardImage>
               <Image
-                style={{height:219}}
+                style={{height:209}}
                 source={require('../images/plant.jpg')}
                 />
             </CardImage>
-            <CardAction seperator>
-              <TouchableOpacity style={ButtonStyles.footerButton} onPress={this.props.onPressNews}>
-                <Text style={textStyles.footerText}>News</Text>
+            <CardAction>
+              <TouchableOpacity style={ButtonStyles.footerButton} onPress={this.props.onPressExplore}>
+                <Text style={textStyles.footerText}>Explore</Text>
               </TouchableOpacity>
             </CardAction>
           </Card>
-          <View style={{flexDirection:'row',flex:1,marginBottom:30}}>
-            <Card>
-              <CardImage>
-                <Image
-                  style={{height:209}}
-                  source={require('../images/plant.jpg')}
-                  />
-              </CardImage>
-              <CardAction>
-                <TouchableOpacity style={ButtonStyles.footerButton} onPress={this.props.onPressExplore}>
-                  <Text style={textStyles.footerText}>Explore</Text>
-                </TouchableOpacity>
-              </CardAction>
-            </Card>
           </View>
-        </View>
       </ScrollView>
     )
   }

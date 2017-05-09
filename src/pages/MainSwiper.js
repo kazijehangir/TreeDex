@@ -20,6 +20,7 @@ class MainSwiper extends React.Component {
   render() {
     return (
       <Swiper style={containerStyles.swiper}
+          onSwipe={(e) => alert(JSON.stringify(e))}
           showsButtons={true} loop={false} index={1}>
           <FriendsPage
             setHeaderTitle={this.props.setHeaderTitle} />
