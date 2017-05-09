@@ -1,114 +1,171 @@
 {
-  "1":{
-    "name":"Gul e Nishtar",
-    "url":"to fill",
-    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/gulenishtar.jpg?alt=media&token=0d5d07c0-c396-4c04-88df-a8d79a72ca38",
-    "age":"nill",
-    "plantedBy":"nill",
-    "location":"LUMS - Academic Block (Outgate Side)"
+  1:{
+    name:"Gul e Nishtat",
+    url:"to fill",
+    imageURL:"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/gulenishtar.jpg?alt=media&token=0d5d07c0-c396-4c04-88df-a8d79a72ca38",
+    age:"nill",
+    plantedBy:"nill",
+    location:"LUMS - Academic Block (Outgate Side)"
   },
-  "2":{
-    "name":"Ulta Ashok",
-    "url":"to fill",
-    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/ultaashok.jpg?alt=media&token=a3e53e8e-f8c0-49cf-903a-2bfaa870a8f9",
-    "age":"nill",
-    "plantedBy":"nill",
-    "location":"LUMS - Academic Block (Outgate Side)"
+  2:{
+    name:"Ulta Ashok",
+    url:"to fill",
+    imageURL:"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/ultaashok.jpg?alt=media&token=a3e53e8e-f8c0-49cf-903a-2bfaa870a8f9",
+    age:"nill",
+    plantedBy:"nill",
+    location:"LUMS - Academic Block (Outgate Side)"
   },
-  "3":{
-    "name":"Marwa",
-    "url":"to fill",
-    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/marwa.jpg?alt=media&token=41685c63-20d0-49e4-a26c-5dc3da11c281",
-    "age":"nill",
-    "plantedBy":"nill",
-    "location":"LUMS - Academic Block (Outgate Side)"
+  3:{
+    name:"Marwa",
+    url:"to fill",
+    imageURL:"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/marwa.jpg?alt=media&token=41685c63-20d0-49e4-a26c-5dc3da11c281",
+    age:"nill",
+    plantedBy:"nill",
+    location:"LUMS - Academic Block (Outgate Side)"
   },
-  "4":{
-    "name":"Green Drycelia",
-    "url":"to fill",
-    "imageURL":"to fill",
-    "age":"nill",
-    "plantedBy":"nill",
-    "location":"LUMS - Academic Block (Outgate Side)"
+  4:{
+    name:"Green Drycelia",
+    url:"to fill",
+    imageURL:"to fill",
+    age:"nill",
+    plantedBy:"nill",
+    location:"LUMS - Academic Block (Outgate Side)"
   },
-  "5":{
-    "name":"Fidex Palm",
-    "url":"to fill",
-    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/fidexpalm.jpg?alt=media&token=97b04f96-5644-4bf6-9698-9e095ba7ca04",
-    "age":"nill",
-    "plantedBy":"nill",
-    "location":"LUMS - Academic Block (Outgate Side)"
+  5:{
+    name:"Fidex Palm",
+    url:"to fill",
+    imageURL:"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/fidexpalm.jpg?alt=media&token=97b04f96-5644-4bf6-9698-9e095ba7ca04",
+    age:"nill",
+    plantedBy:"nill",
+    location:"LUMS - Academic Block (Outgate Side)"
   },
-  "6":{
-    "name":"Tangi Palm",
-    "url":"to fill",
-    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/fidexpalm.jpg?alt=media&token=97b04f96-5644-4bf6-9698-9e095ba7ca04",
-    "age":"nill",
-    "plantedBy":"nill",
-    "location":"LUMS - Academic Block (Outgate Side)"
+  6:{
+    name:"Tangi Palm",
+    url:"to fill",
+    imageURL:"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/fidexpalm.jpg?alt=media&token=97b04f96-5644-4bf6-9698-9e095ba7ca04",
+    age:"nill",
+    plantedBy:"nill",
+    location:"LUMS - Academic Block (Outgate Side)"
   },
-  "7":{
-    "name":"Margarita",
-    "url":"to fill",
-    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/margarita.jpg?alt=media&token=18d5648c-e35c-45ef-834d-470d7a61d1aa",
-    "age":"nill",
-    "plantedBy":"nill",
-    "location":"LUMS - Academic Block (Outgate Side)"
+  7:{
+    name:"Margarita",
+    url:"to fill",
+    imageURL:"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/margarita.jpg?alt=media&token=18d5648c-e35c-45ef-834d-470d7a61d1aa",
+    age:"nill",
+    plantedBy:"nill",
+    location":"LUMS - Academic Block (Outgate Side)"
   },
-  "8":{
-    "name":"China Faicus",
-    "url":"to fill",
-    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/margarita.jpg?alt=media&token=18d5648c-e35c-45ef-834d-470d7a61d1aa",
-    "age":"nill",
-    "plantedBy":"nill",
-    "location":"LUMS - Academic Block (Outgate Side)"
+  8:{
+    name:"China Faicus",
+    url:"to fill",
+    imageURL:"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/margarita.jpg?alt=media&token=18d5648c-e35c-45ef-834d-470d7a61d1aa",
+    age:"nill",
+    plantedBy:"nill",
+    location:"LUMS - Academic Block (Outgate Side)"
   },
-  "9":{
-    "name":"Day Lily",
-    "url":"to fill",
-    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/daylily.jpg?alt=media&token=9fbdd55f-ea2f-4937-b040-5c00d7f0415c",
-    "age":"nill",
-    "plantedBy":"nill",
-    "location":"LUMS - Academic Block (Outgate Side)"
+  9:{
+    name:"Day Lily",
+    url:"to fill",
+    imageURL:"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/daylily.jpg?alt=media&token=9fbdd55f-ea2f-4937-b040-5c00d7f0415c",
+    age:"nill",
+    plantedBy:"nill",
+    location:"LUMS - Academic Block (Outgate Side)"
   },
-  "10":{
-    "name":"Laal tehna",
-    "url":"to fill",
-    "imageURL":"to fill",
-    "age":"nill",
-    "plantedBy":"nill",
-    "location":"LUMS - Academic Block (Outgate Side)"
+  10:{
+    name:"Laal tehna",
+    url:"to fill",
+    imageURL:"to fill",
+    age:"nill",
+    plantedBy:"nill",
+    location:"LUMS - Academic Block (Outgate Side)"
   },
-  "11":{
-    "name":"Rose",
-    "url":"to fill",
-    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/rose.jpg?alt=media&token=b8aff88e-23f8-419c-b26f-cdf5e036ef05",
-    "age":"nill",
-    "plantedBy":"nill",
-    "location":"LUMS - Academic Bloc (Outgate Side)"
+  11:{
+    name:"Rose",
+    url:"to fill",
+    imageURL:"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/rose.jpg?alt=media&token=b8aff88e-23f8-419c-b26f-cdf5e036ef05",
+    age:"nill",
+    plantedBy:"nill",
+    location:"LUMS - Academic Bloc (Outgate Side)"
   },
-  "12":{
-    "name":"Maglolia",
-    "url":"to fill",
-    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/rose.jpg?alt=media&token=b8aff88e-23f8-419c-b26f-cdf5e036ef05",
-    "age":"nill",
-    "plantedBy":"nill",
-    "location":"LUMS - Academic Bloc (Outgate Side)"
+  12:{
+    name:"Maglolia",
+    url:"to fill",
+    imageURL:"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/rose.jpg?alt=media&token=b8aff88e-23f8-419c-b26f-cdf5e036ef05",
+    age:"nill",
+    plantedBy:"nill",
+    location:"LUMS - Academic Bloc (Outgate Side)"
   },
-  "13":{
-    "name":"Changla",
-    "url":"to fill",
-    "imageURL":"to fill",
-    "age":"nill",
-    "plantedBy":"nill",
-    "location":"LUMS - Academic Bloc (Outgate Side)"
+  13:{
+    name:"Changla",
+    url:"to fill",
+    imageURL:"to fill",
+    age:"nill",
+    plantedBy:"nill",
+    location:"LUMS - Academic Bloc (Outgate Side)"
   },
-  "14":{
-    "name":"Mango tree",
-    "url":"to fill",
-    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/mangotree.JPG?alt=media&token=75bf0791-f2bd-4d58-8fd6-4c5d20cd9fca",
-    "age":"nill",
-    "plantedBy":"nill",
-    "location":"LUMS - Academic Bloc (Outgate Side)"
-  }
+  14:{
+    name:"Mango tree",
+    url:"to fill",
+    imageURL:"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/mangotree.JPG?alt=media&token=75bf0791-f2bd-4d58-8fd6-4c5d20cd9fca",
+    age:"nill",
+    plantedBy:"nill",
+    location:"LUMS - Academic Bloc (Outgate Side)"
+  },
+  15:{
+    name:"Ficus Lyrata",
+    url:"https://en.wikipedia.org/wiki/Ficus_lyrata",
+    imageURL:"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/Ficus_lyrata.jpg?alt=media&token=d6863d1e-ffee-4bde-95f1-acfa746f8379",
+    age:"nill",
+    plantedBy:"nill",
+    location:"LUMS - Academic Bloc (Outgate Side)"
+  },
+ 16:{
+    name:"Callistemon",
+    url:"https://en.wikipedia.org/wiki/Callistemon",
+    imageURL:"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/bottle_brush.jpg?alt=media&token=0502961d-1e4b-4baf-8dd7-7a0fd9d43a83",
+    age:"nill",
+    plantedBy:"nill",
+    location:"LUMS - Academic Bloc (Outgate Side)"
+  },
+  17:{
+    name:"Dalbergia sissoo",
+    url:"https://en.wikipedia.org/wiki/Dalbergia_sissoo",
+    imageURL:"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/sheeshum.jpg?alt=media&token=83f79f5a-5f99-4b00-a5b2-e1438360498b",
+    age:"nill",
+    plantedBy:"nill",
+    location:"LUMS - Academic Bloc (Outgate Side)"
+  },
+  18:{
+    name:"Morus nigra",
+    url:"https://en.wikipedia.org/wiki/Morus_nigra",
+    imageURL:"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/toot_shaitoot.jpg?alt=media&token=f002624b-8ffd-48ed-b8bf-a60901ed9017",
+    age:"nill",
+    plantedBy:"nill",
+    location:"LUMS - Academic Bloc (Outgate Side)"
+  },
+  19:{
+    name:"Phanera variegata",
+    url:"https://en.wikipedia.org/wiki/Phanera_variegataa",
+    imageURL:"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/Kachnar.jpg?alt=media&token=1d9f9e61-d7c4-427d-80a0-de0c42ec54e6",
+    age:"nill",
+    plantedBy:"nill",
+    location:"LUMS - Academic Bloc (Outgate Side)"
+  },
+ 20:{
+    name:"Azadirachta indica",
+    url:"https://en.wikipedia.org/wiki/Azadirachta_indica",
+    imageURL:"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/nim.jpg?alt=media&token=48e8e497-e6d3-482f-9375-5813e76371b0",
+    age:"nill",
+    plantedBy:"nill",
+    location:"LUMS - Academic Bloc (Outgate Side)"
+  }, 
+  21:{
+    name:"Cycas revoluta",
+    url:"https://en.wikipedia.org/wiki/Cycas_revoluta",
+    imageURL:"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/kangi_palm.jpg?alt=media&token=39ad8fb7-477b-4c4b-bde8-4bc36e5477f5",
+    age:"nill",
+    plantedBy:"nill",
+    location:"LUMS - Academic Bloc (Outgate Side)"
+  }, 
+>>>>>>> Stashed changes
 }
