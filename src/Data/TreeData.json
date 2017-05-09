@@ -7,7 +7,7 @@
     "plantedBy":"nill",
     "location":"LUMS - Academic Block (Outgate Side)",
     "plantFamily":"nill",
-    "datePlanted":"nill",
+    "datePlanted":"nill"
   },
   "2":{
     "name":"Ulta Ashok",
@@ -17,7 +17,7 @@
     "plantedBy":"nill",
     "location":"LUMS - Academic Block (Outgate Side)",
     "plantFamily":"nill",
-    "datePlanted":"nill",
+    "datePlanted":"nill"
   },
   "3":{
     "name":"Marwa",
@@ -27,7 +27,7 @@
     "plantedBy":"nill",
     "location":"LUMS - Academic Block (Outgate Side)",
     "plantFamily":"nill",
-    "datePlanted":"nill",
+    "datePlanted":"nill"
   },
   "4":{
     "name":"Green Drycelia",
@@ -37,7 +37,7 @@
     "plantedBy":"nill",
     "location":"LUMS - Academic Block (Outgate Side)",
     "plantFamily":"nill",
-    "datePlanted":"nill",
+    "datePlanted":"nill"
   },
   "5":{
     "name":"Fidex Palm",
@@ -47,7 +47,7 @@
     "plantedBy":"nill",
     "location":"LUMS - Academic Block (Outgate Side)",
     "plantFamily":"nill",
-    "datePlanted":"nill",
+    "datePlanted":"nill"
   },
   "6":{
     "name":"Tangi Palm",
@@ -57,7 +57,7 @@
     "plantedBy":"nill",
     "location":"LUMS - Academic Block (Outgate Side)",
     "plantFamily":"nill",
-    "datePlanted":"nill",
+    "datePlanted":"nill"
   },
   "7":{
     "name":"Margarita",
@@ -67,7 +67,7 @@
     "plantedBy":"nill",
     "location":"LUMS - Academic Block (Outgate Side)",
     "plantFamily":"nill",
-    "datePlanted":"nill",
+    "datePlanted":"nill"
   },
   "8":{
     "name":"China Faicus",
@@ -77,7 +77,7 @@
     "plantedBy":"nill",
     "location":"LUMS - Academic Block (Outgate Side)",
     "plantFamily":"nill",
-    "datePlanted":"nill",
+    "datePlanted":"nill"
   },
   "9":{
     "name":"Day Lily",
@@ -87,7 +87,7 @@
     "plantedBy":"nill",
     "location":"LUMS - Academic Block (Outgate Side)",
     "plantFamily":"nill",
-    "datePlanted":"nill",
+    "datePlanted":"nill"
   },
   "10":{
     "name":"Laal tehna",
@@ -97,7 +97,7 @@
     "plantedBy":"nill",
     "location":"LUMS - Academic Block (Outgate Side)",
     "plantFamily":"nill",
-    "datePlanted":"nill",
+    "datePlanted":"nill"
   },
   "11":{
     "name":"Rose",
@@ -107,7 +107,7 @@
     "plantedBy":"nill",
     "location":"LUMS - Academic Bloc (Outgate Side)",
     "plantFamily":"nill",
-    "datePlanted":"nill",
+    "datePlanted":"nill"
   },
   "12":{
     "name":"Maglolia",
@@ -117,7 +117,7 @@
     "plantedBy":"nill",
     "location":"LUMS - Academic Bloc (Outgate Side)",
     "plantFamily":"nill",
-    "datePlanted":"nill",
+    "datePlanted":"nill"
   },
   "13":{
     "name":"Changla",
@@ -127,7 +127,7 @@
     "plantedBy":"nill",
     "location":"LUMS - Academic Bloc (Outgate Side)",
     "plantFamily":"nill",
-    "datePlanted":"nill",
+    "datePlanted":"nill"
   },
   "14":{
     "name":"Mango tree",
@@ -137,7 +137,7 @@
     "plantedBy":"nill",
     "location":"LUMS - Academic Bloc (Outgate Side)",
     "plantFamily":"nill",
-    "datePlanted":"nill",
+    "datePlanted":"nill"
   },
   "15":{
     "name":"Ficus Lyrata",
@@ -145,7 +145,9 @@
     "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/Ficus_lyrata.jpg?alt=media&token=d6863d1e-ffee-4bde-95f1-acfa746f8379",
     "age":"nill",
     "plantedBy":"nill",
-    "location":"LUMS - Academic Bloc (Outgate Side)"
+    "location":"LUMS - Academic Bloc (Outgate Side)",
+    "plantFamily":"nill",
+    "datePlanted":"nill"
   },
  "16":{
     "name":"Callistemon",
@@ -153,7 +155,9 @@
     "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/bottle_brush.jpg?alt=media&token=0502961d-1e4b-4baf-8dd7-7a0fd9d43a83",
     "age":"nill",
     "plantedBy":"nill",
-    "location":"LUMS - Academic Bloc (Outgate Side)"
+    "location":"LUMS - Academic Bloc (Outgate Side)",
+    "plantFamily":"nill",
+    "datePlanted":"nill"
   },
   "17":{
     "name":"Dalbergia sissoo",
@@ -161,7 +165,9 @@
     "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/sheeshum.jpg?alt=media&token=83f79f5a-5f99-4b00-a5b2-e1438360498b",
     "age":"nill",
     "plantedBy":"nill",
-    "location":"LUMS - Academic Bloc (Outgate Side)"
+    "location":"LUMS - Academic Bloc (Outgate Side)",
+    "plantFamily":"nill",
+    "datePlanted":"nill"
   },
   "18":{
     "name":"Morus nigra",
@@ -169,7 +175,9 @@
     "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/toot_shaitoot.jpg?alt=media&token=f002624b-8ffd-48ed-b8bf-a60901ed9017",
     "age":"nill",
     "plantedBy":"nill",
-    "location":"LUMS - Academic Bloc (Outgate Side)"
+    "location":"LUMS - Academic Bloc (Outgate Side)",
+    "plantFamily":"nill",
+    "datePlanted":"nill"
   },
   "19":{
     "name":"Phanera variegata",
@@ -177,7 +185,9 @@
     "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/Kachnar.jpg?alt=media&token=1d9f9e61-d7c4-427d-80a0-de0c42ec54e6",
     "age":"nill",
     "plantedBy":"nill",
-    "location":"LUMS - Academic Bloc (Outgate Side)"
+    "location":"LUMS - Academic Bloc (Outgate Side)",
+    "plantFamily":"nill",
+    "datePlanted":"nill"
   },
  "20":{
     "name":"Azadirachta indica",
@@ -185,8 +195,10 @@
     "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/nim.jpg?alt=media&token=48e8e497-e6d3-482f-9375-5813e76371b0",
     "age":"nill",
     "plantedBy":"nill",
-    "location":"LUMS - Academic Bloc (Outgate Side)"
-  }, 
+    "location":"LUMS - Academic Bloc (Outgate Side)",
+    "plantFamily":"nill",
+    "datePlanted":"nill"
+  },
   "21":{
     "name":"Cycas revoluta",
     "url":"https://en.wikipedia.org/wiki/Cycas_revoluta",

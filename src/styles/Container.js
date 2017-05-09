@@ -24,8 +24,8 @@ export default StyleSheet.create({
     backgroundColor: Colors.background,
   },
   friendsList: {
-    flex: 1,
     // height: Constants.height,
+    flex: 1,
     padding: 12,
     flexDirection:'row',
     alignItems: 'center',
