@@ -37,7 +37,8 @@ const Header = (props) => (
 );
 
 export default () => (
-  <ScrollView style={{height: Constants.height}}>
+
+  <ScrollView style={{height: Constants.height - 50}}>
     <View style={containerStyles.searchBar}>
       <TextInput
         style={textStyles.input}
@@ -51,7 +52,6 @@ export default () => (
         style={{flex:1}}
       >
         <Image
-
           style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
           source={require('../images/plant.jpg')}
         />
@@ -61,7 +61,6 @@ export default () => (
         style={{flex:1}}
       >
         <Image
-
           style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
           source={require('../images/plant.jpg')}
         />
@@ -71,7 +70,35 @@ export default () => (
         style={{flex:1}}
       >
         <Image
-
+          style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+    </View>
+    <View style ={{flex:1,flexDirection:'row'}}>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
+          style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
+          source={require('../images/plant.jpg')}
+        />
+      </Button>
+      <Button
+        onPress={()=>{}}
+        style={{flex:1}}
+      >
+        <Image
           style={{height:100,width:(Constants.width/3),borderWidth:2,borderColor:'black',borderWidth:1}}
           source={require('../images/plant.jpg')}
         />
@@ -235,6 +262,5 @@ export default () => (
         <Text style={{color:Colors.primary,fontWeight:'500'}}>Load More</Text>
       </TouchableOpacity>
     </View>
-
   </ScrollView>
 )
