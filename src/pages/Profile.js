@@ -11,6 +11,7 @@ import {
 
 } from 'react-native';
 
+import Camera from 'react-native-camera';
 import Constants from '../Constants'
 import textStyles from '../styles/Text'
 import containerStyles from '../styles/Container'
