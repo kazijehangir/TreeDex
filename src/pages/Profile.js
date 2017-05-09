@@ -14,11 +14,12 @@ import {
 import Constants from '../Constants'
 import textStyles from '../styles/Text'
 import containerStyles from '../styles/Container'
+import ButtonRectangle from '../components/ButtonRectangle'
 // 3421
 export default ({ onPressQuests, onPressNews, onPressSettings}) => ( 
   <View>
     <Image
-          source = {require('../images/profile_background.png')}
+          source = {require('../images/profpic1.jpg')}
 
 
 
@@ -26,44 +27,45 @@ export default ({ onPressQuests, onPressNews, onPressSettings}) => (
           style={{width: null, height:Constants.profileboxheight, alignSelf: 'stretch',justifyContent: 'center',alignItems: 'center' }}>
 
            
-           <View 
-                style={{flexDirection: 'row', width: 360, height: 50, justifyContent: 'space-between'}} >
-                <TouchableHighlight onPress={onPressSettings}>
-                <Image source={require('../images/edit_icon.png')} style={{width: 50, height: 50}}></Image>
-                </TouchableHighlight>
-
-
-                <TouchableHighlight onPress={onPressNews}>
-                <Image source={require('../images/badges_icon.png')} style={{width: 50, height: 50}}></Image>
-                </TouchableHighlight>
-
-                
-
-          </View>
+           
 
           <Image source={require('../images/profilePic.png')}
            style={{width: 150, height: 150}}/> 
 
           
+          
           <View 
-                style={{flexDirection: 'row', width: 360, height: 50, justifyContent: 'space-between'}} >
+                style={{flexDirection: 'row', width: 360, height: 50, justifyContent: 'center'}} >
+
+                <TouchableHighlight onPress={onPressSettings}>
+                <Image source={require('../images/edit_icon.png')} style={{width: 50, height: 50}}></Image>
+                 </TouchableHighlight>
+
                 <TouchableHighlight onPress={onPressNews}>
-                <Image source={require('../images/adopt_a_plant_icon.png')} style={{width: 50, height: 50}}></Image>
+                <Text style={styles.titleText}>        Settings</Text>
                 </TouchableHighlight>
+
+
+                
+          </View>
+          <View 
+                style={{flexDirection: 'row', width: 360, height: 50, justifyContent: 'center'}} >
+
+                <TouchableHighlight onPress={onPressNews}>
+                <Image source={require('../images/badges_icon.png')} style={{width: 50, height: 50}}></Image>
+                 </TouchableHighlight>
+
+                <TouchableHighlight onPress={onPressNews}>
+                <Text style={styles.titleText}>        Badges</Text>
+                </TouchableHighlight>
+
+
                 
           </View>
     
     </Image>    
 
-        <View>
-         
-          <View style={{flexDirection: 'row', width: 360, height: 50, backgroundColor: '#afeeee'}}>
-                <TouchableHighlight onPress={onPressNews}>
-                <Image source={require('../images/adopt_a_plant_icon.png')} style={{width: 50, height: 50}}></Image>
-                 </TouchableHighlight>
-                <Text style={styles.titleText}>        ADOPT A PLANT</Text>
-          </View>     
-        </View>
+        
   </View>
 )
 

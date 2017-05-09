@@ -34,7 +34,7 @@ class Main extends React.Component {
     }
   }
   componentWillMount() {
-    this.props.setHeaderTitle('Scan a Tree!')
+    // this.props.setHeaderTitle('Scan a Tree!')
   }
   _onBarCodeRead(e) {
     if(this.state.showCamera){
@@ -43,7 +43,7 @@ class Main extends React.Component {
         "Type: " + e.type + "\nData: " + e.data
       )
     }
-    this.state.showCamera = false
+    this.setState({showCamera: false})
   }
   checkUser(ev) {
     if (this.state.user) {

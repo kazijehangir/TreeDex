@@ -77,6 +77,17 @@ export default StyleSheet.create({
     marginRight: 16,
     backgroundColor: Colors.primary
   },
+  buttonRectangle: {
+    height: 50,
+    width: 200,
+    elevation: 8,
+    marginTop: 35,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: 16,
+    marginRight: 16,
+    backgroundColor: Colors.primary
+  },
   buttonSquareText:{
     textAlign: 'center',
     padding: 8,

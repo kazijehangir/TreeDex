@@ -13,6 +13,7 @@ class MainSwiper extends React.Component {
   constructor(props) {
     super(props)
     this.state = {}
+    this.titles = ['Friends', 'Scan a Tree!', 'Other...']
   }
   componentWillMount() {
     this.props.setHeaderTitle('Scan a Tree!')
@@ -20,7 +21,9 @@ class MainSwiper extends React.Component {
   render() {
     return (
       <Swiper style={containerStyles.swiper}
-          onSwipe={(e) => alert(JSON.stringify(e))}
+          onMomentumScrollEnd={(e, state, context) => {
+            this.props.setHeaderTitle(this.titles[state.index])
+          }}
           showsButtons={true} loop={false} index={1}>
           <FriendsPage
             setHeaderTitle={this.props.setHeaderTitle} />

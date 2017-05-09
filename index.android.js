@@ -62,21 +62,21 @@ export default class TreeDexRN extends Component {
       }
     }
     componentDidMount(){
-      // Constants.firebaseApp.auth().onAuthStateChanged((user) => {
-      //   if (user) {
-      //     // User is signed in.
-      //     // alert(JSON.stringify(user) + " signed in.")
-      //     this.setState({user: user})
-      //     this._handleAction({ type: 'push', key: 'MainSwiper' })
-      //     let newState = Object.assign({}, this.state.navState)
-      //     newState.routes = newState.routes.slice(-1)
-      //     newState.index = 0
-      //     this.setState({navState: newState})
-      //   } else {
-      //     // alert("No User signed in.")
-      //
-      //   }
-      // })
+      Constants.firebaseApp.auth().onAuthStateChanged((user) => {
+        if (user) {
+          // User is signed in.
+          // alert(JSON.stringify(user) + " signed in.")
+          this.setState({user: user})
+          this._handleAction({ type: 'push', key: 'MainSwiper' })
+          let newState = Object.assign({}, this.state.navState)
+          newState.routes = newState.routes.slice(-1)
+          newState.index = 0
+          this.setState({navState: newState})
+        } else {
+          // alert("No User signed in.")
+
+        }
+      })
     }
     _setHeaderTitle(title) {
       setState({headerTitle: title})
@@ -211,24 +211,31 @@ export default class TreeDexRN extends Component {
       );
     }
     _renderBackButton(props) {
-      return (
-        <TouchableOpacity
-          style={buttonStyles.navBackContainer}
-          onPress={() => props.onNavigateBack(this.handleBackAction)}>
-          <Image
-            style={buttonStyles.navBack} source={require('./src/assets/backButton.png')}
-          />
-        </TouchableOpacity>
-      )
+      if (props.scene.route.key == 'MainSwiper') {
+        return (
+          <View>
+          </View>
+        )
+      } else {
+        return (
+          <TouchableOpacity
+            style={buttonStyles.navBackContainer}
+            onPress={() => props.onNavigateBack(this.handleBackAction)}>
+            <Image
+              style={buttonStyles.navBack} source={require('./src/assets/backButton.png')}
+              />
+          </TouchableOpacity>
+        )
+      }
     }
     _renderHeader = (sceneProps) => {
         const route = sceneProps.scene.route
         if (route.key == 'Home')
           return null // Here we skip header on home and main screen
         // Next, we remove back navigation on second screen (optional)
-        let onNavigateBack = this.handleBackAction
-        if (route.key == 'Home' || route.key == 'MainSwiper')
-          onNavigateBack = undefined
+        const onNavigateBack =
+          (route.key == 'Home' ||
+           route.key == 'MainSwiper') ? undefined : this.handleBackAction
           // sceneProps.scene.index > 1 ? this.handleBackAction : undefined
         return (
             <NavigationHeader
@@ -275,7 +282,7 @@ const createReducer = (initialState) => {
 const NavReducer = createReducer({
   index: 0,
   key: 'App',
-  routes: [{key: 'MainSwiper'}]
+  routes: [{key: 'Home'}]
 })
 
 AppRegistry.registerComponent('TreeDexRN', () => TreeDexRN);

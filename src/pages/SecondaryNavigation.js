@@ -43,7 +43,7 @@ class SecondaryNavigation extends React.Component {
     this.state = {}
   }
   componentWillMount() {
-    this.props.setHeaderTitle('Secondary Navigation')
+    // this.props.setHeaderTitle('Secondary Navigation')
   }
   render() {
     return (
