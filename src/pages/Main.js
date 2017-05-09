@@ -36,12 +36,24 @@ class Main extends React.Component {
   componentWillMount() {
     // this.props.setHeaderTitle('Scan a Tree!')
   }
+  openUrl (url) {
+    alert(url)
+  }
   _onBarCodeRead(e) {
     // alert(JSON.stringify(this.state))
+    // alert(JSON.stringify(e.data.name))
     if(this.state.showCamera){
       Alert.alert(
-        'Barcode Scanned!',
-        "Type: " + e.type + "\nData: " + e.data
+        e.data.name,
+        'Congratulations! You successfully scanned a plant!' + '\n'
+        + 'Age: ' + e.data.age + '\n'
+        + 'Planted by: ' + e.data.plantedBy + '\n'
+        + 'Location: ' + e.data.location,
+        [
+          {text: 'More info...', onPress: () => this.openUrl(e.data.url)},
+          {text: 'Dismiss', onPress: () => this.setState({showCamera: true}), style: 'cancel'},
+        ],
+        // "Type: " + e.type + "\nData: " + e.data
       )
     }
     this.setState({showCamera: false})
