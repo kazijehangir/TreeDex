@@ -9,20 +9,34 @@ import News from './News'
 import containerStyles from '../styles/Container'
 import Constants from '../Constants'
 
-export default ({ user, onPressSignout, onPressExplore, onPressNews, onPressProfile,onPressSettings}) => (
-    <Swiper style={containerStyles.swiper}
-        showsButtons={true} loop={false} index={1}>
-        <FriendsPage/>
-        <MainPage
-         user={user}
-         onPressSignout={onPressSignout}
-         onPressSettings={onPressSettings}
-         onPressProfile={onPressProfile} />
-        <SecondaryNavigation
-            onPressNews={onPressNews}
-            onPressExplore={onPressExplore}
-            onPressSettings={onPressSettings}
-        />
-    </Swiper>
-
-)
+class MainSwiper extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {}
+  }
+  componentWillMount() {
+    this.props.setHeaderTitle('Scan a Tree!')
+  }
+  render() {
+    return (
+      <Swiper style={containerStyles.swiper}
+          showsButtons={true} loop={false} index={1}>
+          <FriendsPage
+            setHeaderTitle={this.props.setHeaderTitle} />
+          <MainPage
+           setHeaderTitle={this.props.setHeaderTitle}
+           user={this.props.user}
+           onPressSignout={this.props.onPressSignout}
+           onPressSettings={this.props.onPressSettings}
+           onPressProfile={this.props.onPressProfile} />
+          <SecondaryNavigation
+              setHeaderTitle={this.props.setHeaderTitle}
+              onPressNews={this.props.onPressNews}
+              onPressExplore={this.props.onPressExplore}
+              onPressSettings={this.props.onPressSettings}
+          />
+      </Swiper>
+    )
+  }
+}
+export default MainSwiper

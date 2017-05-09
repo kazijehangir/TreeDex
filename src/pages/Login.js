@@ -32,18 +32,21 @@ class Login extends React.Component {
       password: ''
     };
   }
+  componentWillMount() {
+    this.props.setHeaderTitle('Login')
+  }
   async login(){
     this.setState({
       loaded: true
     });
     try{
-        
+
         userData = await Constants.firebaseApp.auth()
           .signInWithEmailAndPassword(this.state.email, this.state.password);
           this.setState({
             loaded: false
           });
-        
+
           this.props.onSuccess()
     } catch(error){
       this.setState({
@@ -52,7 +55,7 @@ class Login extends React.Component {
       alert(error)
 
     }
-    
+
 
   }
   render(){
@@ -80,7 +83,7 @@ class Login extends React.Component {
     </View>
     )
   }
-  
+
 }
 AppRegistry.registerComponent('login', () => login);
 export default Login;

@@ -37,37 +37,56 @@ import Constants from '../Constants'
 // I put them back. - JK
 //I changed it a bit. -Basit
 
-export default ({onPressExplore, onPressNews}) => (
-  <ScrollView>
-    <View style={{flex:1}}>
-    <Card >
-      <CardImage>
-        <Image
-          style={{height:219}}
-          source={require('../images/plant.jpg')}
-        />
-      </CardImage>
-      <CardAction seperator>
-        <TouchableOpacity style={ButtonStyles.footerButton} onPress={onPressNews}>
-          <Text style={textStyles.footerText}>News</Text>
-        </TouchableOpacity>
-      </CardAction>
-    </Card>
-    <View style={{flexDirection:'row',flex:1,marginBottom:30}}>
-      <Card>
-        <CardImage>
-        <Image
-          style={{height:209}}
-          source={require('../images/plant.jpg')}
-        />
-        </CardImage>
-        <CardAction>
-          <TouchableOpacity style={ButtonStyles.footerButton} onPress={onPressExplore}>
-            <Text style={textStyles.footerText}>Explore</Text>
-          </TouchableOpacity>
-        </CardAction>
-      </Card>
-    </View>
-    </View>
-  </ScrollView>
-)
+class SecondaryNavigation extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {}
+  }
+  componentWillMount() {
+    this.props.setHeaderTitle('Secondary Navigation')
+  }
+  render() {
+    return (
+      <ScrollView>
+        <View style={{flex:0.1}}>
+          <Card>
+            <Text style={{fontSize:30,fontWeight:'200',color:Colors.primary,marginLeft:0}}>
+              TreeDex
+            </Text>
+          </Card>
+        </View>
+        <View style={{flex:1}}>
+          <Card >
+            <CardImage>
+              <Image
+                style={{height:219}}
+                source={require('../images/plant.jpg')}
+                />
+            </CardImage>
+            <CardAction seperator>
+              <TouchableOpacity style={ButtonStyles.footerButton} onPress={this.props.onPressNews}>
+                <Text style={textStyles.footerText}>News</Text>
+              </TouchableOpacity>
+            </CardAction>
+          </Card>
+          <View style={{flexDirection:'row',flex:1,marginBottom:30}}>
+            <Card>
+              <CardImage>
+                <Image
+                  style={{height:209}}
+                  source={require('../images/plant.jpg')}
+                  />
+              </CardImage>
+              <CardAction>
+                <TouchableOpacity style={ButtonStyles.footerButton} onPress={this.props.onPressExplore}>
+                  <Text style={textStyles.footerText}>Explore</Text>
+                </TouchableOpacity>
+              </CardAction>
+            </Card>
+          </View>
+        </View>
+      </ScrollView>
+    )
+  }
+}
+export default SecondaryNavigation

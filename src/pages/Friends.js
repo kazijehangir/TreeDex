@@ -66,7 +66,9 @@ class Friends extends React.Component {
       dataSource: ds.cloneWithRows([{name:'Ali'}, {name:'Wali'}]),
     };
   }
-
+  componentWillMount() {
+    this.props.setHeaderTitle('Friends')
+  }
   render() {
     return (
       <View style={containerStyles.Container}>

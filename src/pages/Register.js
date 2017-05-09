@@ -24,87 +24,18 @@ import ButtonInverted from '../components/ButtonInverted'
 import Header from '../components/header'
 import Constants from '../Constants'
 
-/*var state = {}
-
-const usernameChangeHandler = ev => {
-  state.username = ev.nativeEvent.text
-  // console.log(ev.nativeEvent.text)
-}
-
-const emailChangeHandler = ev => {
-  state.email = ev.nativeEvent.text
-  // console.log(ev.nativeEvent.text)
-}
-const passwordChangeHandler = ev => {
-  state.pass = ev.nativeEvent.text
-  // console.log(ev.nativeEvent.text)
-}
-
-var loaded = true
-const onPressRegister = async (email, pass, onSuccessRegister) => {
-  // var cond = true
-  try {
-    // progressOn()
-    await Constants.firebaseApp.auth()
-      .createUserWithEmailAndPassword(email, pass);
-    // this.showProgress = false
-      console.log("Account created");
-      // progressOff()
-      alert('Your account was created!');
-      onSuccessRegister()
-  } catch (error) {
-    switch(error){
-
-        case "EMAIL_TAKEN":
-          alert("The new user account cannot be created because the email is already in use.");
-        break;
-
-        case "INVALID_EMAIL":
-          alert("The specified email is not a valid email.");
-        break;
-
-        default:
-          alert("Error creating user:");
-      }
-
-  }
-    console.log(error.toString())
-}
-export default ({onPress, goBack, onSuccessRegister}) => (
- <View style={containerStyles.container}>
-   
-   <Text style={textStyles.subtitle} >Sign Up</Text>
-   <ActivityIndicator animating = {false}
-        style = {containerStyles.activityIndicator} size = "large"
-    />
-   <TextInput placeholder='Username'
-    style={inputStyles.emailInput}
-    onChange={usernameChangeHandler}></TextInput>
-
-   <TextInput placeholder='Email'
-    style={inputStyles.emailInput}
-    onChange={emailChangeHandler}></TextInput>
-
-   <TextInput placeholder='Password'
-    style={inputStyles.passwordInput}
-    secureTextEntry={true}
-    onChange={passwordChangeHandler}></TextInput>
-
-   <ButtonInverted title='Register' onPress={() => onPressRegister(state.email, state.pass, onSuccessRegister)} />
-
-   <ButtonCustom onPress={onPress} title='Or go to Login' />
-  
- </View>
-)*/
-
 class Register extends React.Component{
   constructor(props){
     super(props);
     this.state = {
       loaded: false,
       email: '',
-      password: ''
+      password: '',
+      name:''
     };
+  }
+  componentWillMount() {
+    this.props.setHeaderTitle('Register')
   }
  async signup(){
 
@@ -117,9 +48,18 @@ class Register extends React.Component{
        this.setState({
         email: '',
         password: '',
+        name:'',
         loaded: false
       });
       alert('Your account was created!');
+      
+     try{
+        await userData.updateProfile({
+              displayName: this.state.name
+              })
+     } catch(error){
+        alert(error)
+     }
       this.props.onSuccessRegister()
     } catch(error) {
       switch(error.code){
@@ -143,14 +83,16 @@ class Register extends React.Component{
   render(){
     return(
        <View style={containerStyles.container}>
-   
+
           <Text style={textStyles.subtitle} >Sign Up</Text>
           <ActivityIndicator animating = {true}
               opacity= {this.state.loaded ? 1:0}
               style = {containerStyles.activityIndicator} size = "large"
           />
-          <TextInput placeholder='Username'
-          style={inputStyles.emailInput}
+          <TextInput placeholder='Name'
+          style={inputStyles.nameInput}
+          onChangeText={(text)=> this.setState({name:text})}
+          value={this.state.name}
           ></TextInput>
 
           <TextInput placeholder='Email'
@@ -173,5 +115,5 @@ class Register extends React.Component{
   }
 
 }
-AppRegistry.registerComponent('signup', () => signup);
+// AppRegistry.registerComponent('signup', () => signup);
 export default Register;
