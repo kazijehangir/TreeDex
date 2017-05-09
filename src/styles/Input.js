@@ -18,7 +18,7 @@ export default StyleSheet.create({
     marginRight: 20,
     marginLeft: 20,
     alignItems: 'center',
-    minLength: 6
+    // minLength: 6
   },
 
 })
