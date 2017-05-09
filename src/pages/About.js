@@ -76,8 +76,6 @@ class Main extends React.Component {
       this.props.onPressSettings()
     } else if(idx === '1') {
       this.props.onPressSignout()
-    } else if (idx === '2') {
-
     } else if(idx === '2') {
       this.props.onPressAbout()
     }
