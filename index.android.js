@@ -140,6 +140,9 @@ export default class TreeDexRN extends Component {
                  user={this.state.user}
                  setHeaderTitle={this._setHeaderTitle.bind(this)}
                  onPressSignout={this._signOut.bind(this)}
+                 setWebUrl={this.setWebUrl.bind(this)}
+                 openWebView={this._handleAction.bind(this,
+                 {type: 'push', key: 'WebViewCustom'})}
                  onPressExplore={this._handleAction.bind(this,
                  { type: 'push', key: 'Explore' })}
                  onPressNews={this._handleAction.bind(this,

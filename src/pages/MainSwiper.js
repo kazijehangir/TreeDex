@@ -30,6 +30,8 @@ class MainSwiper extends React.Component {
           <MainPage
            setHeaderTitle={this.props.setHeaderTitle}
            user={this.props.user}
+           setWebUrl={this.props.setWebUrl}
+           openWebView={this.props.openWebView}
            onPressSignout={this.props.onPressSignout}
            onPressSettings={this.props.onPressSettings}
            onPressChangePass={this.props.onPressChangePass}

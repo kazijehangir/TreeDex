@@ -37,7 +37,11 @@ class Main extends React.Component {
     // this.props.setHeaderTitle('Scan a Tree!')
   }
   openUrl (url) {
-    alert(url)
+    // alert(url)
+
+    this.props.setWebUrl(url)
+    this.props.openWebView()
+    this.setState({showCamera: true})
   }
   _onBarCodeRead(e) {
     // alert(JSON.stringify(this.state))
@@ -59,7 +63,7 @@ class Main extends React.Component {
           {text: 'More info...', onPress: () => this.openUrl(data.url)},
           {text: 'Dismiss', onPress: () => this.setState({showCamera: true}), style: 'cancel'},
         ],
-        // "Type: " + e.type + "\nData: " + e.data
+        {cancelable: false}
       )
     }
     this.setState({showCamera: false})
