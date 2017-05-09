@@ -63,20 +63,20 @@ export default class TreeDexRN extends Component {
     }
     componentDidMount(){
       Constants.firebaseApp.auth().onAuthStateChanged((user) => {
-        if (user) {
-          // User is signed in.
-          // alert(JSON.stringify(user) + " signed in.")
-          this.setState({user: user})
-          this._handleAction({ type: 'push', key: 'MainSwiper' })
-          let newState = Object.assign({}, this.state.navState)
-          newState.routes = newState.routes.slice(-1)
-          newState.index = 0
-          this.setState({navState: newState})
-        } else {
-          // alert("No User signed in.")
-
-        }
-      })
+      //   if (user) {
+      //     // User is signed in.
+      //     // alert(JSON.stringify(user) + " signed in.")
+      //     this.setState({user: user})
+      //     this._handleAction({ type: 'push', key: 'MainSwiper' })
+      //     let newState = Object.assign({}, this.state.navState)
+      //     newState.routes = newState.routes.slice(-1)
+      //     newState.index = 0
+      //     this.setState({navState: newState})
+      //   } else {
+      //     // alert("No User signed in.")
+      //
+      //   }
+      // })
     }
     _setHeaderTitle(title) {
       setState({headerTitle: title})

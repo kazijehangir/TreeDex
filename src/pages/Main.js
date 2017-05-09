@@ -64,7 +64,11 @@ export default ({ user, signout, onPressQuests, onPressNews, onPressProfile}) =>
           underlayColor='#EFEFEF'
           onPress={onPressProfile}
           style={buttonStyles.profileButton}>
-            <Text style={buttonStyles.buttonText}>Profile</Text>
+          <Image
+            source={require('../images/profilePic.png')}
+            style={{flex:1, height:undefined, width:undefined,alignSelf:'stretch'}}
+            resizeMode="contain"
+          />
         </TouchableHighlight>
         <ButtonCustom onPress={checkUser} title='Check User' />
         <ButtonCustom onPress={signout} title='Logout' />

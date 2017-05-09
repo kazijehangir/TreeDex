@@ -21,7 +21,9 @@ export default StyleSheet.create({
   },
   profileButton: {
     height: 45,
+    width:45,
     marginTop: 0,
+    borderRadius: 50,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: Colors.primary,
     justifyContent: 'center',
