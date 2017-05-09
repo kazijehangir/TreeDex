@@ -72,7 +72,6 @@ class Friends extends React.Component {
   render() {
     return (
       <View style={containerStyles.Container}>
-        <Text style={textStyles.header}>Friends</Text>
         <ListView
           Style={containerStyles.friendsList}
           dataSource={this.state.dataSource}
