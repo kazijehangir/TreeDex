@@ -79,8 +79,16 @@ export default class TreeDexRN extends Component {
       // })
     }
     _setHeaderTitle(title) {
-      alert("Setting title: " + title + "\n this.state.headerTitle: " + JSON.stringify(this.state.headerTitle))
-      // this.setState({headerTitle: title})
+      // alert("Setting title: " + title + "\n this.state.headerTitle: " + JSON.stringify(this.state.headerTitle))
+      if (this.state.headerTitle != title) {
+        if (!this.state.settingState) {
+          this.setState({settingState: true}, () => {
+            this.setState({headerTitle: title}, () => {
+              this.setState({settingState: false})
+            })
+          })
+        }
+      }
     }
     async _signOut() {
       // alert("Signing out")
