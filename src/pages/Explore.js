@@ -26,8 +26,6 @@ import ButtonStyles from '../styles/Button'
 
 import Constants from '../Constants'
 
->>>>>>> 4f5cd5bfa1744db327bd5122d963ceb0a111c0ec
-
 export default () => (
   <ScrollView style={{height: Constants.height}}>
     <View style ={{flex:1,flexDirection:'row'}}>

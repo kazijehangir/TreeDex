@@ -43,7 +43,7 @@ class Main extends React.Component {
         "Type: " + e.type + "\nData: " + e.data
       )
     }
-    this.state.showCamera = false
+    this.setState({showCamera: false})
   }
   checkUser(ev) {
     if (this.state.user) {
