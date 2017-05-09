@@ -30,17 +30,12 @@ class ChangeEmail extends React.Component {
       loaded: true
     };
   }
-  usernameChangeHandler(ev) {
-    this.state.username = ev.nativeEvent.text
-  }
-
+  
   emailChangeHandler(ev) {
-    this.state.email = ev.nativeEvent.text
-    // console.log(ev.nativeEvent.text)
+    setState({email:ev.nativeEvent.text})
   }
   passwordChangeHandler(ev) {
-    state.pass = ev.nativeEvent.text
-    // console.log(ev.nativeEvent.text)
+    setState({pass:ev.nativeEvent.text})
   }
   async onPressEmail(email, pass) {
     // var cond = true
