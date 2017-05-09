@@ -79,16 +79,7 @@ export default class TreeDexRN extends Component {
       // })
     }
     _setHeaderTitle(title) {
-      // alert("Setting title: " + title + "\n this.state.headerTitle: " + JSON.stringify(this.state.headerTitle))
-      if (this.state.headerTitle != title) {
-        if (!this.state.settingState) {
-          this.setState({settingState: true}, () => {
-            this.setState({headerTitle: title}, () => {
-              this.setState({settingState: false})
-            })
-          })
-        }
-      }
+      setState({headerTitle: title})
     }
     async _signOut() {
       // alert("Signing out")
@@ -120,7 +111,6 @@ export default class TreeDexRN extends Component {
     _renderRoute (key) {
       if (key === 'Home') {
         return <Home
-                 setHeaderTitle={this._setHeaderTitle.bind(this)}
                  onPressLogin={this._handleAction.bind(this,
                  { type: 'push', key: 'Login' })}
                  onPressRegister={this._handleAction.bind(this,
@@ -128,7 +118,6 @@ export default class TreeDexRN extends Component {
       }
       if (key === 'Register') {
         return <Register
-                setHeaderTitle={this._setHeaderTitle.bind(this)}
                 onSuccessRegister={this._handleAction.bind(this,
                 {type: 'push', key: 'MainSwiper'})}
                 goBack={this.handleBackAction.bind(this)}
@@ -137,14 +126,12 @@ export default class TreeDexRN extends Component {
       }
       if (key === 'Login') {
         return <Login
-                setHeaderTitle={this._setHeaderTitle.bind(this)}
-                onSuccess={this._handleAction.bind(this,
-                { type: 'push', key: 'MainSwiper' })} />
+                 onSuccess={this._handleAction.bind(this,
+                 { type: 'push', key: 'MainSwiper' })} />
       }
       if (key === 'MainSwiper') {
         return <MainSwiper
                  user={this.state.user}
-                 setHeaderTitle={this._setHeaderTitle.bind(this)}
                  onPressSignout={this._signOut.bind(this)}
                  onPressExplore={this._handleAction.bind(this,
                  { type: 'push', key: 'Explore' })}
@@ -157,7 +144,6 @@ export default class TreeDexRN extends Component {
       }
       if (key === 'Profile') {
         return <Profile
-                 setHeaderTitle={this._setHeaderTitle.bind(this)}
                  onPressExplore={this._handleAction.bind(this,
                  { type: 'push', key: 'Explore' })}
                  onPressNews={this._handleAction.bind(this,
@@ -166,12 +152,10 @@ export default class TreeDexRN extends Component {
                  { type: 'push', key: 'Settings' })} />
       }
       if(key === 'Explore'){
-        return <Explore
-                  setHeaderTitle={this._setHeaderTitle.bind(this)}/>
+        return <Explore />
       }
       if(key === 'News'){
         return <News
-                setHeaderTitle={this._setHeaderTitle.bind(this)}
                 onPressNews={this._handleAction.bind(this,
                  { type: 'push', key: 'News1' })}
                  onPressSubNews1={this._handleAction.bind(this,
@@ -180,26 +164,22 @@ export default class TreeDexRN extends Component {
                  { type: 'push', key: 'News1' })}/>
       }
       if (key == 'News1'){
-        return <WebView
-                  setHeaderTitle={this._setHeaderTitle.bind(this)}/>
+        return <WebView/>
 
       }
 
       if (key == 'ChangeName'){
-        return <ChangeName
-          setHeaderTitle={this._setHeaderTitle.bind(this)}/>
+        return <ChangeName/>
 
       }
 
       if (key == 'ChangePass'){
-        return <ChangePass
-          setHeaderTitle={this._setHeaderTitle.bind(this)}/>
+        return <ChangePass/>
 
       }
 
       if (key == 'Settings'){
         return <Settings
-                 setHeaderTitle={this._setHeaderTitle.bind(this)}
                  onPressName={this._handleAction.bind(this,
                  { type: 'push', key: 'ChangeName' })}
                  onPressPass={this._handleAction.bind(this,
