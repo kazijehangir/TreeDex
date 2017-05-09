@@ -17,16 +17,29 @@ export default StyleSheet.create({
     alignItems: 'center',
     marginLeft: 16,
     marginRight: 16,
-    backgroundColor: Colors.background
+    backgroundColor: Colors.background,
+    alignItems:'center'
   },
   profileButton: {
     height: 45,
-    marginTop: 0,
+    width:45,
+    marginTop:8,
+    borderRadius: 22.5,
+    borderWidth: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'transparent'
+  },
+  profileButton: {
+    height: 45,
+    width:45,
+    marginTop:8,
+    borderRadius: 50,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: Colors.primary,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#FFFFFF'
+    backgroundColor: 'transparent'
   },
   buttonInverted: {
     height: 45,

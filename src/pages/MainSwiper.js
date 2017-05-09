@@ -18,7 +18,8 @@ export default ({ user, setHeaderTitle, onPressSignout,
         <FriendsPage/>
         <MainPage
          user={user}
-         signout={onPressSignout}
+         onPressSignout={onPressSignout}
+         onPressSettings={onPressSettings}
          onPressProfile={onPressProfile} />
         <SecondaryNavigation
             onPressNews={onPressNews}

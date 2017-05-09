@@ -12,6 +12,13 @@ export default StyleSheet.create({
     height: Constants.height,
     flex: -1
   },
+   activityIndicator: {
+      flex: 1,
+      marginTop: 10,
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: 80
+   },
   scrollView: {
     height:50,
     backgroundColor: Colors.background,
@@ -89,5 +96,20 @@ export default StyleSheet.create({
     height: Constants.height/2,
     width: Constants.width/2,
     resizeMode: 'contain'
-  }
+  },
+  smallCircle: {
+    height: 45,
+    width:45,
+    marginTop:8,
+    marginLeft:8,
+    borderRadius: 22.5,
+    borderWidth: StyleSheet.hairlineWidth,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'white'
+  },
+  dropDown: {
+    marginRight:8,
+  },
+
 })

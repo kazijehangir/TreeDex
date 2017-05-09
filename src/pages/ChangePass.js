@@ -19,7 +19,7 @@ import inputStyles from '../styles/Input'
 import textStyles from '../styles/Text'
 import ButtonCustom from '../components/ButtonCustom'
 import ButtonInverted from '../components/ButtonInverted'
-import * as firebase from "firebase";
+import Constants from '../Constants'
 import Header from '../components/header'
 var state = {}
 
@@ -46,43 +46,31 @@ const passwordChangeHandler = ev => {
 // };
 // const firebaseApp = firebase.initializeApp(config);
 var loaded = true
-const onPressRegister = async (pass) => {
-  // var cond = true
-  try {
-    // if(cond){
-    //   onSuccessRegister()
-    // }
-    //loaded = false
-    userData = await firebase.auth()
-            .updatePassword (pass);
-    //loaded = true
-      console.log("Password Changed");
-      alert('Your Password Was Changed!');
-      
-  } catch (error) {
+const onPressPass = async (pass) => {
+  loaded = false
+  var user = Constants.firebase.auth().currentUser;
+  user.updatePassword(pass).then((userData) => {
+    loaded = true
+    console.log("Pasword Changed");
+    alert('Your Password was changed!');
+  }, (error) => {
     switch(error.code){
+    
+      case "INVALID_PASSWORD":
+        alert("The specified password is not valid.");
+      break;
 
-        case "INVALID PASSWORD":
-          alert("The new password is invalid.");
-        break;
-
-        default:
-          alert("Error changing password");
-      }
-
-}
-    console.log(error.toString())
+      default:
+        alert("Error changing Password:" + JSON.stringify(error));
+    }
+  })
 }
 
-export default ({onPress, goBack, onSuccessRegister}) => (
+export default ({onPress, goBack}) => (
  <View style={containerStyles.container}>
-   <Header text="Signup" loaded={loaded} />
+   <Header text="Change Password" loaded={loaded} />
    <Text style={textStyles.subtitle} >Change Password</Text>
 
-   <TextInput placeholder='Old Password'
-    style={inputStyles.passwordInput}
-    secureTextEntry={true}
-    onChange={passwordChangeHandler}></TextInput>
 
    <TextInput placeholder='Type New Password'
     style={inputStyles.passwordInput}
@@ -94,7 +82,7 @@ export default ({onPress, goBack, onSuccessRegister}) => (
     secureTextEntry={true}
     onChange={passwordChangeHandler}></TextInput>
 
-   <ButtonInverted title='Change Password' onPress={() => onPressRegister(state.pass)} />
+   <ButtonInverted title='Change Password' onPress={() => onPressPass(state.pass)} />
 
   
  </View>

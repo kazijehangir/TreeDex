@@ -7,9 +7,12 @@ import {
   View,
   Alert,
   ScrollView,
-  TouchableHighlight
+  TouchableHighlight,
+  TouchableOpacity
 } from 'react-native';
 import Camera from 'react-native-camera'
+import ModalDropdown from 'react-native-modal-dropdown';
+
 
 import Constants from '../Constants'
 import textStyles from '../styles/Text'
@@ -17,6 +20,7 @@ import buttonStyles from '../styles/Button'
 import containerStyles from '../styles/Container'
 import ButtonCustom from '../components/ButtonCustom'
 import ButtonSquare from '../components/ButtonSquare'
+import Colors from '../Colors'
 // import ButtonCustom from '../components/ButtonCustom'
 
 //global stuct maintaining the state
@@ -46,7 +50,17 @@ const checkUser = (ev) => {
   }
 }
 
-export default ({ user, signout, onPressQuests, onPressNews, onPressProfile}) => {
+dropdown = (idx, value, onPressSettings,onPressSignout) => {
+      if (idx === '0'){
+        onPressSettings()
+      } else if(idx === '1') {
+        onPressSignout()
+      }
+  }
+  const DEMO_OPTIONS_1 = ['Account','Logout','About Us','Contact Us'];
+
+
+export default ({ user, onPressSignout, onPressSettings, onPressNews, onPressProfile}) => {
   state.user = user
   if(state.showCamera) {
     return (
@@ -60,14 +74,36 @@ export default ({ user, signout, onPressQuests, onPressNews, onPressProfile}) =>
           aspect={Camera.constants.Aspect.fill}
           type={state.cameraType}
         >
-        <TouchableHighlight
-          underlayColor='#EFEFEF'
-          onPress={onPressProfile}
-          style={buttonStyles.profileButton}>
-            <Text style={buttonStyles.buttonText}>Profile</Text>
-        </TouchableHighlight>
-        <ButtonCustom onPress={checkUser} title='Check User' />
-        <ButtonCustom onPress={signout} title='Logout' />
+        <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+          <View style={containerStyles.smallCircle}>
+            <Image
+              source = {require('../../android/app/src/main/res/mipmap-hdpi/ic_launcher.png')}
+              style={{flex:1, height:45, width:45,borderRadius:22.5,alignSelf:'stretch'}}
+              resizeMode="cover"
+            />
+          </View>
+          <TouchableOpacity
+            onPress={onPressProfile}
+            style={buttonStyles.profileButton}>
+            <Image
+              source={require('../images/profilePic.png')}
+              style={{flex:1, height:45, width:45,borderRadius:22.5,alignSelf:'stretch'}}
+              resizeMode="cover"
+            />
+          </TouchableOpacity>
+          <ModalDropdown
+          style={containerStyles.dropDown}
+             options={DEMO_OPTIONS_1}
+             textStyle={{backgroundColor:Colors.primary}}
+             onSelect={(idx , value) => this.dropdown(idx,value,onPressSettings,onPressSignout)}>
+             <View style={buttonStyles.profileButton}>
+                <Image
+                  style={{flex:1, height:45, width:45,borderRadius:22.5,alignSelf:'stretch'}}
+                   source={require('../images/settings.png')}
+                />
+              </View>
+            </ModalDropdown>
+        </View>
         </Camera>
       // </View>
     );
