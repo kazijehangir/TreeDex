@@ -21,7 +21,8 @@ const firebaseApp = firebase.initializeApp(config);
 export default {
   firebaseApp: firebaseApp,
   firebase: firebase,
-  height: height - 24,
+  // TODO: Jehangir: Fix height for on screen navigation
+  height: height,
   greenboxheight: height*0.65,
   whiteboxheight: height*0.35,
   profileboxheight: 143+(height*0.65),

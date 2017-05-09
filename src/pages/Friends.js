@@ -67,12 +67,11 @@ class Friends extends React.Component {
     };
   }
   componentWillMount() {
-    this.props.setHeaderTitle('Friends')
+    // this.props.setHeaderTitle('Friends')
   }
   render() {
     return (
       <View style={containerStyles.Container}>
-        <Text style={textStyles.header}>Friends</Text>
         <ListView
           Style={containerStyles.friendsList}
           dataSource={this.state.dataSource}
