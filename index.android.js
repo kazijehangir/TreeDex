@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import * as firebase from "firebase";
-// import { Card, Button } from 'react-native-material-design';
 import {
   AppRegistry,
   StyleSheet,
@@ -39,7 +37,7 @@ import ChangeEmail from './src/pages/ChangeEmail'
 import ChangePass from './src/pages/ChangePass'
 import containerStyles from './src/styles/Container'
 import buttonStyles from './src/styles/Button'
-import WebView from './src/pages/WebView'
+import WebViewCustom from './src/pages/WebViewCustom'
 import Constants from './src/Constants'
 // import { WebView } from 'react-native';
 
@@ -95,6 +93,9 @@ export default class TreeDexRN extends Component {
         alert("Error Signing out!")
       }
 
+    }
+    setWebUrl(url) {
+      this.setState({WebViewUrl: url})
     }
     _handleAction (action) {
         const newState = NavReducer(this.state.navState, action);
@@ -164,38 +165,29 @@ export default class TreeDexRN extends Component {
       if(key === 'News'){
         return <News
                 setHeaderTitle={this._setHeaderTitle.bind(this)}
-                onPressNews={this._handleAction.bind(this,
-                 { type: 'push', key: 'News1' })}
-                 onPressSubNews1={this._handleAction.bind(this,
-                 { type: 'push', key: 'News1' })}
-                 onPressSubNews2={this._handleAction.bind(this,
-                 { type: 'push', key: 'News1' })}/>
+                setWebUrl={this.setWebUrl.bind(this)}
+                openWebView={this._handleAction.bind(this,
+                {type: 'push', key: 'WebViewCustom'})}/>
       }
-      if (key == 'News1'){
-        return <WebView
-                  setHeaderTitle={this._setHeaderTitle.bind(this)}/>
-
+      if (key == 'WebViewCustom'){
+        return <WebViewCustom
+                  setHeaderTitle={this._setHeaderTitle.bind(this)}
+                  url={this.state.WebViewUrl}/>
       }
-
       if (key == 'ChangeEmail'){
         return <ChangeEmail
           setHeaderTitle={this._setHeaderTitle.bind(this)}/>
 
       }
-
       if (key == 'ChangePass'){
         return <ChangePass
           setHeaderTitle={this._setHeaderTitle.bind(this)}/>
 
       }
-
       if (key == 'About'){
         return <About
           setHeaderTitle={this._setHeaderTitle.bind(this)}/>
-          
-
       }
-
       if (key == 'Settings'){
         return <Settings
                  setHeaderTitle={this._setHeaderTitle.bind(this)}
@@ -205,8 +197,6 @@ export default class TreeDexRN extends Component {
                  { type: 'push', key: 'ChangePass' })} />
 
       }
-
-
     }
     _renderScene(props) {
         const ComponentToRender = this._renderRoute(props.scene.route.key)

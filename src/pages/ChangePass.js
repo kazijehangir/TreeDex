@@ -31,17 +31,17 @@ class ChangePass extends React.Component {
     };
   }
   password1ChangeHandler(ev) {
-    setState({pass1:ev.nativeEvent.text})
+    this.setState({pass1:ev.nativeEvent.text})
   }
   password2ChangeHandler(ev) {
-    setState({pass2:ev.nativeEvent.text})
+    this.setState({pass2:ev.nativeEvent.text})
   }
   async onPressPass (pass)  {
     if (this.state.pass1 === this.state.pass2) {
-      setState({loaded: false})
+      this.setState({loaded: false})
       var user = Constants.firebase.auth().currentUser;
       user.updatePassword(pass).then((userData) => {
-        setState({loaded: true})
+        this.setState({loaded: true})
         console.log("Password Changed");
         alert('Your Password was changed!');
       }, (error) => {
