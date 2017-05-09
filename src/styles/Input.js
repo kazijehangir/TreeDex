@@ -17,8 +17,8 @@ export default StyleSheet.create({
   passwordInput: {
     marginRight: 20,
     marginLeft: 20,
-    alignItems: 'center',
-    minLength: 6
+    alignItems: 'center'
+    // minLength: 6
   },
 
 })

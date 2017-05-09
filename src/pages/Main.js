@@ -34,7 +34,7 @@ class Main extends React.Component {
     }
   }
   componentWillMount() {
-    this.props.setHeaderTitle('Scan a Tree!')
+    // this.props.setHeaderTitle('Scan a Tree!')
   }
   _onBarCodeRead(e) {
     if(this.state.showCamera){

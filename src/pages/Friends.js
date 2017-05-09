@@ -67,7 +67,7 @@ class Friends extends React.Component {
     };
   }
   componentWillMount() {
-    this.props.setHeaderTitle('Friends')
+    // this.props.setHeaderTitle('Friends')
   }
   render() {
     return (
