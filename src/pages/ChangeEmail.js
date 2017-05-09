@@ -30,20 +30,20 @@ class ChangeEmail extends React.Component {
       loaded: true
     };
   }
-  
+
   emailChangeHandler(ev) {
-    setState({email:ev.nativeEvent.text})
+    this.setState({email:ev.nativeEvent.text})
   }
   passwordChangeHandler(ev) {
-    setState({pass:ev.nativeEvent.text})
+    this.setState({pass:ev.nativeEvent.text})
   }
   async onPressEmail(email, pass) {
     // var cond = true
-    setState({loaded: false})
+    this.setState({loaded: false})
     var user = Constants.firebase.auth().currentUser;
 
     user.updateEmail(email).then((userData) => {
-      setState({loaded: true})
+      this.setState({loaded: true})
       // console.log("Email Address Changed");
       alert('Your Email Address was changed!');
     }, (error) => {
