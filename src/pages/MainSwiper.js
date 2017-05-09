@@ -33,6 +33,8 @@ class MainSwiper extends React.Component {
            onPressSignout={this.props.onPressSignout}
            onPressSettings={this.props.onPressSettings}
            onPressChangePass={this.props.onPressChangePass}
+           onPressContact={this.props.onPressContact}
+           onPressChangeEmail={this.props.onPressChangeEmail}
            onPressAbout={this.props.onPressAbout}
            onPressProfile={this.props.onPressProfile} />
           <SecondaryNavigation
