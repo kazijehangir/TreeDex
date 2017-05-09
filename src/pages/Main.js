@@ -50,10 +50,10 @@ const checkUser = (ev) => {
   }
 }
 
-_dropdown_6_onSelect = (idx, value, onPressSettings,onPressSignout) => {
+dropdown = (idx, value, onPressSettings,onPressSignout) => {
       if (idx === '0'){
         onPressSettings()
-      } else {
+      } else if(idx === '1') {
         onPressSignout()
       }
   }
@@ -91,11 +91,11 @@ export default ({ user, onPressSignout, onPressSettings, onPressNews, onPressPro
               resizeMode="cover"
             />
           </TouchableOpacity>
-          <ModalDropdown ref={el => this._dropdown_5 = el}
+          <ModalDropdown
           style={containerStyles.dropDown}
              options={DEMO_OPTIONS_1}
              textStyle={{backgroundColor:Colors.primary}}
-             onSelect={(idx , value) => this._dropdown_6_onSelect(idx,value,onPressSettings,onPressSignout)}>
+             onSelect={(idx , value) => this.dropdown(idx,value,onPressSettings,onPressSignout)}>
              <View style={buttonStyles.profileButton}>
                 <Image
                   style={{flex:1, height:45, width:45,borderRadius:22.5,alignSelf:'stretch'}}
