@@ -33,6 +33,9 @@ class Register extends React.Component{
       password: ''
     };
   }
+  componentWillMount() {
+    this.props.setHeaderTitle('Register')
+  }
  async signup(){
 
     this.setState({

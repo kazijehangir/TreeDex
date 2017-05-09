@@ -128,6 +128,7 @@ export default class TreeDexRN extends Component {
       }
       if (key === 'Register') {
         return <Register
+                setHeaderTitle={this._setHeaderTitle.bind(this)}
                 onSuccessRegister={this._handleAction.bind(this,
                 {type: 'push', key: 'MainSwiper'})}
                 goBack={this.handleBackAction.bind(this)}
@@ -136,8 +137,9 @@ export default class TreeDexRN extends Component {
       }
       if (key === 'Login') {
         return <Login
-                 onSuccess={this._handleAction.bind(this,
-                 { type: 'push', key: 'MainSwiper' })} />
+                setHeaderTitle={this._setHeaderTitle.bind(this)}
+                onSuccess={this._handleAction.bind(this,
+                { type: 'push', key: 'MainSwiper' })} />
       }
       if (key === 'MainSwiper') {
         return <MainSwiper
@@ -155,6 +157,7 @@ export default class TreeDexRN extends Component {
       }
       if (key === 'Profile') {
         return <Profile
+                 setHeaderTitle={this._setHeaderTitle.bind(this)}
                  onPressExplore={this._handleAction.bind(this,
                  { type: 'push', key: 'Explore' })}
                  onPressNews={this._handleAction.bind(this,
@@ -163,10 +166,12 @@ export default class TreeDexRN extends Component {
                  { type: 'push', key: 'Settings' })} />
       }
       if(key === 'Explore'){
-        return <Explore />
+        return <Explore
+                  setHeaderTitle={this._setHeaderTitle.bind(this)}/>
       }
       if(key === 'News'){
         return <News
+                setHeaderTitle={this._setHeaderTitle.bind(this)}
                 onPressNews={this._handleAction.bind(this,
                  { type: 'push', key: 'News1' })}
                  onPressSubNews1={this._handleAction.bind(this,
@@ -175,22 +180,26 @@ export default class TreeDexRN extends Component {
                  { type: 'push', key: 'News1' })}/>
       }
       if (key == 'News1'){
-        return <WebView/>
+        return <WebView
+                  setHeaderTitle={this._setHeaderTitle.bind(this)}/>
 
       }
 
       if (key == 'ChangeName'){
-        return <ChangeName/>
+        return <ChangeName
+          setHeaderTitle={this._setHeaderTitle.bind(this)}/>
 
       }
 
       if (key == 'ChangePass'){
-        return <ChangePass/>
+        return <ChangePass
+          setHeaderTitle={this._setHeaderTitle.bind(this)}/>
 
       }
 
       if (key == 'Settings'){
         return <Settings
+                 setHeaderTitle={this._setHeaderTitle.bind(this)}
                  onPressName={this._handleAction.bind(this,
                  { type: 'push', key: 'ChangeName' })}
                  onPressPass={this._handleAction.bind(this,
