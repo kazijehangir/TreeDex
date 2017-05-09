@@ -146,6 +146,8 @@ export default class TreeDexRN extends Component {
                  { type: 'push', key: 'Profile'})}
                  onPressAbout={this._handleAction.bind(this,
                  { type: 'push', key: 'About'})}
+                 onPressChangePass={this._handleAction.bind(this,
+                 { type: 'push', key: 'ChangePass'})}
                  onPressSettings={this._handleAction.bind(this,
                  { type: 'push', key: 'Settings' })} />
       }

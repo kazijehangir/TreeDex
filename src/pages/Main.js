@@ -79,7 +79,7 @@ class Main extends React.Component {
     } else if(idx === '2') {
       this.props.onPressAbout()
     } else if(idx === '3') {
-      this.props.onPressAbout()
+      this.props.onPressChangePass()
     }
   }
   render() {
