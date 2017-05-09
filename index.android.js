@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import * as firebase from "firebase";
-// import { Card, Button } from 'react-native-material-design';
 import {
   AppRegistry,
   StyleSheet,
@@ -95,11 +93,8 @@ export default class TreeDexRN extends Component {
       }
 
     }
-    openWebUrl(url) {
-      this.setState({WebViewUrl: url}, () => {
-        console.log(this.state.WebViewUrl)
-        this._handleAction({type:'push', key: 'WebViewCustom'})
-      })
+    setWebUrl(url) {
+      this.setState({WebViewUrl: url})
     }
     _handleAction (action) {
         const newState = NavReducer(this.state.navState, action);
@@ -167,27 +162,25 @@ export default class TreeDexRN extends Component {
       if(key === 'News'){
         return <News
                 setHeaderTitle={this._setHeaderTitle.bind(this)}
-                openWebUrl={this.openWebUrl.bind(this)}/>
+                setWebUrl={this.setWebUrl.bind(this)}
+                openWebView={this._handleAction.bind(this,
+                {type: 'push', key: 'WebViewCustom'})}/>
       }
       if (key == 'WebViewCustom'){
         return <WebViewCustom
                   setHeaderTitle={this._setHeaderTitle.bind(this)}
                   url={this.state.WebViewUrl}/>
-
       }
-
       if (key == 'ChangeEmail'){
         return <ChangeEmail
           setHeaderTitle={this._setHeaderTitle.bind(this)}/>
 
       }
-
       if (key == 'ChangePass'){
         return <ChangePass
           setHeaderTitle={this._setHeaderTitle.bind(this)}/>
 
       }
-
       if (key == 'Settings'){
         return <Settings
                  setHeaderTitle={this._setHeaderTitle.bind(this)}
@@ -197,8 +190,6 @@ export default class TreeDexRN extends Component {
                  { type: 'push', key: 'ChangePass' })} />
 
       }
-
-
     }
     _renderScene(props) {
         const ComponentToRender = this._renderRoute(props.scene.route.key)

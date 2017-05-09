@@ -30,11 +30,15 @@ class News extends React.Component {
   componentWillMount() {
     this.props.setHeaderTitle('News')
   }
+  openWebUrl(url) {
+    this.props.setWebUrl(url)
+    this.props.openWebView()
+  }
   render() {
     return (
      <View style={containerStyles.container}>
         <View style = {{marginTop: 10, marginLeft: 10, marginRight: 10}}>
-            <TouchableHighlight onPress={this.props.openWebUrl("http://news.nationalgeographic.com/2016/02/160221-plant-science-botany-evolution-mabey-ngbooktalk/")}>
+            <TouchableHighlight onPress={(ev) => this.openWebUrl("http://news.nationalgeographic.com/2016/02/160221-plant-science-botany-evolution-mabey-ngbooktalk/")}>
                 <Image source={require('../images/plant.jpg')} style={{width: Constants.width, height: 200, marginBottom: 10}}>
                     <Text style={textStyles.welcomeLabel1}>There is Such a Thing as Plant Intelligence</Text>
                 </Image>
