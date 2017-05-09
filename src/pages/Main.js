@@ -27,7 +27,7 @@ class Main extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      DEMO_OPTIONS_1: ['Account','Logout', 'About', 'Change Password', 'Change Email'],
+      DEMO_OPTIONS_1: ['Account','Logout', 'About', 'Change Password', 'Change Email', 'Contact Us'],
       user: this.props.user,
       showCamera: true,
       cameraType: Camera.constants.Type.back
@@ -82,6 +82,8 @@ class Main extends React.Component {
       this.props.onPressChangePass()
     } else if(idx === '4') {
       this.props.onPressChangeEmail()
+    } else if(idx === '5') {
+      this.props.onPressContact()
     }
   }
   render() {
