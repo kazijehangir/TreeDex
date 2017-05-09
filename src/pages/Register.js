@@ -103,7 +103,8 @@ class Register extends React.Component{
     this.state = {
       loaded: false,
       email: '',
-      password: ''
+      password: '',
+      name:''
     };
   }
  async signup(){
@@ -117,9 +118,18 @@ class Register extends React.Component{
        this.setState({
         email: '',
         password: '',
+        name:'',
         loaded: false
       });
       alert('Your account was created!');
+      
+     try{
+        await userData.updateProfile({
+              displayName: this.state.name
+              })
+     } catch(error){
+        alert(error)
+     }
       this.props.onSuccessRegister()
     } catch(error) {
       switch(error.code){
@@ -149,8 +159,10 @@ class Register extends React.Component{
               opacity= {this.state.loaded ? 1:0}
               style = {containerStyles.activityIndicator} size = "large"
           />
-          <TextInput placeholder='Username'
-          style={inputStyles.emailInput}
+          <TextInput placeholder='Name'
+          style={inputStyles.nameInput}
+          onChangeText={(text)=> this.setState({name:text})}
+          value={this.state.name}
           ></TextInput>
 
           <TextInput placeholder='Email'
