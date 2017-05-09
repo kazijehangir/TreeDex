@@ -23,7 +23,7 @@ import Constants from '../Constants'
 import Header from '../components/header'
 
 
-class ChangeEmail extends React.Component {
+class ChangePass extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -36,7 +36,7 @@ class ChangeEmail extends React.Component {
   password2ChangeHandler(ev) {
     setState({pass2:ev.nativeEvent.text})
   }
-  const onPressPass = async (pass) => {
+  async onPressPass (pass)  {
     if (this.state.pass1 === this.state.pass2) {
       setState({loaded: false})
       var user = Constants.firebase.auth().currentUser;
@@ -83,4 +83,4 @@ class ChangeEmail extends React.Component {
     )
   }
 }
-export default ChangeEmail
+export default ChangePass
