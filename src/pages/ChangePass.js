@@ -21,26 +21,6 @@ import ButtonCustom from '../components/ButtonCustom'
 import ButtonInverted from '../components/ButtonInverted'
 import Constants from '../Constants'
 import Header from '../components/header'
-var loaded = true
-const onPressPass = async (pass) => {
-  loaded = false
-  var user = Constants.firebase.auth().currentUser;
-  user.updatePassword(pass).then((userData) => {
-    loaded = true
-    console.log("Pasword Changed");
-    alert('Your Password was changed!');
-  }, (error) => {
-    switch(error.code){
-
-      case "INVALID_PASSWORD":
-        alert("The specified password is not valid.");
-      break;
-
-      default:
-        alert("Error changing Password:" + JSON.stringify(error));
-    }
-  })
-}
 
 
 class ChangeEmail extends React.Component {

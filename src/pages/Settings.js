@@ -43,3 +43,4 @@ class Settings extends React.Component {
     )
   }
 }
+export default Settings
