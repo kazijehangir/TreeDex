@@ -81,3 +81,5 @@ class ChangeEmail extends React.Component {
      </View>
     )
   }
+}
+export default ChangeEmail

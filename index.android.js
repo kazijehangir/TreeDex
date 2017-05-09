@@ -149,8 +149,6 @@ export default class TreeDexRN extends Component {
       if (key === 'Profile') {
         return <Profile
                  setHeaderTitle={this._setHeaderTitle.bind(this)}
-                 onPressExplore={this._handleAction.bind(this,
-                 { type: 'push', key: 'Explore' })}
                  onPressNews={this._handleAction.bind(this,
                  { type: 'push', key: 'News'})}
                  onPressSettings={this._handleAction.bind(this,
