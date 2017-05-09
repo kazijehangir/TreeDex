@@ -37,6 +37,7 @@ class Main extends React.Component {
     // this.props.setHeaderTitle('Scan a Tree!')
   }
   _onBarCodeRead(e) {
+    // alert(JSON.stringify(this.state))
     if(this.state.showCamera){
       Alert.alert(
         'Barcode Scanned!',
@@ -68,7 +69,7 @@ class Main extends React.Component {
               this.camera = cam;
             }}
             style={containerStyles.camera}
-            onBarCodeRead={this._onBarCodeRead}
+            onBarCodeRead={this._onBarCodeRead.bind(this)}
             aspect={Camera.constants.Aspect.fill}
             type={this.state.cameraType}
           >
