@@ -194,5 +194,85 @@
     "age":"nill",
     "plantedBy":"nill",
     "location":"LUMS - Academic Bloc (Outgate Side)"
-  }, 
+  },
+  "22":{
+    "name":"Beaucarnea recurvata",
+    "url":"https://en.wikipedia.org/wiki/Beaucarnea_recurvata",
+    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/beaucarnea.jpg?alt=media&token=3d43d8cd-b455-49a6-85fb-c31029ff7924",
+    "age":"nill",
+    "plantedBy":"nill",
+    "location":"LUMS - Academic Bloc (Outgate Side)"
+  },
+  "23":{
+    "name":"Asparagus",
+    "url":"https://www.bbcgoodfood.com/glossary/asparagus",
+    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/asparagus.jpg?alt=media&token=250c840d-38f5-4ff8-bd5b-29711b26d99a",
+    "age":"nill",
+    "plantedBy":"nill",
+    "location":"LUMS - Academic Bloc (Outgate Side)"
+  },
+  "24":{
+    "name":"Gladiolus",
+    "url":"https://en.wikipedia.org/wiki/Gladiolus",
+    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/gladiolus.jpg?alt=media&token=2db77442-d1b6-4644-b0a2-ed347216bd6c",
+    "age":"nill",
+    "plantedBy":"nill",
+    "location":"LUMS - Academic Bloc (Outgate Side)"
+  },
+  "25":{
+    "name":"Day Lily",
+    "url":"https://en.wikipedia.org/wiki/Gladiolus",
+    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/gladiolus.jpg?alt=media&token=2db77442-d1b6-4644-b0a2-ed347216bd6c",
+    "age":"nill",
+    "plantedBy":"nill",
+    "location":"LUMS - Academic Bloc (Outgate Side)"
+  },
+  "26":{
+    "name":"Hibiscus",
+    "url":"https://en.wikipedia.org/wiki/Hibiscus",
+    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/hibiscus-flower.jpg?alt=media&token=40b1d380-343e-48b8-a636-68bad4fec051",
+    "age":"nill",
+    "plantedBy":"nill",
+    "location":"LUMS - Academic Bloc (Outgate Side)"
+  },
+  "27":{
+    "name":"Coriander",
+    "url":"https://en.wikipedia.org/wiki/Coriander",
+    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/coriander.jpg?alt=media&token=fb2ea3a5-3329-451a-b65e-022d364c2183",
+    "age":"nill",
+    "plantedBy":"nill",
+    "location":"LUMS - Academic Bloc (Outgate Side)"
+  },
+  "27":{
+    "name":"Date Palm",
+    "url":"https://en.wikipedia.org/wiki/Date_palm",
+    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/date_palm.jpg?alt=media&token=792ba153-36de-4ebd-ade7-ae8930ba4e89",
+    "age":"nill",
+    "plantedBy":"nill",
+    "location":"LUMS - Academic Bloc (Outgate Side)"
+  },
+  "28":{
+    "name":"Spirea",
+    "url":"https://garden.org/plants/group/spiraeas/",
+    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/Spirea.jpg?alt=media&token=99690a75-7270-4e3a-9165-ba843f907bf6",
+    "age":"nill",
+    "plantedBy":"nill",
+    "location":"LUMS - Academic Bloc (Outgate Side)"
+  },
+  "29":{
+    "name":"Bougainvillea",
+    "url":"https://en.wikipedia.org/wiki/Bougainvillea",
+    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/Bougainvillea-arch.jpg?alt=media&token=b03fe0c5-64b0-40ce-92ad-46888e22672e",
+    "age":"nill",
+    "plantedBy":"nill",
+    "location":"LUMS - Academic Bloc (Outgate Side)"
+  },
+ "30":{
+    "name":"Syzygium cumini",
+    "url":"https://en.wikipedia.org/wiki/Syzygium_cumini",
+    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/jambul.jpg?alt=media&token=c989e7f4-d4ae-4706-9728-98a304ad5c40",
+    "age":"nill",
+    "plantedBy":"nill",
+    "location":"LUMS - Academic Bloc (Outgate Side)"
+  },
 }
