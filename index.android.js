@@ -79,7 +79,8 @@ export default class TreeDexRN extends Component {
       })
     }
     _setHeaderTitle(title) {
-      setState({headerTitle: title})
+      alert("Setting title: " + title + "\n this.state.headerTitle: " + JSON.stringify(this.state.headerTitle))
+      // this.setState({headerTitle: title})
     }
     async _signOut() {
       // alert("Signing out")
@@ -111,6 +112,7 @@ export default class TreeDexRN extends Component {
     _renderRoute (key) {
       if (key === 'Home') {
         return <Home
+                 setHeaderTitle={this._setHeaderTitle.bind(this)}
                  onPressLogin={this._handleAction.bind(this,
                  { type: 'push', key: 'Login' })}
                  onPressRegister={this._handleAction.bind(this,
@@ -132,6 +134,7 @@ export default class TreeDexRN extends Component {
       if (key === 'MainSwiper') {
         return <MainSwiper
                  user={this.state.user}
+                 setHeaderTitle={this._setHeaderTitle.bind(this)}
                  onPressSignout={this._signOut.bind(this)}
                  onPressExplore={this._handleAction.bind(this,
                  { type: 'push', key: 'Explore' })}

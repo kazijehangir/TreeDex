@@ -9,7 +9,10 @@ import News from './News'
 import containerStyles from '../styles/Container'
 import Constants from '../Constants'
 
-export default ({ user, onPressSignout, onPressExplore, onPressNews, onPressProfile,onPressSettings}) => (
+export default ({ user, setHeaderTitle, onPressSignout,
+    onPressExplore, onPressNews, onPressProfile,onPressSettings}) => {
+  setHeaderTitle('Scan a Tree!')
+  return (
     <Swiper style={containerStyles.swiper}
         showsButtons={true} loop={false} index={1}>
         <FriendsPage/>
@@ -23,5 +26,5 @@ export default ({ user, onPressSignout, onPressExplore, onPressNews, onPressProf
             onPressSettings={onPressSettings}
         />
     </Swiper>
-
-)
+  )
+}
