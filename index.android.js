@@ -31,6 +31,7 @@ import Profile from './src/pages/Profile'
 import MainSwiper from './src/pages/MainSwiper'
 import Explore from './src/pages/Explore'
 import News from './src/pages/News'
+import About from './src/pages/About'
 import Settings from './src/pages/Settings'
 import ChangeEmail from './src/pages/ChangeEmail'
 import ChangePass from './src/pages/ChangePass'
@@ -144,6 +145,8 @@ export default class TreeDexRN extends Component {
                  { type: 'push', key: 'News'})}
                  onPressProfile={this._handleAction.bind(this,
                  { type: 'push', key: 'Profile'})}
+                 onPressAbout={this._handleAction.bind(this,
+                 { type: 'push', key: 'About'})}
                  onPressSettings={this._handleAction.bind(this,
                  { type: 'push', key: 'Settings' })} />
       }
@@ -181,6 +184,13 @@ export default class TreeDexRN extends Component {
           setHeaderTitle={this._setHeaderTitle.bind(this)}/>
 
       }
+      if (key == 'About'){
+        return <About
+          setHeaderTitle={this._setHeaderTitle.bind(this)}/>
+
+
+      }
+
       if (key == 'Settings'){
         return <Settings
                  setHeaderTitle={this._setHeaderTitle.bind(this)}
