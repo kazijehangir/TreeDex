@@ -96,5 +96,15 @@ export default StyleSheet.create({
     height: Constants.height/2,
     width: Constants.width/2,
     resizeMode: 'contain'
+  },
+  smallCircle: {
+    height: 45,
+    width:45,
+    marginTop:8,
+    borderRadius: 22.5,
+    borderWidth: StyleSheet.hairlineWidth,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'white'
   }
 })

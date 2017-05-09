@@ -62,7 +62,7 @@ export default class TreeDexRN extends Component {
       }
     }
     componentDidMount(){
-      Constants.firebaseApp.auth().onAuthStateChanged((user) => {
+      // Constants.firebaseApp.auth().onAuthStateChanged((user) => {
       //   if (user) {
       //     // User is signed in.
       //     // alert(JSON.stringify(user) + " signed in.")

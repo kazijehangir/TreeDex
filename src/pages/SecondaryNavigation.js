@@ -37,8 +37,8 @@ import Constants from '../Constants'
 // I put them back. - JK
 //I changed it a bit. -Basit
 
-export default ({onPressExplore, onPressNews, onPressSettings}) => (
-  <View style={{flex:1}}>
+export default ({onPressExplore, onPressNews}) => (
+  <ScrollView>
     <View style={{flex:0.1}}>
       <Card>
           <Text style={{fontSize:30,fontWeight:'200',color:Colors.primary,marginLeft:0}}>
@@ -76,5 +76,5 @@ export default ({onPressExplore, onPressNews, onPressSettings}) => (
       </Card>
     </View>
     </View>
-  </View>
+  </ScrollView>
 )

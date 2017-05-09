@@ -7,7 +7,8 @@ import {
   View,
   Alert,
   ScrollView,
-  TouchableHighlight
+  TouchableHighlight,
+  TouchableOpacity
 } from 'react-native';
 import Camera from 'react-native-camera'
 
@@ -46,7 +47,7 @@ const checkUser = (ev) => {
   }
 }
 
-export default ({ user, signout, onPressQuests, onPressNews, onPressProfile}) => {
+export default ({ user, signout, onPressSettings, onPressNews, onPressProfile}) => {
   state.user = user
   if(state.showCamera) {
     return (
@@ -60,18 +61,35 @@ export default ({ user, signout, onPressQuests, onPressNews, onPressProfile}) =>
           aspect={Camera.constants.Aspect.fill}
           type={state.cameraType}
         >
-        <TouchableHighlight
-          underlayColor='#EFEFEF'
-          onPress={onPressProfile}
-          style={buttonStyles.profileButton}>
-          <Image
-            source={require('../images/profilePic.png')}
-            style={{flex:1, height:undefined, width:undefined,alignSelf:'stretch'}}
-            resizeMode="contain"
-          />
-        </TouchableHighlight>
-        <ButtonCustom onPress={checkUser} title='Check User' />
-        <ButtonCustom onPress={signout} title='Logout' />
+        <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+          <View style={containerStyles.smallCircle}>
+            <Image
+              source = {require('../../android/app/src/main/res/mipmap-hdpi/ic_launcher.png')}
+              style={{flex:1, height:45, width:45,borderRadius:22.5,alignSelf:'stretch'}}
+              resizeMode="cover"
+            />
+          </View>
+          <TouchableOpacity
+            underlayColor='#EFEFEF'
+            onPress={onPressProfile}
+            style={buttonStyles.profileButton}>
+            <Image
+              source={require('../images/profilePic.png')}
+              style={{flex:1, height:45, width:45,borderRadius:22.5,alignSelf:'stretch'}}
+              resizeMode="cover"
+            />
+          </TouchableOpacity>
+          <TouchableOpacity
+            underlayColor='#EFEFEF'
+            onPress={onPressSettings}
+            style={buttonStyles.profileButton}>
+            <Image
+              source={require('../images/settings.png')}
+              style={{flex:1, height:45, width:45,borderRadius:22.5,alignSelf:'stretch'}}
+              resizeMode="cover"
+            />
+          </TouchableOpacity>
+        </View>
         </Camera>
       // </View>
     );
