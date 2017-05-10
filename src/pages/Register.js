@@ -12,7 +12,8 @@ import {
   ScrollView,
   Platform,
   ActivityIndicator,
-  BackAndroid
+  BackAndroid,
+  AsyncStorage
 } from 'react-native';
 
 import containerStyles from '../styles/Container'
@@ -45,15 +46,18 @@ class Register extends React.Component{
     try{
       userData = await Constants.firebaseApp.auth()
        .createUserWithEmailAndPassword(this.state.email, this.state.password)
+       AsyncStorage.setItem('user_data',JSON(userData));
        this.setState({
-        email: '',
-        password: '',
-        username: '',
-        name:'',
-        loaded: false
+         email:"",
+         name:this.state.Username,
+         password:"",
+         friends:"",
+         badges:"",
+         profilePicture:"",
+         loaded: false
       });
       alert('Your account was created!');
-      
+
      try{
         await userData.updateProfile({
               displayName: this.state.name,
