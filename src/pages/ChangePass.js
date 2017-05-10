@@ -78,7 +78,7 @@ class ChangePass extends React.Component {
          style={inputStyles.passwordInput}
          secureTextEntry={true}
          onChange={this.password2ChangeHandler}></TextInput>
-        <ButtonInverted title='Change Password' onPress={() => onPressPass(state.pass)} />
+        <ButtonInverted title='Change Password' onPress={() => this.onPressPass(state.pass)} />
       </View>
     )
   }
