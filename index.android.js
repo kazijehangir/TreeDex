@@ -227,8 +227,8 @@ export default class TreeDexRN extends Component {
       if (key == 'Settings'){
         return <Settings
                  setHeaderTitle={this._setHeaderTitle.bind(this)}
-                 onPressName={this._handleAction.bind(this,
-                 { type: 'push', key: 'ChangeName' })}
+                 onPressEmail={this._handleAction.bind(this,
+                 { type: 'push', key: 'ChangeEmail' })}
                  onPressPass={this._handleAction.bind(this,
                  { type: 'push', key: 'ChangePass' })} />
 
