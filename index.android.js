@@ -191,7 +191,10 @@ export default class TreeDexRN extends Component {
       }
       if(key === 'Explore'){
         return <Explore
-                  setHeaderTitle={this._setHeaderTitle.bind(this)}/>
+                  setHeaderTitle={this._setHeaderTitle.bind(this)}
+                  setWebUrl={this.setWebUrl.bind(this)}
+                  openWebView={this._handleAction.bind(this,
+                  {type: 'push', key: 'WebViewCustom'})}/>
       }
       if(key === 'News'){
         return <News
