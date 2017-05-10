@@ -23,6 +23,11 @@ import ButtonInverted from '../components/ButtonInverted'
 // import * as firebase from "firebase";
 import Header from '../components/header'
 import Constants from '../Constants'
+// using Firebase;
+
+// import Firebase from "firebase";
+// import Database from "Firebase";
+// using Firebase.Database;
 
 class Register extends React.Component{
   constructor(props){
@@ -45,14 +50,22 @@ class Register extends React.Component{
     try{
       userData = await Constants.firebaseApp.auth()
        .createUserWithEmailAndPassword(this.state.email, this.state.password)
-       this.setState({
-        email: '',
-        password: '',
-        username: '',
-        name:'',
-        loaded: false
-      });
+       
       alert('Your account was created!');
+
+      // var database = firebase.database();
+      // var databasechild = database.child("Users");
+      // var new_user_id = databasechild.child(this.state.name);
+      // newuserRid.setValue(this.state.username)
+      alert(this.state.name)
+      Constants.firebaseApp.database().ref('Users/' + "001").set({
+      "username": this.state.name,
+      "email": this.state.name
+      });
+      // DatabaseReference rootRef = Database.getInstance().getReference();
+      // DatabaseReference listRef = rootRef.child("Users");
+      // DatabaseReference newuserRid = listRef.child(this.state.name);
+      // newuserRid.setValue(this.state.username);
       
      try{
         await userData.updateProfile({
@@ -62,7 +75,17 @@ class Register extends React.Component{
      } catch(error){
         alert(error)
      }
+
+     this.setState({
+        email: '',
+        password: '',
+        username: '',
+        name:'',
+        loaded: false
+      });
+
       this.props.onSuccessRegister()
+
     } catch(error) {
       switch(error.code){
 

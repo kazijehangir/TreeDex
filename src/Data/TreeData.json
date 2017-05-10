@@ -1,7 +1,7 @@
 {
   "1":{
     "name":"Gul e Nishtar",
-    "inforURL":"to fill",
+    "inforURL":"https://www.pinterest.com/pin/163325923966197603/",
     "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/gulenishtar.jpg?alt=media&token=0d5d07c0-c396-4c04-88df-a8d79a72ca38",
     "age":"nill",
     "plantedBy":"nill",
@@ -10,8 +10,8 @@
     "datePlanted":"nill"
   },
   "2":{
-    "name":"Ulta Ashok",
-    "infoURL":"to fill",
+    "name":"Polyalthia longifolia",
+    "infoURL":"https://en.wikipedia.org/wiki/Polyalthia_longifolia",
     "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/ultaashok.jpg?alt=media&token=a3e53e8e-f8c0-49cf-903a-2bfaa870a8f9",
     "age":"nill",
     "plantedBy":"nill",
@@ -20,8 +20,8 @@
     "datePlanted":"nill"
   },
   "3":{
-    "name":"Marwa",
-    "infoURL":"to fill",
+    "name":"Murraya paniculata",
+    "infoURL":"https://en.wikipedia.org/wiki/Murraya_paniculata",
     "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/marwa.jpg?alt=media&token=41685c63-20d0-49e4-a26c-5dc3da11c281",
     "age":"nill",
     "plantedBy":"nill",
@@ -40,8 +40,8 @@
     "datePlanted":"nill"
   },
   "5":{
-    "name":"Fidex Palm",
-    "infoURL":"to fill",
+    "name":"Arecaceae",
+    "infoURL":"https://en.wikipedia.org/wiki/Arecaceae",
     "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/fidexpalm.jpg?alt=media&token=97b04f96-5644-4bf6-9698-9e095ba7ca04",
     "age":"nill",
     "plantedBy":"nill",
@@ -50,8 +50,8 @@
     "datePlanted":"nill"
   },
   "6":{
-    "name":"Tangi Palm",
-    "infoURL":"to fill",
+    "name":"Phoenix",
+    "infoURL":"https://en.wikipedia.org/wiki/Phoenix_(plant)",
     "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/fidexpalm.jpg?alt=media&token=97b04f96-5644-4bf6-9698-9e095ba7ca04",
     "age":"nill",
     "plantedBy":"nill",
@@ -60,8 +60,8 @@
     "datePlanted":"nill"
   },
   "7":{
-    "name":"Margarita",
-    "infoURL":"to fill",
+    "name":"Margaritaria discoidea",
+    "infoURL":"https://en.wikipedia.org/wiki/Margaritaria_discoidea",
     "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/margarita.jpg?alt=media&token=18d5648c-e35c-45ef-834d-470d7a61d1aa",
     "age":"nill",
     "plantedBy":"nill",
@@ -70,8 +70,8 @@
     "datePlanted":"nill"
   },
   "8":{
-    "name":"China Faicus",
-    "infoURL":"to fill",
+    "name":"China Ficus",
+    "infoURL":"https://en.wikipedia.org/wiki/Ficus",
     "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/margarita.jpg?alt=media&token=18d5648c-e35c-45ef-834d-470d7a61d1aa",
     "age":"nill",
     "plantedBy":"nill",
@@ -81,7 +81,7 @@
   },
   "9":{
     "name":"Day Lily",
-    "infoURL":"to fill",
+    "infoURL":"https://en.wikipedia.org/wiki/Daylily",
     "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/daylily.jpg?alt=media&token=9fbdd55f-ea2f-4937-b040-5c00d7f0415c",
     "age":"nill",
     "plantedBy":"nill",
@@ -90,9 +90,9 @@
     "datePlanted":"nill"
   },
   "10":{
-    "name":"Laal tehna",
-    "infoURL":"to fill",
-    "imageURL":"to fill",
+    "name":"Hyphaene coriacea",
+    "infoURL":"https://en.wikipedia.org/wiki/Hyphaene_coriacea",
+    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/lal_tehna.JPG?alt=media&token=322ab2e0-3b4d-455b-bc33-24365a576511",
     "age":"nill",
     "plantedBy":"nill",
     "location":"LUMS - Academic Block (Outgate Side)",
@@ -101,7 +101,7 @@
   },
   "11":{
     "name":"Rose",
-    "infoURL":"to fill",
+    "infoURL":"https://en.wikipedia.org/wiki/Rose",
     "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/rose.jpg?alt=media&token=b8aff88e-23f8-419c-b26f-cdf5e036ef05",
     "age":"nill",
     "plantedBy":"nill",
@@ -110,8 +110,8 @@
     "datePlanted":"nill"
   },
   "12":{
-    "name":"Maglolia",
-    "infoURL":"to fill",
+    "name":"Magnolia",
+    "infoURL":"https://en.wikipedia.org/wiki/Magnolia",
     "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/rose.jpg?alt=media&token=b8aff88e-23f8-419c-b26f-cdf5e036ef05",
     "age":"nill",
     "plantedBy":"nill",
@@ -120,9 +120,9 @@
     "datePlanted":"nill"
   },
   "13":{
-    "name":"Changla",
-    "infoURL":"to fill",
-    "imageURL":"to fill",
+    "name":"Cactus",
+    "infoURL":"https://en.wikipedia.org/wiki/Cactus",
+    "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/cactus.jpg?alt=media&token=54b658ed-435a-4877-88db-b6f25c6e889f",
     "age":"nill",
     "plantedBy":"nill",
     "location":"LUMS - Academic Bloc (Outgate Side)",
@@ -131,7 +131,7 @@
   },
   "14":{
     "name":"Mango tree",
-    "infoURL":"to fill",
+    "infoURL":"http://www.mango.org/en/About-Mangos/Meet-a-Mango-Tree",
     "imageURL":"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/mangotree.JPG?alt=media&token=75bf0791-f2bd-4d58-8fd6-4c5d20cd9fca",
     "age":"nill",
     "plantedBy":"nill",
