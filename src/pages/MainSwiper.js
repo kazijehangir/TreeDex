@@ -13,7 +13,7 @@ class MainSwiper extends React.Component {
   constructor(props) {
     super(props)
     this.state = {}
-    this.titles = ['Friends', 'Scan a Tree!', 'Other...']
+    this.titles = ['Friends', 'Scan a Tree!', 'Menu']
   }
   componentWillMount() {
     this.props.setHeaderTitle('Scan a Tree!')
