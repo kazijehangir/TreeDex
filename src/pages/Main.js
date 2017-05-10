@@ -47,22 +47,27 @@ class Main extends React.Component {
       // data = st.filter((ch) => ch != '\\')
       // let test = "{\"name\":\"Gul e Nishtar\",\"url\":\"to fill\",\"imageURL\":\"https://firebasestorage.googleapis.com/v0/b/treedex-8cb38.appspot.com/o/gulenishtar.jpg?alt=media&token=0d5d07c0-c396-4c04-88df-a8d79a72ca38\",\"age\":\"nill\",\"plantedBy\":\"nill\",\"location\":\"LUMS - Academic Block (Outgate Side)\"}"
       // alert(e.data)
-      data = JSON.parse(e.data)
-      // alert(data)
-      Alert.alert(
-        data.name,
-        'Congratulations! You successfully scanned a plant!' + '\n'
-        + 'Age:\t' + data.age + '\n'
-        + 'Planted by:\t' + data.plantedBy + '\n'
-        + 'Location:\t' + data.location,
-        [
-          {text: 'More info...', onPress: () => this.openUrl(data.url)},
-          {text: 'Dismiss', onPress: () => this.setState({showCamera: true}), style: 'cancel'},
-        ],
-        // "Type: " + e.type + "\nData: " + e.data
-      )
+      try {
+        data = JSON.parse(e.data)
+        // alert(data)
+
+        Alert.alert(
+          data.name,
+          'Congratulations! You successfully scanned a plant!' + '\n'
+          + 'Age:\t' + data.age + '\n'
+          + 'Planted by:\t' + data.plantedBy + '\n'
+          + 'Location:\t' + data.location,
+          [
+            {text: 'More info...', onPress: () => this.openUrl(data.url)},
+            {text: 'Dismiss', onPress: () => this.setState({showCamera: true}), style: 'cancel'},
+          ],
+          {cancelable: false}
+        )
+        this.setState({showCamera: false})
+      } catch (e) {
+        alert("QR not valid. Please try again.")
+      }
     }
-    this.setState({showCamera: false})
   }
   checkUser(ev) {
     if (this.state.user) {
@@ -106,6 +111,7 @@ class Main extends React.Component {
               />
             </View>
             <TouchableOpacity
+<<<<<<< HEAD
               onPress={this.props.onPressProfile}
               style={buttonStyles.profileButton}>
               <Image
@@ -113,13 +119,28 @@ class Main extends React.Component {
                 style={{flex:1, height:45, width:45,borderRadius:22.5,alignSelf:'stretch'}}
                 resizeMode="cover"
               />
+=======
+              onPress={this.props.onPressProfile}>
+              <View style={{marginTop: 8}}>
+                 <Icon name="portrait" color="rgba(204, 204, 204,0.9)" size={40}/>
+               </View>
+>>>>>>> 4add4a9f2681e27ecc58f527f3c3e4169e41c1cc
             </TouchableOpacity>
             <ModalDropdown
                style={containerStyles.dropDown}
                options={this.state.DEMO_OPTIONS_1}
+<<<<<<< HEAD
                textStyle={{color:Colors.primary,fontSize:30}}
                onSelect={(idx, value) => this.dropdown(idx,value)}>
                <View style={buttonStyles.profileButton}>
+=======
+               textStyle={{backgroundColor:Colors.primary}}
+               onSelect={(idx, value) => this.dropdown(idx,value)}>
+               <View style={{marginTop: 8}}>
+                 <Icon name="settings" color="rgba(204, 204, 204,0.9)" size={40}/>
+               </View>
+               {/*<View style={buttonStyles.profileButton}>
+>>>>>>> 4add4a9f2681e27ecc58f527f3c3e4169e41c1cc
                   <Image
                     style={{flex:1, height:45, width:45,borderRadius:22.5,alignSelf:'stretch'}}
                      source={require('../images/settings.png')}
