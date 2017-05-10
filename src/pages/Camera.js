@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import Camera from 'react-native-camera';
 import { Icon } from 'react-native-material-design';
+import Constants from '../Constants'
 class UploadPhoto extends Component {
     constructor(props) {
     super(props)
@@ -34,7 +35,7 @@ class UploadPhoto extends Component {
     );
   }
 
-  takePicture() {
+  async takePicture() {
     const options = {};
     //options.location = ...
     this.camera.capture({metadata: options})
@@ -49,7 +50,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   preview: {
-    flex: 1,
+    flex: -1,
+    width: Constants.width,
+    height: Constants.height - 70,
     justifyContent: 'flex-end',
     alignItems: 'center'
   },

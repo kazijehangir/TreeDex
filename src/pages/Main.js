@@ -12,6 +12,8 @@ import {
 } from 'react-native';
 import Camera from 'react-native-camera'
 import ModalDropdown from 'react-native-modal-dropdown';
+import { Avatar } from 'react-native-material-design';
+import { Icon } from 'react-native-material-design';
 
 
 import Constants from '../Constants'
@@ -111,40 +113,17 @@ class Main extends React.Component {
               />
             </View>
             <TouchableOpacity
-<<<<<<< HEAD
               onPress={this.props.onPressProfile}
               style={buttonStyles.profileButton}>
-              <Image
-                source={require('../images/profilePic.png')}
-                style={{flex:1, height:45, width:45,borderRadius:22.5,alignSelf:'stretch'}}
-                resizeMode="cover"
-              />
-=======
-              onPress={this.props.onPressProfile}>
-              <View style={{marginTop: 8}}>
-                 <Icon name="portrait" color="rgba(204, 204, 204,0.9)" size={40}/>
-               </View>
->>>>>>> 4add4a9f2681e27ecc58f527f3c3e4169e41c1cc
+              <Icon name="portrait" color="rgba(204, 204, 204,0.9)" size={40}/>
             </TouchableOpacity>
             <ModalDropdown
                style={containerStyles.dropDown}
                options={this.state.DEMO_OPTIONS_1}
-<<<<<<< HEAD
-               textStyle={{color:Colors.primary,fontSize:30}}
-               onSelect={(idx, value) => this.dropdown(idx,value)}>
-               <View style={buttonStyles.profileButton}>
-=======
                textStyle={{backgroundColor:Colors.primary}}
                onSelect={(idx, value) => this.dropdown(idx,value)}>
-               <View style={{marginTop: 8}}>
-                 <Icon name="settings" color="rgba(204, 204, 204,0.9)" size={40}/>
-               </View>
-               {/*<View style={buttonStyles.profileButton}>
->>>>>>> 4add4a9f2681e27ecc58f527f3c3e4169e41c1cc
-                  <Image
-                    style={{flex:1, height:45, width:45,borderRadius:22.5,alignSelf:'stretch'}}
-                     source={require('../images/settings.png')}
-                  />
+               <View style={buttonStyles.profileButton}>
+                  <Icon name="settings" color="rgba(204, 204, 204,0.9)" size={40}/>
                 </View>
               </ModalDropdown>
           </View>

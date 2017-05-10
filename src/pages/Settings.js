@@ -35,20 +35,23 @@ class Settings extends React.Component {
   componentWillMount() {
     this.props.setHeaderTitle('Settings')
   }
-handlecheck(ev){
-  this.setstate('check' : true)
-}
+  handlecheck(ev){
+    if (this.state.check) {
+      this.setState({'check' : false})
+    } else {
+      this.setState({'check' : true})
+    }
+  }
   render() {
     return (
       <View style={{flexDirection: 'row', width: 360, height: 50, justifyContent: 'center'}} >
         <ScrollView style={containerStyles.explore}>
-          <Text style={textStyles.header}>Settings</Text>
           <ButtonInverted onPress={this.props.onPressEmail} title='Change Email'/>
           <ButtonInverted onPress={this.props.onPressPass} title= 'Change Password'/>
           <View
             style={{flexDirection: 'row', width: 360, height: 50, justifyContent: 'center'}} >
 
-            <Checkbox value="accepted" checked={this.state.check} onCheck={this.handlecheck}/>
+            <Checkbox value="accepted" checked={this.state.check} onCheck={this.handlecheck.bind(this)}/>
 
             <Text style={textStyles.subtitle}>Turn Notifications On</Text>
           </View>

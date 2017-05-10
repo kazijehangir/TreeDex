@@ -23,7 +23,11 @@ import Constants from '../Constants'
 import buttonStyles from '../styles/Button.js'
 import Colors from '../Colors'
 
-let friendsArray = []
+let friendsArray = [
+  {name: 'Ali'},
+  {name:'Mali'},
+  {name: 'Bhalli'}
+]
 
 
 const Row = (props) => (
@@ -86,16 +90,16 @@ class Friends extends React.Component {
 
   }
   componentWillMount() {
-    AsyncStorage.getItem('user_data').then((user_data_json) => {
-      let user_data = JSON.parse(user_data_json);
-      console.log(user_data)
-      const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-      friendsArray = user_data
-      this.setState({
-        dataSource: ds.cloneWithRows(user_data),
-        loaded: true
-      })
-    })
+    // AsyncStorage.getItem('user_data').then((user_data_json) => {
+    //   let user_data = JSON.parse(user_data_json);
+    //   console.log(user_data)
+    //   const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    //   friendsArray = user_data
+    //   this.setState({
+    //     dataSource: ds.cloneWithRows(user_data),
+    //     loaded: true
+    //   })
+    // })
   }
   render() {
     return (
@@ -105,8 +109,8 @@ class Friends extends React.Component {
           dataSource={this.state.dataSource}
           renderRow={(data) => <Row {...data} />}
           renderSeparator={(sectionId, rowId) => <View key={rowId} style={containerStyles.separator} />}
-          renderHeader={() => <Header />}
-          renderFooter={() => <Footer />}
+          renderHeader={Header}
+          renderFooter={Footer}
         />
       </View>
     );
