@@ -12,7 +12,8 @@ import {
   Dimensions,
   Platform,
   BackAndroid,
-  TouchableOpacity
+  TouchableOpacity,
+  AsyncStorage
 } from 'react-native';
 
 import containerStyles from '../styles/Container'
@@ -21,6 +22,8 @@ import ButtonCustom from '../components/ButtonCustom'
 import Constants from '../Constants'
 import buttonStyles from '../styles/Button.js'
 import Colors from '../Colors'
+
+let friendsArray = []
 
 
 const Row = (props) => (
@@ -78,11 +81,19 @@ class Friends extends React.Component {
     super(props);
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     this.state = {
-      dataSource: ds.cloneWithRows([{name:'Ali'}, {name:'Wali'},{name:'kali'},{name:'Gali'},{name:'Mali'},{name:'Dali'},{name:'Bali'},{name:'Qali'}]),
+      dataSource: ds.cloneWithRows(friendsArray),
     };
   }
-  componentWillMount() {
-    // this.props.setHeaderTitle('Friends')
+
+componentWillMount() {
+    AsyncStorage.getItem('user_data').then((user_data_json) => {
+      let user_data = JSON.parse(user_data_json);
+      console.log(user_data)
+      this.setState({
+        user: user_data,
+        loaded: true
+      })
+    })
   }
   render() {
     return (

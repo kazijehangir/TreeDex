@@ -39,6 +39,7 @@ import ChangePass from './src/pages/ChangePass'
 import containerStyles from './src/styles/Container'
 import buttonStyles from './src/styles/Button'
 import WebViewCustom from './src/pages/WebViewCustom'
+import UploadPhoto from './src/pages/Camera'
 import Constants from './src/Constants'
 // import { WebView } from 'react-native';
 
@@ -48,7 +49,7 @@ export default class TreeDexRN extends Component {
       super(props)
       this.state = {
         navState: NavReducer(undefined, {}),
-        headerTitle: 'TreeDex'
+        headerTitles: ['TreeDex']
       }
       if (Platform.OS === 'android') {
         BackAndroid.addEventListener('hardwareBackPress', () => {
@@ -79,7 +80,9 @@ export default class TreeDexRN extends Component {
       })
     }
     _setHeaderTitle(title) {
-      this.setState({headerTitle: title})
+      titles = this.state.headerTitles
+      titles.push(title)
+      this.setState({headerTitles: titles})
     }
     async _signOut() {
       // alert("Signing out")
@@ -113,6 +116,11 @@ export default class TreeDexRN extends Component {
         return true;
     }
     handleBackAction() {
+      if (this.state.headerTitles.length > 1) {
+        titles = this.state.headerTitles
+        titles.pop()
+        this.setState({headerTitles: titles})
+      }
        return this._handleAction({ type: 'pop' });
     }
     _renderRoute (key) {
@@ -167,8 +175,14 @@ export default class TreeDexRN extends Component {
                  onPressSettings={this._handleAction.bind(this,
                  { type: 'push', key: 'Settings' })} />
       }
+      if(key === 'UploadPhoto'){
+        return <UploadPhoto
+                />
+      }
       if (key === 'Profile') {
         return <Profile
+                 onPressCamera={this._handleAction.bind(this,
+                 {type:'push', key:'UploadPhoto'})}
                  setHeaderTitle={this._setHeaderTitle.bind(this)}
                  onPressNews={this._handleAction.bind(this,
                  { type: 'push', key: 'News'})}
@@ -230,13 +244,13 @@ export default class TreeDexRN extends Component {
     }
     _renderTitleComponent(props) {
       // alert(JSON.stringify(this.state))
-      if (!this.state.headerTitle) {
+      if (!this.state.headerTitles) {
         this._setHeaderTitle(props.scene.route.key)
       }
       return (
         <NavigationHeader.Title >
           <Text style={containerStyles.navHeaderText}>
-          {this.state.headerTitle}
+          {this.state.headerTitles[this.state.headerTitles.length - 1]}
           </Text>
         </NavigationHeader.Title>
       );

@@ -41,8 +41,10 @@ class Login extends React.Component {
     });
     try{
 
-        userData = await Constants.firebaseApp.auth()
+          userData = await Constants.firebaseApp.auth()
           .signInWithEmailAndPassword(this.state.email, this.state.password);
+          alert(JSON.stringify(userData))
+          AsyncStorage.setItem('user_data',JSON.stringify(userData));
           this.setState({
             loaded: false
           });
@@ -55,9 +57,8 @@ class Login extends React.Component {
       alert(error)
 
     }
-
-
   }
+
   render(){
     return(
       <View style={containerStyles.container}>
