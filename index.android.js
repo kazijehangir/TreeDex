@@ -48,7 +48,7 @@ export default class TreeDexRN extends Component {
       super(props)
       this.state = {
         navState: NavReducer(undefined, {}),
-        headerTitle: 'TreeDex'
+        headerTitles: ['TreeDex']
       }
       if (Platform.OS === 'android') {
         BackAndroid.addEventListener('hardwareBackPress', () => {
@@ -79,7 +79,9 @@ export default class TreeDexRN extends Component {
       })
     }
     _setHeaderTitle(title) {
-      this.setState({headerTitle: title})
+      titles = this.state.headerTitles
+      titles.push(title)
+      this.setState({headerTitles: titles})
     }
     async _signOut() {
       // alert("Signing out")
@@ -113,6 +115,11 @@ export default class TreeDexRN extends Component {
         return true;
     }
     handleBackAction() {
+      if (this.state.headerTitles.length > 1) {
+        titles = this.state.headerTitles
+        titles.pop()
+        this.setState({headerTitles: titles})
+      }
        return this._handleAction({ type: 'pop' });
     }
     _renderRoute (key) {
@@ -230,13 +237,13 @@ export default class TreeDexRN extends Component {
     }
     _renderTitleComponent(props) {
       // alert(JSON.stringify(this.state))
-      if (!this.state.headerTitle) {
+      if (!this.state.headerTitles) {
         this._setHeaderTitle(props.scene.route.key)
       }
       return (
         <NavigationHeader.Title >
           <Text style={containerStyles.navHeaderText}>
-          {this.state.headerTitle}
+          {this.state.headerTitles[this.state.headerTitles.length - 1]}
           </Text>
         </NavigationHeader.Title>
       );
