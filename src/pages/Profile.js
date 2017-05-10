@@ -41,7 +41,7 @@ class Profile extends React.Component {
               <Image source={require('../images/edit_icon.png')} style={{width: 50, height: 50}}></Image>
             </TouchableHighlight>
             <TouchableHighlight onPress={this.props.onPressSettings}>
-              <Text style={textStyles.titleText}>Settings</Text>
+              <Text style={textStyles.subtitle}>Settings</Text>
             </TouchableHighlight>
           </View>
           <View
@@ -51,7 +51,7 @@ class Profile extends React.Component {
               <Image source={require('../images/badges_icon.png')} style={{width: 50, height: 50}}></Image>
             </TouchableHighlight>
             <TouchableHighlight onPress={this.props.onPressNews}>
-              <Text style={textStyles.titleText}>Badges</Text>
+              <Text style={textStyles.subtitle}>Badges</Text>
             </TouchableHighlight>
           </View>
         </Image>

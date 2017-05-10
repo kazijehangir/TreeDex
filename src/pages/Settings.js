@@ -42,7 +42,19 @@ class Settings extends React.Component {
           <ButtonInverted onPress={this.props.onPressEmail} title='Change Email'/>
           <ButtonInverted onPress={this.props.onPressPass} title= 'Change Password'/>
 
-          <Checkbox value="accepted" label="Turn Notifications On" />
+
+
+          <View
+            style={{flexDirection: 'row', width: 360, height: 50, justifyContent: 'center'}} >
+
+            <Checkbox value="accepted" />
+            
+            <Text style={textStyles.subtitle}>Turn Notifications On</Text>
+          </View>
+
+
+
+          
 
         </ScrollView>
       </View>
