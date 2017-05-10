@@ -39,7 +39,9 @@ class Main extends React.Component {
     // this.props.setHeaderTitle('Scan a Tree!')
   }
   openUrl (url) {
-    alert(url)
+    this.setState({showCamera: true})
+    this.props.setWebUrl(url)
+    this.props.openWebView()
   }
   _onBarCodeRead(e) {
     // alert(JSON.stringify(this.state))
