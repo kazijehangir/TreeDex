@@ -11,10 +11,13 @@ import {
 
 } from 'react-native';
 
+import Camera from 'react-native-camera';
 import Constants from '../Constants'
 import textStyles from '../styles/Text'
 import containerStyles from '../styles/Container'
 import ButtonRectangle from '../components/ButtonRectangle'
+import { Avatar } from 'react-native-material-design';
+import { Icon } from 'react-native-material-design';
 // 3421
 class Profile extends React.Component {
   constructor(props) {
@@ -31,16 +34,22 @@ class Profile extends React.Component {
         <Image
           source = {require('../images/profpic1.jpg')}
           style={{width: null, height:Constants.profileboxheight, alignSelf: 'stretch',justifyContent: 'center',alignItems: 'center' }}>
-          <Image source={require('../images/profilePic.png')}
-            style={{width: 150, height: 150}}/>
+          {/*<Image source={require('../images/profileImage.png')}
+            style={{width: 150, height: 150}}/>*/}
+            <TouchableHighlight onPress={this.props.onPressSettings}>
+              <View>
+                <Image src='../images/camera-icon.png' styles={{weight: 50, height: 50}}></Image>
+              </View>
+              
+            </TouchableHighlight>
           <View
-            style={{flexDirection: 'row', width: 360, height: 50, justifyContent: 'center'}} >
+            style={{flexDirection: 'row', width: 360, height: 50, justifyContent: 'center', marginTop: 20}} >
 
             <TouchableHighlight onPress={this.props.onPressSettings}>
               <Image source={require('../images/edit_icon.png')} style={{width: 50, height: 50}}></Image>
             </TouchableHighlight>
             <TouchableHighlight onPress={this.props.onPressSettings}>
-              <Text style={textStyles.titleText}>Settings</Text>
+              <Text style={textStyles.subtitle}>Settings</Text>
             </TouchableHighlight>
           </View>
           <View
@@ -50,7 +59,7 @@ class Profile extends React.Component {
               <Image source={require('../images/badges_icon.png')} style={{width: 50, height: 50}}></Image>
             </TouchableHighlight>
             <TouchableHighlight onPress={this.props.onPressNews}>
-              <Text style={textStyles.titleText}>Badges</Text>
+              <Text style={textStyles.subtitle}>Badges</Text>
             </TouchableHighlight>
           </View>
         </Image>

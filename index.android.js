@@ -30,6 +30,7 @@ import Main from './src/pages/Main'
 import Profile from './src/pages/Profile'
 import MainSwiper from './src/pages/MainSwiper'
 import Explore from './src/pages/Explore'
+import Contact from './src/pages/Contact'
 import News from './src/pages/News'
 import About from './src/pages/About'
 import Settings from './src/pages/Settings'
@@ -47,7 +48,7 @@ export default class TreeDexRN extends Component {
       super(props)
       this.state = {
         navState: NavReducer(undefined, {}),
-        headerTitle: 'TreeDex'
+        headerTitles: ['TreeDex']
       }
       if (Platform.OS === 'android') {
         BackAndroid.addEventListener('hardwareBackPress', () => {
@@ -78,7 +79,9 @@ export default class TreeDexRN extends Component {
       })
     }
     _setHeaderTitle(title) {
-      this.setState({headerTitle: title})
+      titles = this.state.headerTitles
+      titles.push(title)
+      this.setState({headerTitles: titles})
     }
     async _signOut() {
       // alert("Signing out")
@@ -98,6 +101,10 @@ export default class TreeDexRN extends Component {
       this.setState({WebViewUrl: url})
     }
     _handleAction (action) {
+        if(this.state.navState.routes
+            [this.state.navState.routes.length-1].key === action.key) {
+              return false
+        }
         const newState = NavReducer(this.state.navState, action);
         if (newState === this.state.navState) {
           return false;
@@ -108,9 +115,17 @@ export default class TreeDexRN extends Component {
         return true;
     }
     handleBackAction() {
+      if (this.state.headerTitles.length > 1) {
+        titles = this.state.headerTitles
+        titles.pop()
+        this.setState({headerTitles: titles})
+      }
        return this._handleAction({ type: 'pop' });
     }
     _renderRoute (key) {
+      // if (this.state.navState.routes[this.state.navState.routes.length-1] === key) {
+      //   return false
+      // }
       if (key === 'Home') {
         return <Home
                  setHeaderTitle={this._setHeaderTitle.bind(this)}
@@ -139,14 +154,23 @@ export default class TreeDexRN extends Component {
                  user={this.state.user}
                  setHeaderTitle={this._setHeaderTitle.bind(this)}
                  onPressSignout={this._signOut.bind(this)}
+                 setWebUrl={this.setWebUrl.bind(this)}
+                 openWebView={this._handleAction.bind(this,
+                 {type: 'push', key: 'WebViewCustom'})}
                  onPressExplore={this._handleAction.bind(this,
                  { type: 'push', key: 'Explore' })}
                  onPressNews={this._handleAction.bind(this,
                  { type: 'push', key: 'News'})}
                  onPressProfile={this._handleAction.bind(this,
                  { type: 'push', key: 'Profile'})}
+                 onPressContact={this._handleAction.bind(this,
+                 { type: 'push', key: 'Contact'})}
                  onPressAbout={this._handleAction.bind(this,
                  { type: 'push', key: 'About'})}
+                 onPressChangePass={this._handleAction.bind(this,
+                 { type: 'push', key: 'ChangePass'})}
+                 onPressChangeEmail={this._handleAction.bind(this,
+                 { type: 'push', key: 'ChangeEmail'})}
                  onPressSettings={this._handleAction.bind(this,
                  { type: 'push', key: 'Settings' })} />
       }
@@ -188,6 +212,11 @@ export default class TreeDexRN extends Component {
         return <About
           setHeaderTitle={this._setHeaderTitle.bind(this)}/>
       }
+
+      if (key == 'Contact'){
+        return <Contact
+          setHeaderTitle={this._setHeaderTitle.bind(this)}/>
+      }
       if (key == 'Settings'){
         return <Settings
                  setHeaderTitle={this._setHeaderTitle.bind(this)}
@@ -208,13 +237,13 @@ export default class TreeDexRN extends Component {
     }
     _renderTitleComponent(props) {
       // alert(JSON.stringify(this.state))
-      if (!this.state.headerTitle) {
+      if (!this.state.headerTitles) {
         this._setHeaderTitle(props.scene.route.key)
       }
       return (
         <NavigationHeader.Title >
           <Text style={containerStyles.navHeaderText}>
-          {this.state.headerTitle}
+          {this.state.headerTitles[this.state.headerTitles.length - 1]}
           </Text>
         </NavigationHeader.Title>
       );
@@ -291,7 +320,7 @@ const createReducer = (initialState) => {
 const NavReducer = createReducer({
   index: 0,
   key: 'App',
-  routes: [{key: 'MainSwiper'}]
+  routes: [{key: 'Home'}]
 })
 
 AppRegistry.registerComponent('TreeDexRN', () => TreeDexRN);
