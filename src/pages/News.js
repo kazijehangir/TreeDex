@@ -46,6 +46,15 @@ class News extends React.Component {
                 <Text style = {{fontFamily:'Roboto', fontSize: 16, color: Colors.primary}}>Plants are capable of solving problems and learning from past experiences</Text>
 
         </View>
+        <View style = {{marginTop: 10, marginLeft: 10, marginRight: 10}}>
+            <TouchableHighlight onPress={(ev) => this.openWebUrl("http://news.nationalgeographic.com/2017/03/felix-finkbeiner-plant-for-the-planet-one-trillion-trees/")}>
+                <Image source={require('../images/news2.jpg')} style={{width: Constants.width, height: 200, marginBottom: 10}}>
+                    <Text style={textStyles.welcomeLabel1}>Teenager Is on Track to Plant a Trillion Trees</Text>
+                </Image>
+            </TouchableHighlight>
+                <Text style = {{fontFamily:'Roboto', fontSize: 16, color: Colors.primary}}>Starting his project as a nine-year-old, Felix Finkbeiner aims to restore the world’s forests.</Text>
+
+        </View>
 
 
      </View>
