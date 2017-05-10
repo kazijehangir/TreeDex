@@ -6,23 +6,31 @@ import {
   StyleSheet,
   Text,
   TouchableHighlight,
+  TouchableOpacity,
   View
 } from 'react-native';
 import Camera from 'react-native-camera';
-
+import { Icon } from 'react-native-material-design';
 class UploadPhoto extends Component {
+    constructor(props) {
+    super(props)
+    this.state = {}
+    // console.log('profile constructor')
+  }
+    componentWillMount() {
+    this.props.setHeaderTitle('Take a picture')
+  }
   render() {
     return (
-      <View style={styles.container}>
         <Camera
           ref={(cam) => {
             this.camera = cam;
           }}
           style={styles.preview}
-          aspect={Camera.constants.Aspect.fill}>
+          aspect={Camera.constants.Aspect.fill}
+          type={Camera.constants.Type.front}>
           <Text style={styles.capture} onPress={this.takePicture.bind(this)}>[CAPTURE]</Text>
         </Camera>
-      </View>
     );
   }
 
@@ -51,7 +59,8 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     color: '#000',
     padding: 10,
-    margin: 40
+    margin: 40,
+    marginTop: 20
   }
 });
 

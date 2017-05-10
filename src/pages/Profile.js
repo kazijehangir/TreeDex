@@ -37,7 +37,8 @@ class Profile extends React.Component {
     
             <TouchableHighlight onPress={this.props.onPressCamera}>
               <View>
-                <Image src='../images/camera-icon.png' style={{weight: 100, height: 100, alignItems: 'center', justifyContent: 'center'}}></Image>
+                <Icon name="settings" color="rgba(204, 204, 204,0.9)" size={40}/>
+                {/*<Image src='../images/camera-icon.png' style={{weight: 100, height: 100, alignItems: 'center', justifyContent: 'center'}}></Image>*/}
               </View>
               
             </TouchableHighlight>

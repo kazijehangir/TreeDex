@@ -177,6 +177,7 @@ export default class TreeDexRN extends Component {
       }
       if(key === 'UploadPhoto'){
         return <UploadPhoto
+                setHeaderTitle={this._setHeaderTitle.bind(this)}
                 />
       }
       if (key === 'Profile') {
