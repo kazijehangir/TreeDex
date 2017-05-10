@@ -46,7 +46,6 @@ class Register extends React.Component{
     try{
       userData = await Constants.firebaseApp.auth()
        .createUserWithEmailAndPassword(this.state.email, this.state.password)
-       AsyncStorage.setItem('user_data',JSON(userData));
        this.setState({
          email:"",
          name:this.state.Username,
@@ -62,7 +61,8 @@ class Register extends React.Component{
         await userData.updateProfile({
               displayName: this.state.name,
               userName: this.state.userName
-              })
+            })
+            AsyncStorage.setItem('user_data',JSON(userData));
      } catch(error){
         alert(error)
      }

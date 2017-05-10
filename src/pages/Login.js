@@ -44,7 +44,7 @@ class Login extends React.Component {
           userData = await Constants.firebaseApp.auth()
           .signInWithEmailAndPassword(this.state.email, this.state.password);
           alert(JSON.stringify(userData))
-          AsyncStorage.setItem('user_data',JSON.stringify(userData));
+          AsyncStorage.setItem('user_data',JSON(userData));
           this.setState({
             loaded: false
           });

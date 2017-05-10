@@ -35,7 +35,6 @@ const Row = (props) => (
       </Text>
     </View>
     <TouchableHighlight
-      onPress={()=>{}}
       underlayColor={Colors.primaryLight}
       style={{alignItems:'center',flex:0.4,padding:5,margin:8,borderRadius:15,backgroundColor: Colors.primary}}>
         <Text
@@ -83,14 +82,17 @@ class Friends extends React.Component {
     this.state = {
       dataSource: ds.cloneWithRows(friendsArray),
     };
-  }
+    console.log('friends',friendsArray)
 
-componentWillMount() {
+  }
+  componentWillMount() {
     AsyncStorage.getItem('user_data').then((user_data_json) => {
       let user_data = JSON.parse(user_data_json);
       console.log(user_data)
+      const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+      friendsArray = user_data
       this.setState({
-        user: user_data,
+        dataSource: ds.cloneWithRows(user_data),
         loaded: true
       })
     })
