@@ -79,5 +79,5 @@ export default StyleSheet.create({
   },
   sectionHeaderText: {
     fontSize: 13,
-  },
+  }
 })
