@@ -13,9 +13,9 @@ import {
 import Camera from 'react-native-camera'
 import ModalDropdown from 'react-native-modal-dropdown';
 import { Icon } from 'react-native-material-design';
+import { Avatar } from 'react-native-material-design';
 
 import { Checkbox } from 'react-native-material-design';
-
 import Constants from '../Constants'
 import textStyles from '../styles/Text'
 import buttonStyles from '../styles/Button'
@@ -87,6 +87,8 @@ class Main extends React.Component {
       this.props.onPressSettings()
     } else if(idx === '1') {
       this.props.onPressSignout()
+    } else if (idx === '2') {
+
     } else if(idx === '2') {
       this.props.onPressAbout()
     } else if(idx === '3') {
@@ -132,7 +134,6 @@ class Main extends React.Component {
                <View style={{marginTop: 8}}>
                  <Icon name="settings" color="rgba(204, 204, 204,0.9)" size={40}/>
                </View>
-
                {/*<View style={buttonStyles.profileButton}>
                   <Image
                     style={{flex:1, height:45, width:45,borderRadius:22.5,alignSelf:'stretch'}}

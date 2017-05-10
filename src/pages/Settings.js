@@ -29,11 +29,21 @@ class Settings extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      check: false
     };
   }
   componentWillMount() {
     this.props.setHeaderTitle('Settings')
   }
+
+
+handlecheck(){
+
+  this.setstate('check' : true)
+
+}
+
+
   render() {
     return (
       <View style={{flexDirection: 'row', width: 360, height: 50, justifyContent: 'center'}} >
@@ -47,7 +57,7 @@ class Settings extends React.Component {
           <View
             style={{flexDirection: 'row', width: 360, height: 50, justifyContent: 'center'}} >
 
-            <Checkbox value="accepted" />
+            <Checkbox value="accepted" checked={this.state.check} onCheck={() => this.handlecheck()}/>
             
             <Text style={textStyles.subtitle}>Turn Notifications On</Text>
           </View>
