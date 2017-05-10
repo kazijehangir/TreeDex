@@ -72,13 +72,13 @@ class ChangePass extends React.Component {
         <TextInput placeholder='Type New Password'
          style={inputStyles.passwordInput}
          secureTextEntry={true}
-         onChange={this.password1ChangeHandler}></TextInput>
+         onChange={this.password1ChangeHandler.bind(this)}></TextInput>
 
         <TextInput placeholder='Re-type New Password'
          style={inputStyles.passwordInput}
          secureTextEntry={true}
-         onChange={this.password2ChangeHandler}></TextInput>
-        <ButtonInverted title='Change Password' onPress={() => this.onPressPass(state.pass)} />
+         onChange={this.password2ChangeHandler.bind(this)}></TextInput>
+        <ButtonInverted title='Change Password' onPress={() => this.onPressPass(this.state.pass1)} />
       </View>
     )
   }

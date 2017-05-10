@@ -122,7 +122,7 @@ class Main extends React.Component {
             <ModalDropdown
                style={containerStyles.dropDown}
                options={this.state.DEMO_OPTIONS_1}
-               textStyle={{backgroundColor:Colors.primary}}
+               textStyle={{backgroundColor:'black'}}
                onSelect={(idx, value) => this.dropdown(idx,value)}>
                <View style={buttonStyles.profileButton}>
                   <Icon name="settings" color="rgba(204, 204, 204,0.9)" size={40}/>
