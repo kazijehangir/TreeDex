@@ -34,11 +34,10 @@ class Profile extends React.Component {
         <Image
           source = {require('../images/profpic1.jpg')}
           style={{width: null, height:Constants.profileboxheight, alignSelf: 'stretch',justifyContent: 'center',alignItems: 'center' }}>
-          {/*<Image source={require('../images/profileImage.png')}
-            style={{width: 150, height: 150}}/>*/}
-            <TouchableHighlight onPress={this.props.onPressSettings}>
+    
+            <TouchableHighlight onPress={this.props.onPressCamera}>
               <View>
-                <Image src='../images/camera-icon.png' styles={{weight: 50, height: 50}}></Image>
+                <Image src='../images/camera-icon.png' style={{weight: 100, height: 100, alignItems: 'center', justifyContent: 'center'}}></Image>
               </View>
               
             </TouchableHighlight>

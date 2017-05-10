@@ -39,6 +39,7 @@ import ChangePass from './src/pages/ChangePass'
 import containerStyles from './src/styles/Container'
 import buttonStyles from './src/styles/Button'
 import WebViewCustom from './src/pages/WebViewCustom'
+import UploadPhoto from './src/pages/Camera'
 import Constants from './src/Constants'
 // import { WebView } from 'react-native';
 
@@ -174,8 +175,14 @@ export default class TreeDexRN extends Component {
                  onPressSettings={this._handleAction.bind(this,
                  { type: 'push', key: 'Settings' })} />
       }
+      if(key === 'UploadPhoto'){
+        return <UploadPhoto
+                />
+      }
       if (key === 'Profile') {
         return <Profile
+                 onPressCamera={this._handleAction.bind(this,
+                 {type:'push', key:'UploadPhoto'})}
                  setHeaderTitle={this._setHeaderTitle.bind(this)}
                  onPressNews={this._handleAction.bind(this,
                  { type: 'push', key: 'News'})}
